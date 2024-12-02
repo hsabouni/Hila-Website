@@ -190,17 +190,17 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f92c2c;}
     align-items: center;
     justify-content: center;
     position:relative;
-    background:url(../images/about/welcome-banner.jpg)no-repeat;
+    background:url(../images/about/IMG_7698.png)no-repeat;
     background-size:cover;
     background-position: center;
-    height:890px;
+    height:850px;
 }
 .welcome-hero:before{
     position:absolute;
     content: " ";
     top:0;
     left:0;
-    /*background:rgba(31,44,108,.65);*/
+    background:rgba(180, 180, 180, 0.85);
     width:100%;
     height:100%;
 }
@@ -252,6 +252,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f92c2c;}
     color: #3c4258;
     text-transform: initial;
     line-height: 1.8;
+    text-align: justify;
 }
 .single-about-txt p {
     font-size: 16px;
@@ -342,7 +343,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f92c2c;}
 .single-horizontal-timeline .experience-time h3{text-transform: capitalize;}
 .single-horizontal-timeline .experience-time h3 span{text-transform:lowercase;}
 .single-horizontal-timeline .timeline-content h5 {margin: 15px 0;}
-.single-horizontal-timeline p {color: #999fb3;max-width: 335px;}
+.single-horizontal-timeline p {color: #999fb3;max-width: 335px; text-align: justify;}
 
 /*.timeline-horizontal-border*/
 .timeline-horizontal-border {
@@ -468,11 +469,11 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .main-timeline:before{
     content: "";
     width: 2px;
-    height: 100%;
+    height: 90%;
     background: #b2c1ce;
     position: absolute;
-    top: 0%;
-    left: 45.8%;
+    top: 0.2%;
+    left: 45.87%;
     z-index: -1;
 }
 .main-timeline .timeline{
@@ -501,6 +502,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .main-timeline .description {
     font-size: 14px;
     color: #999fb3;
+    text-align: justify;
 }
 .main-timeline .timeline-content.right{
     float: right;
