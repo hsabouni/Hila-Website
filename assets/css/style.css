@@ -548,6 +548,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     -o-transition:background 0.5s linear; 
     transition:background 0.5s linear;
 }
+.single-profile-left-border {
+    border-left: 1px solid #b2c1ce;
+}
 .profile-icon-name {
     text-transform: capitalize;
     color: #636a82;
@@ -635,10 +638,11 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 /*.isotope-overlay*/
 .isotope-overlay{
+    color: white;
     position:absolute;
     height:100%;
     width:100%;
-    background:rgba(31,44,108,.5);
+    background:rgba(108, 31, 31, 0.5);
     display:flex;
     align-items:center;
     text-transform: uppercase;
@@ -877,4 +881,51 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     0%   {bottom:0px;}
     100%  {bottom:7px;}
 }
-/*========================Thank you=================
+
+
+
+.youtube-video-padding {
+    padding-top: 65px;
+}
+
+.custom-offset {
+    margin-left: 13%;
+  }
+
+.method-center {
+    text-align: center;
+}
+
+.method-content {padding-top: 10px;}
+
+.single-method-img {
+    display: block; /* Ensure it's a block-level element */
+    margin: 0 auto; /* Center horizontally */
+    padding-top: 50px; /* Add top padding (adjust as needed) */
+    max-width: 100%; /* Optional: Ensure responsiveness */  
+  }
+  
+.dicot {
+    background:  #f9fbfd;
+    padding-top:  50px;
+    padding-bottom: 20px;
+}
+
+.about-contribution {padding-top: 50px;}
+
+.button {
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 3px;
+    text-transform: capitalize;
+    color: #fff;
+    background: #f92c2c;
+    border:1px solid #f92c2c;
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+    -webkit-transition: 0.3s linear; 
+    -moz-transition: 0.3s linear; 
+    -ms-transition: 0.3s linear; 
+    -o-transition: 0.3s linear; 
+    transition: 0.3s linear;
+}
