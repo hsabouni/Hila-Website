@@ -1,1133 +1,800 @@
 <!doctype html>
 <html class="no-js" lang="en">
+<head>
+    <!-- meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <head>
-        <!-- meta data -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!--font-family-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
+    
+    <!-- title of site -->
+    <title>Hila Sabouni</title>
 
-        <!--font-family-->
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
-        
-        <!-- title of site -->
-        <title>Hila Sabouni</title>
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+   
+    <!--font-awesome.min.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-        <!-- For favicon png -->
-		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
-       
-        <!--font-awesome.min.css-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!--flat icon css-->
+    <link rel="stylesheet" href="assets/css/flaticon.css">
 
-		<!--flat icon css-->
-		<link rel="stylesheet" href="assets/css/flaticon.css">
+    <!--animate.css-->
+    <link rel="stylesheet" href="assets/css/animate.css">
 
-		<!--animate.css-->
-        <link rel="stylesheet" href="assets/css/animate.css">
+    <!--owl.carousel.css-->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="assets/css/bootsnav.css">
+    
+    <!--style.css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!--responsive.css-->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
 
-        <!--owl.carousel.css-->
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-		
-        <!--bootstrap.min.css-->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
-		<!-- bootsnav -->
-		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
-        
-        <!--style.css-->
-        <link rel="stylesheet" href="assets/css/style.css">
-        
-        <!--responsive.css-->
-        <link rel="stylesheet" href="assets/css/responsive.css">
-        
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		
-        <!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+<body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+    
+    <!-- top-area Start -->
+    <header class="top-area">
+        <div class="header-area">
+            <!-- Start Navigation -->
+            <nav class="navbar navbar-default bootsnav navbar-fixed dark no-background">
+                <div class="container">
+                    <!-- Start Header Navigation -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="index.html">Hila Sabouni</a>
+                    </div><!--/.navbar-header-->
+                    <!-- End Header Navigation -->
 
-    </head>
-	
-	<body>
-		<!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-		
-		<!-- top-area Start -->
-		<header class="top-area">
-			<div class="header-area">
-				<!-- Start Navigation -->
-			    <nav class="navbar navbar-default bootsnav navbar-fixed dark no-background">
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                        <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                            <li class="smooth-menu active"></li>
+                            <li class="smooth-menu"><a href="#education">education</a></li>
+                            <li class="smooth-menu"><a href="#skills">skills</a></li>
+                            <li class="smooth-menu"><a href="#experience">experience</a></li>
+                            <li class="smooth-menu"><a href="#publications">publications</a></li>
+                            <li class="smooth-menu"><a href="#portfolio">portfolio</a></li>
+                            <li class="smooth-menu"><a href="#contact">contact</a></li>
+                        </ul><!--/.nav -->
+                    </div><!-- /.navbar-collapse -->
+                </div><!--/.container-->
+            </nav><!--/nav-->
+            <!-- End Navigation -->
+        </div><!--/.header-area-->
 
-			        <div class="container">
+        <div class="clearfix"></div>
+    </header><!-- /.top-area-->
+    <!-- top-area End -->
 
-			            <!-- Start Header Navigation -->
-			            <div class="navbar-header">
-			                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-			                    <i class="fa fa-bars"></i>
-			                </button>
-			                <a class="navbar-brand" href="index.html">Hila Sabouni</a>
-			            </div><!--/.navbar-header-->
-			            <!-- End Header Navigation -->
+    <!--welcome-hero start -->
+    <section id="welcome-hero" class="welcome-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="header-text">
+                        <h2>hi <span>,</span> i am hila <span>.</span></h2>
+                        <p>a researcher, designer, and mentor</p>
+                        <a href="assets/resume/Sabouni_Hila_Resume.pdf" download>Check Out My Resume</a>
+                    </div><!--/.header-text-->
+                </div><!--/.col-->
+            </div><!-- /.row-->
+        </div><!-- /.container-->
+    </section><!--/.welcome-hero-->
+    <!--welcome-hero end -->
 
-			            <!-- Collect the nav links, forms, and other content for toggling -->
-			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-			                <li class=" smooth-menu active"></li>
-			                    <li class=" smooth-menu"><a href="#education">education</a></li>
-			                    <li class="smooth-menu"><a href="#skills">skills</a></li>
-			                    <li class="smooth-menu"><a href="#experience">experience</a></li>
-			                    <li class="smooth-menu"><a href="#publications">publications</a></li>
-			                    <li class="smooth-menu"><a href="#portfolio">portfolio</a></li>
-			                    <!--<li class="smooth-menu"><a href="#clients">clients</a></li>-->
-			                    <li class="smooth-menu"><a href="#contact">contact</a></li>
-			                </ul><!--/.nav -->
-			            </div><!-- /.navbar-collapse -->
-			        </div><!--/.container-->
-			    </nav><!--/nav-->
-			    <!-- End Navigation -->
-			</div><!--/.header-area-->
+    <!--about start -->
+    <section id="about" class="about">
+        <div class="section-heading text-center">
+            <h2>about me</h2>
+        </div>
+        <div class="container">
+            <div class="about-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="single-about-txt">
+                            <h3>
+                                As a UX researcher and designer, I explore how people understand and engage with AI. My background in architecture, human–computer interaction, and immersive technology shapes a multidisciplinary approach to studying experience at the intersection of design, engineering, and intelligent systems. I focus on uncovering the social, cultural, and behavioral factors that influence how people adopt and interact with emerging technology.
+                                <br /><br />
+                                My current research examines how designers and engineers form mental models of AI, particularly tools like ChatGPT, and how these models affect communication, decision-making, and collaboration. By analyzing prompting strategy, interaction dynamic, and adoption pattern, I develop frameworks that make human–AI interaction more intuitive, effective, and impactful. My goal is to guide the creation of user-centered, AI-driven solutions for the future.
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-sm-offset-1 col-sm-5">
+                        <div class="single-about-img">
+                            <img src="assets/images/about/profile_image.jpg" alt="profile_image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/.about-->
+    <!--about end -->
+    
+    <!--education start -->
+    <section id="education" class="education">
+        <div class="section-heading text-center">
+            <h2>education</h2>
+        </div>
+        <div class="container">
+            <div class="education-horizontal-timeline">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="single-horizontal-timeline">
+                            <div class="experience-time">
+                                <h2>2012 - 2016</h2>
+                                <h3>Bachelor <span>of </span> Architecture</h3>
+                            </div><!--/.experience-time-->
+                            <div class="timeline-horizontal-border">
+                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                <span class="single-timeline-horizontal"></span>
+                            </div>
+                            <div class="timeline">
+                                <div class="timeline-content">
+                                    <h4 class="title">
+                                        Azad University
+                                    </h4>
+                                    <p class="description">
+                                        Focused on the fundamentals of architectural design, human-centered design principles, spatial experience, construction methods, and innovative problem-solving approaches.
+                                    </p>
+                                </div><!--/.timeline-content-->
+                            </div><!--/.timeline-->
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="single-horizontal-timeline">
+                            <div class="experience-time">
+                                <h2>2020 - 2022</h2>
+                                <h3>Master <span>of </span> Architecture</h3>
+                            </div><!--/.experience-time-->
+                            <div class="timeline-horizontal-border">
+                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                <span class="single-timeline-horizontal"></span>
+                            </div>
+                            <div class="timeline">
+                                <div class="timeline-content">
+                                    <h4 class="title">
+                                        Iowa State University
+                                    </h4>
+                                    <p class="description">
+                                        Concentrated on advanced spatial design, user behavior analysis, and the integration of technology and sustainability.
+                                    </p>
+                                </div><!--/.timeline-content-->
+                            </div><!--/.timeline-->
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="single-horizontal-timeline">
+                            <div class="experience-time">
+                                <h2>2022 - 2023</h2>
+                                <h3>Master <span>of </span> Science <span>in </span> HCI</h3>
+                            </div><!--/.experience-time-->
+                            <div class="timeline-horizontal-border">
+                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                <span class="single-timeline-horizontal"></span>
+                            </div>
+                            <div class="timeline">
+                                <div class="timeline-content">
+                                    <h4 class="title">
+                                        Iowa State University
+                                    </h4>
+                                    <p class="description">
+                                        Explored the impact of effectiveness of guidance cues for visual targets in virtual environments.
+                                    </p>
+                                </div><!--/.timeline-content-->
+                            </div><!--/.timeline-->
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="single-horizontal-timeline">
+                            <div class="experience-time">
+                                <h2>2023 - 2027(expected)</h2>
+                                <h3>PhD <span>in </span> HCI</h3>
+                            </div><!--/.experience-time-->
+                            <div class="timeline-horizontal-border">
+                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                <span class="single-timeline-horizontal spacial-horizontal-line"></span>
+                            </div>
+                            <div class="timeline">
+                                <div class="timeline-content">
+                                    <h4 class="title">
+                                        Iowa State University
+                                    </h4>
+                                    <p class="description">
+                                        Studying designer and engineer mental models of AI to improve communication, decision-making, and collaboration, and to create user-centered, AI-driven solutions.
+                                    </p>
+                                </div><!--/.timeline-content-->
+                            </div><!--/.timeline-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/.education-->
+    <!--education end -->
 
-		    <div class="clearfix"></div>
+    <!--skills start -->
+    <section id="skills" class="skills">
+        <div class="skill-content">
+            <div class="section-heading text-center">
+                <h2>top skills</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="single-skill-content">
+                            <div class="barWrapper">
+                                <span class="progressText">Qualitative Research, Quantitative Analysis</span>
+                                <div class="single-progress-txt">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style=""></div>
+                                    </div>
+                                </div>
+                            </div><!-- /.barWrapper -->
+                            <div class="barWrapper">
+                                <span class="progressText">Thematic coding, Concept Mapping</span>
+                                <div class="single-progress-txt">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style=""></div>
+                                    </div>
+                                </div>
+                            </div><!-- /.barWrapper -->
+                            <div class="barWrapper">
+                                <span class="progressText">3D Modeling, Unity</span>
+                                <div class="single-progress-txt">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style=""></div>
+                                    </div>
+                                </div>
+                            </div><!-- /.barWrapper -->
+                            <div class="barWrapper">
+                                <span class="progressText">idea generation, Concept diagramming</span>
+                                <div class="single-progress-txt">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style=""></div>
+                                    </div>
+                                </div>
+                            </div><!-- /.barWrapper -->
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="single-skill-content">
+                            <div class="barWrapper">
+                                <span class="progressText">Problem Solving, Task Management</span>
+                                <div class="single-progress-txt">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style=""></div>
+                                    </div>
+                                </div>
+                            </div><!-- /.barWrapper -->
+                            <div class="barWrapper">
+                                <span class="progressText">Project Planning, Time Management</span>
+                                <div class="single-progress-txt">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style=""></div>
+                                    </div>
+                                </div>
+                            </div><!-- /.barWrapper -->
+                            <div class="barWrapper">
+                                <span class="progressText">Team Leadership, Mentoring</span>
+                                <div class="single-progress-txt">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style=""></div>
+                                    </div>
+                                </div>
+                            </div><!-- /.barWrapper -->
+                            <div class="barWrapper">
+                                <span class="progressText">Cross-functional Teamwork, communication</span>
+                                <div class="single-progress-txt">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style=""></div>
+                                    </div>
+                                </div>
+                            </div><!-- /.barWrapper -->
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.skill-content-->
+    </section><!--/.skills-->
+    <!--skills end -->
 
-		</header><!-- /.top-area-->
-		<!-- top-area End -->
-	
-		<!--welcome-hero start -->
-		<section id="welcome-hero" class="welcome-hero">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<div class="header-text">
-							<h2>hi <span>,</span> i am hila <span>.</span>   </h2>
-							<p>a researcher, designer, and mentor</p>
-							<a href="assets/resume/Sabouni_Hila_Resume.pdf" download>Check Out My Resume</a>
-						</div><!--/.header-text-->
-					</div><!--/.col-->
-				</div><!-- /.row-->
-			</div><!-- /.container-->
+    <!--experience start -->
+    <section id="experience" class="experience">
+        <div class="section-heading text-center">
+            <h2>experience</h2>
+        </div>
+        <div class="container">
+            <div class="experience-content">
+                <div class="main-timeline">
+                    <ul>
+                        <li>
+                            <div class="single-timeline-box fix">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="experience-time text-right">
+                                            <h2>Summer 2025</h2>
+                                            <h3>CX researcher Intern</h3>
+                                        </div><!--/.experience-time-->
+                                    </div><!--/.col-->
+                                    <div class="col-md-offset-1 col-md-5">
+                                        <div class="timeline">
+                                            <div class="timeline-content">
+                                                <h4 class="title">
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                    Customer Experience Analyst Intern
+                                                </h4>
+                                                <h5>Rocket Mortgage, Detroit, MI, USA</h5>
+                                                <p class="description">
+                                                    Benchmarked Qualtrics Text iQ against ChatGPT for qualitative data tagging and sentiment analysis, demonstrating ChatGPT's superior performance through prompt engineering. Developed a reusable framework for research tasks, analyzed NPS shifts across clients, and delivered product recommendations to improve the digital mortgage journey. Won "Best Use of AI for Discovery & Research" at a company-wide hackathon.
+                                                </p>
+                                            </div><!--/.timeline-content-->
+                                        </div><!--/.timeline-->
+                                    </div><!--/.col-->
+                                </div>
+                            </div><!--/.single-timeline-box-->
+                        </li>
 
-		</section><!--/.welcome-hero-->
-		<!--welcome-hero end -->
+                        <li>
+                            <div class="single-timeline-box fix">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="experience-time text-right">
+                                            <h2>2023 – 2027</h2>
+                                            <h3>UX researcher & designer</h3>
+                                        </div><!--/.experience-time-->
+                                    </div><!--/.col-->
+                                    <div class="col-md-offset-1 col-md-5">
+                                        <div class="timeline">
+                                            <div class="timeline-content">
+                                                <h4 class="title">
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                    PhD Dissertation on designer-engineer teamwork
+                                                </h4>
+                                                <h5>Iowa State University, IA, USA</h5>
+                                                <p class="description">
+                                                    Researching designer and engineer mental models of AI, with emphasis on ChatGPT, through surveys, interviews, and experiments. Collaborating with experts in HCI, computer science, architecture, and communication studies to uncover how professional background shapes AI understanding, communication, and collaboration, with the goal of developing frameworks that enhance cross-functional teamwork with AI.
+                                                </p>
+                                            </div><!--/.timeline-content-->
+                                        </div><!--/.timeline-->
+                                    </div><!--/.col-->
+                                </div>
+                            </div><!--/.single-timeline-box-->
+                        </li>
 
-		<!--about start -->
-		<section id="about" class="about">
-			<div class="section-heading text-center">
-				<h2>about me</h2>
-			</div>
-			<div class="container">
-				<div class="about-content">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="single-about-txt">
-								<h3>
-									
-As a UX researcher and designer, I explore how people understand and engage with AI. My background in architecture, human–computer interaction, and immersive technology shapes a multidisciplinary approach to studying experience at the intersection of design, engineering, and intelligent systems. I focus on uncovering the social, cultural, and behavioral factors that influence how people adopt and interact with emerging technology. 
-<br /><br />
-My current research examines how designers and engineers form mental models of AI, particularly tools like ChatGPT, and how these models affect communication, decision-making, and collaboration. By analyzing prompting strategy, interaction dynamic, and adoption pattern, I develop frameworks that make human–AI interaction more intuitive, effective, and impactful. My goal is to guide the creation of user-centered, AI-driven solutions for the future.
-								<!--<p>
-									My work is driven by a commitment to creativity, effective communication, collaboration, and continuous innovation.
-								</p>
-								<!--<div class="row">
-									<!--<div class="col-sm-4">
-										<div class="single-about-add-info">
-											<h3>phone</h3>
-											<p>987-123-6547</p>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="single-about-add-info">
-											<h3>email</h3>
-											<p>browny@info.com</p>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="single-about-add-info">
-											<h3>website</h3>
-											<p>www.brownsine.com</p>-->
-										<!--</div>
-									</div>
-								</div>-->
-							</div>
-						</div>
-						<div class="col-sm-offset-1 col-sm-5">
-							<div class="single-about-img">
-								<img src="assets/images/about/profile_image.jpg" alt="profile_image">
-								<!--<div class="about-list-icon">
-									<ul>
-										<li>
-											<a href="#">
-												<i  class="fa fa-facebook" aria-hidden="true"></i>
-											</a>
-										</li></ li>
-										<li>
-											<a href="#">
-												<i  class="fa fa-dribbble" aria-hidden="true"></i>
-											</a>
-											
-										</li></ li>
-										<li>
-											<a href="#">
-												<i  class="fa fa-twitter" aria-hidden="true"></i>
-											</a>
-											
-										</li></ li>
-										<li>
-											<a href="#">
-												<i  class="fa fa-linkedin" aria-hidden="true"></i>
-											</a>
-										</li></ li>
-										<li>
-											<a href="#">
-												<i  class="fa fa-instagram" aria-hidden="true"></i>
-											</a>
-										</li></ li>
-										
-										
-									</ul>< / ul >
-								</div>< /.about-list-icon> -->
+                        <li>
+                            <div class="single-timeline-box fix">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="experience-time text-right">
+                                            <h2>2023 – 2025</h2>
+                                            <h3>UX researcher & designer</h3>
+                                        </div><!--/.experience-time-->
+                                    </div><!--/.col-->
+                                    <div class="col-md-offset-1 col-md-5">
+                                        <div class="timeline">
+                                            <div class="timeline-content">
+                                                <h4 class="title">
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                    NSF-Funded Cybersecurity Research
+                                                </h4>
+                                                <h5>Iowa State University, IA, USA</h5>
+                                                <p class="description">
+                                                    As part of an interdisciplinary team, I am exploring innovative pathways to introduce cybersecurity knowledge to rural English learners through XR-enabled educational tools. By leveraging user research and game development in Unity, we aim to create an immersive and inclusive learning experience that teaches middle school students the fundamentals of cybersecurity.
+                                                </p>
+                                            </div><!--/.timeline-content-->
+                                        </div><!--/.timeline-->
+                                    </div><!--/.col-->
+                                </div>
+                            </div><!--/.single-timeline-box-->
+                        </li>
 
-							</div>
+                        <li>
+                            <div class="single-timeline-box fix">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="experience-time text-right">
+                                            <h2>Summer 2024</h2>
+                                            <h3>Research & 3D Modeling Mentor</h3>
+                                        </div><!--/.experience-time-->
+                                    </div><!--/.col-->
+                                    <div class="col-md-offset-1 col-md-5">
+                                        <div class="timeline">
+                                            <div class="timeline-content">
+                                                <h4 class="title">
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                    NSF REU (Research Experience for Undergrads)
+                                                </h4>
+                                                <h5>Iowa State University, IA, USA</h5>
+                                                <p class="description">
+                                                    Instructed nine undergraduates in Blender and mentored three students in creating a 3D mini-game on electric circuits for middle school English learners in rural areas.
+                                                </p>
+                                            </div><!--/.timeline-content-->
+                                        </div><!--/.timeline-->
+                                    </div><!--/.col-->
+                                </div>
+                            </div><!--/.single-timeline-box-->
+                        </li>
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</section><!--/.about-->
-		<!--about end -->
-		
-		<!--education start -->
-		<section id="education" class="education">
-			<div class="section-heading text-center">
-				<h2>education</h2>
-			</div>
-			<div class="container">
-				<div class="education-horizontal-timeline">
-					<div class="row">
-						<div class="col-sm-3">
-							<div class="single-horizontal-timeline">
-								<div class="experience-time">
-									<h2>2012 - 2016</h2>
-									<h3>Bachelor <span>of </span> Architecture</h3>
-								</div><!--/.experience-time-->
-								<div class="timeline-horizontal-border">
-									<i class="fa fa-circle" aria-hidden="true"></i>
-									<span class="single-timeline-horizontal"></span>
-								</div>
-								<div class="timeline">
-									<div class="timeline-content">
-										<h4 class="title">
-											Azad University
-										</h4>
-										<!--<h5>north carolina, USA</h5>-->
-										<p class="description">
-											Focused on the fundamentals of architectural design, human-centered design principles, spatial experience, construction methods, and innovative problem-solving approaches.
-										</p>
-									</div><!--/.timeline-content-->
-								</div><!--/.timeline-->
-							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="single-horizontal-timeline">
-								<div class="experience-time">
-									<h2>2020 - 2022</h2>
-									<h3>Master <span>of </span> Architecture</h3>
-								</div><!--/.experience-time-->
-								<div class="timeline-horizontal-border">
-									<i class="fa fa-circle" aria-hidden="true"></i>
-									<span class="single-timeline-horizontal"></span>
-								</div>
-								<div class="timeline">
-									<div class="timeline-content">
-										<h4 class="title">
-											Iowa State University
-										</h4>
-										<!--<h5>north carolina, USA</h5>-->
-										<p class="description">
-											Concentrated on advanced spatial design, user behavior analysis, and the integration of technology and sustainability.
-										</p>
-									</div><!--/.timeline-content-->
-								</div><!--/.timeline-->
-							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="single-horizontal-timeline">
-								<div class="experience-time">
-									<h2>2022 - 2023</h2>
-									<h3>Master <span>of </span> Scinece <span>in </span>HCI</h3>
-								</div><!--/.experience-time-->
-								<div class="timeline-horizontal-border">
-									<i class="fa fa-circle" aria-hidden="true"></i>
-									<span class="single-timeline-horizontal"></span>
-								</div>
-								<div class="timeline">
-									<div class="timeline-content">
-										<h4 class="title">
-											Iowa State University
-										</h4>
-										<!--<h5>north carolina, USA</h5>-->
-										<p class="description">
-											Explored the impact of effectiveness of guidance cues for visual targets in virtual environments. 
-										</p>
-									</div><!--/.timeline-content-->
-								</div><!--/.timeline-->
-							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="single-horizontal-timeline">
-								<div class="experience-time">
-									<h2>2023 - 2027(expected)</h2>
-									<h3>PhD <span>in </span> HCI</h3>
-								</div><!--/.experience-time-->
-								<div class="timeline-horizontal-border">
-									<i class="fa fa-circle" aria-hidden="true"></i>
-									<span class="single-timeline-horizontal spacial-horizontal-line
-									"></span>
-								</div>
-								<div class="timeline">
-									<div class="timeline-content">
-										<h4 class="title">
-											Iowa State University
-										</h4>
-										<!--<h5>bolton, united kingdome</h5>-->
-										<p class="description">
-											Studying designer and engineer mental models of AI to improve communication, decision-making, and collaboration, and to create user-centered, AI-driven solutions.
-										</p>
-									</div><!--/.timeline-content-->
-								</div><!--/.timeline-->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+                        <li>
+                            <div class="single-timeline-box fix">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="experience-time text-right">
+                                            <h2>2022 – 2024</h2>
+                                            <h3>University Instructor</h3>
+                                        </div><!--/.experience-time-->
+                                    </div><!--/.col-->
+                                    <div class="col-md-offset-1 col-md-5">
+                                        <div class="timeline">
+                                            <div class="timeline-content">
+                                                <h4 class="title">
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                    Architecture Studio Course
+                                                </h4>
+                                                <h5>Iowa State University, IA, USA</h5>
+                                                <p class="description">
+                                                    Instructed second-year undergraduate architecture students in a 6-credit studio course, holding weekly desk crits, midterm and final reviews, and participating in field trips with over 100 students to Chicago, IL and Columbus, IN each semester.
+                                                </p>
+                                            </div><!--/.timeline-content-->
+                                        </div><!--/.timeline-->
+                                    </div><!--/.col-->
+                                </div>
+                            </div><!--/.single-timeline-box-->
+                        </li>
+                        
+                        <li>
+                            <div class="single-timeline-box fix">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="experience-time text-right">
+                                            <h2>2022 – 2023</h2>
+                                            <h3>UX researcher & designer</h3>
+                                        </div><!--/.experience-time-->
+                                    </div><!--/.col-->
+                                    <div class="col-md-offset-1 col-md-5">
+                                        <div class="timeline">
+                                            <div class="timeline-content">
+                                                <h4 class="title">
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                    Master Thesis on Sensory Cues in Virtual Reality
+                                                </h4>
+                                                <h5>Iowa State University, IA, USA</h5>
+                                                <p class="description">
+                                                    Designed and executed a mixed-method user experience study on the effectiveness of guidance cues for visual targets in virtual environments.
+                                                </p>
+                                            </div><!--/.timeline-content-->
+                                        </div><!--/.timeline-->
+                                    </div><!--/.col-->
+                                </div>
+                            </div><!--/.single-timeline-box-->
+                        </li>
 
-		</section><!--/.education-->
-		<!--education end -->
+                        <li>
+                            <div class="single-timeline-box fix">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="experience-time text-right">
+                                            <h2>Summer 2023</h2>
+                                            <h3>Research & 3D Modeling Mentor</h3>
+                                        </div><!--/.experience-time-->
+                                    </div><!--/.col-->
+                                    <div class="col-md-offset-1 col-md-5">
+                                        <div class="timeline">
+                                            <div class="timeline-content">
+                                                <h4 class="title">
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                    NSF REU (Research Experience for Undergrads)
+                                                </h4>
+                                                <h5>Iowa State University, IA, USA</h5>
+                                                <p class="description">
+                                                    Instructed nine undergraduates in Blender and mentored three students in creating a 3D mini-game 3D game to inspire first-gen, middle school English learners in rural areas.
+                                                </p>
+                                            </div><!--/.timeline-content-->
+                                        </div><!--/.timeline-->
+                                    </div><!--/.col-->
+                                </div>
+                            </div><!--/.single-timeline-box-->
+                        </li>
 
-		<!--skills start -->
-		<section id="skills" class="skills">
-				<div class="skill-content">
-					<div class="section-heading text-center">
-						<h2>top skills</h2>
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="single-skill-content">
-									<div class="barWrapper">
-										<span class="progressText">Qualitative Research, Quantitative Analysis</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-												<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="">
-													  
-												</div>
-											</div>
-											<!--<h3>90%</h3>-->	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">Thematic coding, Concept Mapping</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="">
-												    
-											   </div>
-											</div>
-											<!--<h3>85%</h3>-->	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">3D Modeling, Unity</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="">
-												   
-											   </div>
-											</div>
-											<!--<h3>70%</h3>-->	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">idea generation, Concept diagramming </span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="">
-												    
-											   </div>
-											</div>
-											<!--<h3>85%</h3>-->	
-										</div>
-									</div><!-- /.barWrapper -->
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="single-skill-content">
-									<div class="barWrapper">
-										<span class="progressText">Problem Solving, Task Management</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-												<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="">
-													
-												</div>
-											</div>
-											<!--<h3>90%</h3>-->	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">Project Planning, Time Management</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="">
-												    
-											   </div>
-											</div>
-											<!--<h3>90%</h3>-->	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">Team Leadership, Mentoring</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="">
-												   
-											   </div>
-											</div>
-											<!--<h3>95%</h3>-->	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText"> Cross-functional Teamwork, communication</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="">
-												    
-											   </div>
-											</div>
-											<!--<h3>90%</h3>-->	
-										</div>
-									</div><!-- /.barWrapper -->
-								</div>
-							</div>
-						</div><!-- /.row -->
-					</div>	<!-- /.container -->		
-				</div><!-- /.skill-content-->
+                        <li>
+                            <div class="single-timeline-box fix">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="experience-time text-right">
+                                            <h2>2022 - 2022 (eight months)</h2>
+                                            <h3>Architect Intern</h3>
+                                        </div><!--/.experience-time-->
+                                    </div><!--/.col-->
+                                    <div class="col-md-offset-1 col-md-5">
+                                        <div class="timeline">
+                                            <div class="timeline-content">
+                                                <h4 class="title">
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                    Klingner & Associates, PC
+                                                </h4>
+                                                <h5>Pella, IA, USA</h5>
+                                                <p class="description">
+                                                    Engaged in the site visit, design, and construction phases of four projects, produced technical drawings and 3D models, and collaborated in client meetings to listen to and document their requirements and desires.
+                                                </p>
+                                            </div><!--/.timeline-content-->
+                                        </div><!--/.timeline-->
+                                    </div><!--/.col-->
+                                </div>
+                            </div><!--/.single-timeline-box-->
+                        </li>
 
-		</section><!--/.skills-->
-		<!--skills end -->
+                        <li>
+                            <div class="single-timeline-box fix">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="experience-time text-right">
+                                            <h2>2016 - 2018 (~three years)</h2>
+                                            <h3>founder, owner, designer</h3>
+                                        </div><!--/.experience-time-->
+                                    </div><!--/.col-->
+                                    <div class="col-md-offset-1 col-md-5">
+                                        <div class="timeline">
+                                            <div class="timeline-content">
+                                                <h4 class="title">
+                                                    <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                                    Risen Design Architecture Studio
+                                                </h4>
+                                                <h5>Iran</h5>
+                                                <p class="description">
+                                                    Managed the full design and construction process of nine industrial and residential projects, delivering them with fewer revisions and cost savings, while creating inclusive designs that met diverse client needs and earning recognition for excellence in client satisfaction.
+                                                </p>
+                                            </div><!--/.timeline-content-->
+                                        </div><!--/.timeline-->
+                                    </div><!--/.col-->
+                                </div>
+                            </div><!--/.single-timeline-box-->
+                        </li>
+                    </ul>
+                </div><!--.main-timeline-->
+            </div><!--.experience-content-->
+        </div>
+    </section><!--/.experience-->
+    <!--experience end -->
 
-		<!--experience start -->
-		<section id="experience" class="experience">
-			<div class="section-heading text-center">
-				<h2>experience</h2>
-			</div>
-			<div class="container">
-				<div class="experience-content">
-						<div class="main-timeline">
-							<ul>
+    <!--publications start -->
+    <section id="publications" class="publications">
+        <div class="publications-details">
+            <div class="section-heading text-center">
+                <h2>publications</h2>
+            </div>
+            <div class="container">
+                <div class="profiles-content">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="single-profile">
+                                <div class="profile-txt">
+                                    <div class="profile-icon-name">Electronic Imaging Symposium</div>
+                                </div>
+                                <a href="https://library.imaging.org/jpi/articles/8/0/000403" target="_blank">
+                                    <div class="single-profile-overlay">
+                                        <div class="profile-txt">
+                                            <div class="profile-icon-name">Electronic Imaging Symposium</div>
+                                            (Click to view)
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="single-profile">
+                                <div class="profile-txt">
+                                    <div class="profile-icon-name">CHI</div>
+                                </div>
+                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8R1s_VIAAAAJ&sortby=pubdate&citation_for_view=8R1s_VIAAAAJ:u-x6o8ySG0sC" target="_blank">
+                                    <div class="single-profile-overlay">
+                                        <div class="profile-txt">
+                                            <div class="profile-icon-name">CHI</div>
+                                            (Click to view)
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="single-profile profile-no-border">
+                                <div class="profile-txt">
+                                    <div class="profile-icon-name">HCI International</div>
+                                </div>
+                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8R1s_VIAAAAJ&citation_for_view=8R1s_VIAAAAJ:u5HHmVD_uO8C" target="_blank">
+                                    <div class="single-profile-overlay">
+                                        <div class="profile-txt">
+                                            <div class="profile-icon-name">HCI International</div>
+                                            (Click to view)
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="margin: 0px 0; border: 0; border-top: 1px solid #ddd;">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="single-profile">
+                                <div class="profile-txt">
+                                    <div class="profile-icon-name">ANNSIM</div>
+                                </div>
+                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8R1s_VIAAAAJ&citation_for_view=8R1s_VIAAAAJ:9yKSN-GCB0IC" target="_blank">
+                                    <div class="single-profile-overlay">
+                                        <div class="profile-txt">
+                                            <div class="profile-icon-name">ANNSIM</div>
+                                            (Click to view)
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="single-profile">
+                                <div class="profile-txt">
+                                    <div class="profile-icon-name">HFES</div>
+                                </div>
+                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8R1s_VIAAAAJ&citation_for_view=8R1s_VIAAAAJ:2osOgNQ5qMEC" target="_blank">
+                                    <div class="single-profile-overlay">
+                                        <div class="profile-txt">
+                                            <div class="profile-icon-name">HFES</div>
+                                            (Click to view)
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="single-profile profile-no-border">
+                                <div class="profile-txt">
+                                    <div class="profile-icon-name">SimAUD</div>
+                                </div>
+                                <div class="single-profile-overlay">
+                                    <div class="profile-txt">
+                                        <div class="profile-icon-name">SimAUD</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/.publications-->
+    <!--publications end -->
 
+    <!--portfolio start -->
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio-details">
+            <div class="section-heading text-center">
+                <h2>portfolio</h2>
+            </div>
+            <div class="container">
+                <div class="portfolio-content">
+                    <div class="isotope">
+                        <div class="row">
+                            <div class="col-sm-offset-2 col-sm-4">
+                                <div class="item">
+                                    <a href="./portfolio_one.html">
+                                        <img src="assets/images/portfolio/p3.jpg" alt="portfolio image"/>
+                                        <div class="isotope-overlay">
+                                            Individual Project
+                                        </div><!-- /.isotope-overlay -->
+                                    </a>
+                                </div><!-- /.item -->
+                            </div><!-- /.col -->
+                            <div class="col-sm-4">
+                                <div class="item">
+                                    <a href="./portfolio_two.html">
+                                        <img src="assets/images/portfolio/kn.jpg" alt="portfolio image"/>
+                                        <div class="isotope-overlay">
+                                            Group Project
+                                        </div><!-- /.isotope-overlay -->
+                                    </a>
+                                </div><!-- /.item -->
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                    </div><!--/.isotope-->
+                </div><!--/.gallery-content-->
+            </div><!--/.container-->
+        </div><!--/.portfolio-details-->
+    </section><!--/.portfolio-->
+    <!--portfolio end -->
 
-								<li>
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-5">
-												<div class="experience-time text-right">
-													<h2>Summer 2025</h2>
-													<h3>CX researcher Intern</h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-											<div class="col-md-offset-1 col-md-5">
-												<div class="timeline">
-													<div class="timeline-content">
-														<h4 class="title">
-															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															Customer Experience Analyst Intern
-														</h4>
-														<h5>Rocket Mortgage, Detroit, MI, USA</h5>
-														<p class="description">
-															Benchmarked Qualtrics Text iQ against ChatGPT for qualitative data tagging and sentiment analysis, demonstrating ChatGPT's superior performance through prompt engineering. Developed a reusable framework for research tasks, analyzed NPS shifts across clients, and delivered product recommendations to improve the digital mortgage journey. Won "Best Use of AI for Discovery & Research" at a company-wide hackathon.
-														</p>
-													</div><!--/.timeline-content-->
-												</div><!--/.timeline-->
-											</div><!--/.col-->
-										</div>
-									</div><!--/.single-timeline-box-->
-								</li>
+    <!--contact start -->
+    <section id="contact" class="contact">
+        <div class="section-heading text-center">
+            <h2>Contact Me</h2>
+        </div>
+        <div class="container text-center" style="margin-top: 20px;">
+            <div class="contact-info">
+                <p><strong>Hila Sabouni</strong></p>
+                <p>
+                    <i class="fas fa-envelope icon"></i>hsabouni[at]iastate[dot]edu
+                </p>
+                <p>
+                    <i class="fab fa-linkedin icon"></i><a href="https://www.linkedin.com/in/hilasabouni" target="_blank">www.linkedin.com/in/hilasabouni</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--contact end -->
 
-								<li>
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-5">
-												<div class="experience-time text-right">
-													<h2>2023 – 2027</h2>
-													<h3>UX researcher & designer</h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-											<div class="col-md-offset-1 col-md-5">
-												<div class="timeline">
-													<div class="timeline-content">
-														<h4 class="title">
-															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															PhD Dissertation on designer-engineer teamwork
-														</h4>
-														<h5>Iowa State University, IA, USA</h5>
-														<p class="description">
-															Researching designer and engineer mental models of AI, with emphasis on ChatGPT, through surveys, interviews, and experiments. Collaborating with experts in HCI, computer science, architecture, and communication studies to uncover how professional background shapes AI understanding, communication, and collaboration, with the goal of developing frameworks that enhance cross-functional teamwork with AI.
-														</p>
-													</div><!--/.timeline-content-->
-												</div><!--/.timeline-->
-											</div><!--/.col-->
-										</div>
-									</div><!--/.single-timeline-box-->
-								</li>
+    <!--footer-copyright start-->
+    <footer id="footer-copyright" class="footer-copyright">
+        <div class="container">
+            <div class="hm-footer-copyright text-center">
+                <p>
+                    &copy; copyright HilaSabouni. design and developed by <a href="https://www.themesine.com/">themesine</a>
+                </p><!--/p-->
+            </div><!--/.text-center-->
+        </div><!--/.container-->
 
-								<li>
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-5">
-												<div class="experience-time text-right">
-													<h2>2023 – 2025</h2>
-													<h3>UX researcher & designer</h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-											<div class="col-md-offset-1 col-md-5">
-												<div class="timeline">
-													<div class="timeline-content">
-														<h4 class="title">
-															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															NSF-Funded Cybersecurity Research 
-														</h4>
-														<h5>Iowa State University, IA, USA</h5>
-														<p class="description">
-															As part of an interdisciplinary team, I am exploring innovative pathways to introduce cybersecurity knowledge to rural English learners through XR-enabled educational tools. By leveraging user research and game development in Unity, we aim to create an immersive and inclusive learning experience that teaches middle school students the fundamentals of cybersecurity. 
-														</p>
-													</div><!--/.timeline-content-->
-												</div><!--/.timeline-->
-											</div><!--/.col-->
-										</div>
-									</div><!--/.single-timeline-box-->
-								</li>
+        <div id="scroll-Top">
+            <div class="return-to-top">
+                <i class="fa fa-angle-up" id="scroll-top"></i>
+            </div>
+        </div><!--/.scroll-Top-->
+    </footer><!--/.footer-copyright-->
+    <!--footer-copyright end-->
+    
+    <!-- Include all js compiled plugins (below), or include individual files as needed -->
 
-								<li>
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-5">
-												<div class="experience-time text-right">
-													<h2>Summer 2024</h2>
-													<h3>Research & 3D Modeling Mentor</h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-											<div class="col-md-offset-1 col-md-5">
-												<div class="timeline">
-													<div class="timeline-content">
-														<h4 class="title">
-															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															NSF REU (Research Experience for Undergrads)
-														</h4>
-														<h5>Iowa State University, Ai, USA</h5>
-														<p class="description">
-															Instructed nine undergraduates in Blender and mentored three students in creating a 3D mini-game on electric circuits for middle school English learners in rural areas. 
-														</p>
-													</div><!--/.timeline-content-->
-												</div><!--/.timeline-->
-											</div><!--/.col-->
-										</div>
-									</div><!--/.single-timeline-box-->
-								</li>
+    <script src="assets/js/jquery.js"></script>
+    
+    <!--modernizr.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    
+    <!--bootstrap.min.js-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+    <!-- bootsnav js -->
+    <script src="assets/js/bootsnav.js"></script>
+    
+    <!-- jquery.sticky.js -->
+    <script src="assets/js/jquery.sticky.js"></script>
+    
+    <!-- for progress bar start-->
 
-								<li>
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-5">
-												<div class="experience-time text-right">
-													<h2>2022 – 2024</h2>
-													<h3>University Instructor</h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-											<div class="col-md-offset-1 col-md-5">
-												<div class="timeline">
-													<div class="timeline-content">
-														<h4 class="title">
-															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															Architecture Studio Course
-														</h4>
-														<h5>Iowa State University, AI, USA</h5>
-														<p class="description">
-															Instructed second-year undergraduate architecture students in a 6-credit studio course, holding weekly desk crits, midterm and final reviews, and participating in field trips with over 100 students to Chicago, IL and Columbus, IN each semester. 
-														</p>
-													</div><!--/.timeline-content-->
-												</div><!--/.timeline-->
-											</div><!--/.col-->
-										</div>
-									</div><!--/.single-timeline-box-->
-								</li>
-								
-								<li>
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-5">
-												<div class="experience-time text-right">
-													<h2>2022 – 2023</h2>
-													<h3>UX researcher & designer</h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-											<div class="col-md-offset-1 col-md-5">
-												<div class="timeline">
-													<div class="timeline-content">
-														<h4 class="title">
-															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															Master Thesis on Sensory Cues in Virtual Reality
-														</h4>
-														<h5>Iowa State University, IA, USA</h5>
-														<p class="description">
-															Designed and executed a mixed-method user experience study on the effectiveness of guidance cues for visual targets in virtual environments. 
-														</p>
-													</div><!--/.timeline-content-->
-												</div><!--/.timeline-->
-											</div><!--/.col-->
-										</div>
-									</div><!--/.single-timeline-box-->
-								</li>
+    <!-- progressbar js -->
+    <script src="assets/js/progressbar.js"></script>
 
-								<li>
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-5">
-												<div class="experience-time text-right">
-													<h2>Summer 2023</h2>
-													<h3>Research & 3D Modeling Mentor</h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-											<div class="col-md-offset-1 col-md-5">
-												<div class="timeline">
-													<div class="timeline-content">
-														<h4 class="title">
-															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															NSF REU (Research Experience for Undergrads)
-														</h4>
-														<h5>Iowa State University, IA, USA</h5>
-														<p class="description">
-															Instructed nine undergraduates in Blender and mentored three students in creating a 3D mini-game 3D game to inspire first-gen, middle school English learners in rural areas.
-														</p>
-													</div><!--/.timeline-content-->
-												</div><!--/.timeline-->
-											</div><!--/.col-->
-										</div>
-									</div><!--/.single-timeline-box-->
-								</li>
+    <!-- appear js -->
+    <script src="assets/js/jquery.appear.js"></script>
 
-								<li>
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-5">
-												<div class="experience-time text-right">
-													<h2>2022 - 2022 (eight months)</h2>
-													<h3>Architect Intern</h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-											<div class="col-md-offset-1 col-md-5">
-												<div class="timeline">
-													<div class="timeline-content">
-														<h4 class="title">
-															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															Klingner & Associates, PC 
-														</h4>
-														<h5>Pella, IA, USA</h5>
-														<p class="description">
-															Engaged in the site visit, design, and construction phases of four projects, produced technical drawings and 3D models, and collaborated in client meetings to listen to and document their requirements and desires. 
-														</p>
-													</div><!--/.timeline-content-->
-												</div><!--/.timeline-->
-											</div><!--/.col-->
-										</div>
-									</div><!--/.single-timeline-box-->
-								</li>
+    <!-- for progress bar end -->
 
-								<li>
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-5">
-												<div class="experience-time text-right">
-													<h2>2016 - 2018 (~three years)</h2>
-													<h3>founder, owner, designer</h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-											<div class="col-md-offset-1 col-md-5">
-												<div class="timeline">
-													<div class="timeline-content">
-														<h4 class="title">
-															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															Risen Design Architecture Studio
-														</h4>
-														<h5>Iran</h5>
-														<p class="description">
-															Managed the full design and construction process of nine industrial and residential projects, delivering them with fewer revisions and cost savings, while creating inclusive designs that met diverse client needs and earning recognition for excellence in client satisfaction. 
-														</p>
-													</div><!--/.timeline-content-->
-												</div><!--/.timeline-->
-											</div><!--/.col-->
-										</div>
-									</div><!--/.single-timeline-box-->
-								</li>
-							</ul>
-						</div><!--.main-timeline-->
-					</div><!--.experience-content-->
-			</div>
+    <!--owl.carousel.js-->
+    <script src="assets/js/owl.carousel.min.js"></script>
 
-		</section><!--/.experience-->
-		<!--experience end -->
-
-		<!--profiles start -->
-		<section id="publications" class="publications">
-			<div class="publications-details">
-				<div class="section-heading text-center">
-					<h2>publications</h2>
-				</div>
-				<div class="container">
-					<div class="profiles-content">
-						<div class="row">
-							<div class="col-sm-4">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<div class="profile-icon-name">Electronic Imaging Symposium</div>
-									</div>
-									<a href="https://library.imaging.org/jpi/articles/8/0/000403" target="_blank">
-										<div class="single-profile-overlay">
-											 <div class="profile-txt">
-												<div class="profile-icon-name">Electronic Imaging Symposium</div>
-												(Click to view)
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<div class="profile-icon-name">CHI</div>
-									</div>
-									<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8R1s_VIAAAAJ&sortby=pubdate&citation_for_view=8R1s_VIAAAAJ:u-x6o8ySG0sC" target="_blank">
-										<div class="single-profile-overlay">
-											 <div class="profile-txt">
-												<div class="profile-icon-name">CHI</div>
-												(Click to view)
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="single-profile profile-no-border">
-									<div class="profile-txt">
-										<div class="profile-icon-name">HCI International</div>
-									</div>
-									<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8R1s_VIAAAAJ&citation_for_view=8R1s_VIAAAAJ:u5HHmVD_uO8C" target="_blank">
-										<div class="single-profile-overlay">
-											 <div class="profile-txt">
-												<div class="profile-icon-name">HCI International</div>
-												(Click to view)
-											 </div>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">
-						<div class="row">
-							<div class="col-sm-4">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<div class="profile-icon-name">ANNSIM</div>
-									</div>
-									<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8R1s_VIAAAAJ&citation_for_view=8R1s_VIAAAAJ:9yKSN-GCB0IC" target="_blank">
-									<div class="single-profile-overlay">
-										     <div class="profile-txt">
-										    <div class="profile-icon-name">ANNSIM</div>
-										    (Click to view)
-										     </div>
-									</div>
-							</a>
-							</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<div class="profile-icon-name">HFES</div>
-									</div>
-									<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8R1s_VIAAAAJ&citation_for_view=8R1s_VIAAAAJ:2osOgNQ5qMEC" target="_blank">
-										<div class="single-profile-overlay">
-											<div class="profile-txt">
-												   <div class="profile-icon-name">HFES</div>
-												   (Click to view)
-											</div>
-										</div>
-									</a>
-								   </div>
-							</div>
-							<div class="col-sm-4">
-								<div class="single-profile profile-no-border">
-									<div class="profile-txt">
-										<div class="profile-icon-name">SimAUD</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<div class="profile-icon-name">SimAUD</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-							<!--<div class="col-sm-3">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<a href=""><i class="flaticon-smug"></i></a>
-										<div class="profile-icon-name">smungMung</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href=""><i class="flaticon-smug"></i></a>
-											<div class="profile-icon-name">smungMung</div>
-										</div>
-									</div>
-								</div>-->
-							<!--</div>
-							<div class="col-sm-3">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<a href=""><i class="flaticon-squarespace-logo"></i></a>
-										<div class="profile-icon-name">squareSpace</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href=""><i class="flaticon-squarespace-logo"></i></a>
-											<div class="profile-icon-name">squareSpace</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="single-profile profile-no-border">
-									<div class="profile-txt">
-										<a href=""><i class="flaticon-bitbucket-logotype-camera-lens-in-perspective"></i></a>
-										<div class="profile-icon-name">bitBucket</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href=""><i class="flaticon-bitbucket-logotype-camera-lens-in-perspective"></i></a>
-											<div class="profile-icon-name">bitBucket</div>
-										</div>
-									</div>
-								</div>
-							</div>-->
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</section><!--/.publicationss-->
-		<!--publications end -->
-
-		<!--portfolio start -->
-		<section id="portfolio" class="portfolio">
-			<div class="portfolio-details">
-				<div class="section-heading text-center">
-					<h2>portfolio</h2>
-				</div>
-				<div class="container">
-					<div class="portfolio-content">
-						<div class="isotope">
-							<div class="row">
-
-								<!--<div class="col-sm-4">
-									<div class="item">
-										<img src="assets/images/portfolio/p1.jpg" alt="portfolio image"/>
-										<div class="isotope-overlay">
-											<a href="#">
-												ui/ux design
-											</a>
-										</div>
-									</div>
-									<div class="item">
-										<img src="assets/images/portfolio/p2.jpg" alt="portfolio image"/>
-										<div class="isotope-overlay">
-											<a href="#">
-												ui/ux design
-											</a>
-										</div>
-									</div>
-								</div> -->
-
-								<div class="col-sm-offset-2 col-sm-4">
-									<div class="item">
-										<a href="./portfolio_one.html">
-											<img src="assets/images/portfolio/p3.jpg" alt="portfolio image"/>
-											<div class="isotope-overlay">
-													Individual Project
-											</div><!-- /.isotope-overlay -->
-										</a>
-									</div><!-- /.item -->
-								</div><!-- /.col -->
-								<div class="col-sm-4">
-									<div class="item">
-										<a href="./portfolio_two.html">
-											<img src="assets/images/portfolio/kn.jpg" alt="portfolio image"/>
-											<div class="isotope-overlay">
-													Group Project
-											</div><!-- /.isotope-overlay -->
-										</a>
-									</div><!-- /.item -->
-								</div><!-- /.col -->
-
-								<!-- <div class="col-sm-4">
-									<div class="item">
-										<img src="assets/images/portfolio/p4.jpg" alt="portfolio image"/>
-										<div class="isotope-overlay">
-											<a href="#">
-												web development
-											</a>
-										</div>
-									</div>
-									<div class="item">
-										<img src="assets/images/portfolio/p5.jpg" alt="portfolio image"/>
-										<div class="isotope-overlay">
-											<a href="#">
-												web development
-											</a>
-										</div>
-									</div>
-								</div>/.col -->
-							</div><!-- /.row -->
-						</div><!--/.isotope-->
-					</div><!--/.gallery-content-->
-				</div><!--/.container-->
-			</div><!--/.portfolio-details-->
-
-		</section><!--/.portfolio-->
-		<!--portfolio end -->
-
-		<!--clients start -->
-		<!--<section id="clients" class="clients">
-			<div class="section-heading text-center">
-				<h2>clients</h2>
-			</div>
-			<div class="clients-area">
-				<div class="container">
-					<div class="owl-carousel owl-theme" id="client">
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c1.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<!--<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c2.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<!--<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c3.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<!--<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c4.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<!--<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c5.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<!--<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c6.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<!--<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c7.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-					</div><!--/.owl-carousel-->
-				</div><!--/.container-->
-			</div><!--/.clients-area-->
-
-		</section><!--/.clients-->
-
-		</section><!--/.clients-->
-		<!--clients end -->
-
-		<!--contact start -->
-		<!--<section id="contact" class="contact">
-			<div class="section-heading text-center">
-				<h2>contact me</h2>
-			<!--</div>
-			<div class="container">
-				<div class="contact-content">
-					<div class="row">
-						<div class="col-md-offset-1 col-md-5 col-sm-6">
-							<div class="single-contact-box">
-								<div class="contact-form">
-									<form>
-										<div class="row">
-											<div class="col-sm-6 col-xs-12">
-												<div class="form-group">
-												  <input type="text" class="form-control" id="name" placeholder="Name*" name="name">
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-											<!--<div class="col-sm-6 col-xs-12">
-												<div class="form-group">
-													<input type="email" class="form-control" id="email" placeholder="Email*" name="email">
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-										</div><!--/.row-->
-										<!--<div class="row">
-											<div class="col-sm-12">
-												<div class="form-group">
-													<input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-										</div><!--/.row-->
-										<!--<div class="row">
-											<div class="col-sm-12">
-												<div class="form-group">
-													<textarea class="form-control" rows="8" id="comment" placeholder="Message" ></textarea>
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-										</div><!--/.row-->
-										<!--<div class="row">
-											<div class="col-sm-12">
-												<div class="single-contact-btn">
-													<a class="contact-btn" href="#" role="button">submit</a>
-												</div><!--/.single-single-contact-btn-->
-											</div><!--/.col-->
-										</div><!--/.row-->
-									</form><!--/form-->
-								</div><!--/.contact-form-->
-							</div><!--/.single-contact-box-->
-						</div><!--/.col-->
-						<!--<div class="col-md-offset-1 col-md-5 col-sm-6">
-							<div class="single-contact-box">
-								<div class="contact-adress">
-									<div class="contact-add-head">
-										<h3>browny star</h3>
-										<p>uI/uX designer</p>
-									</div>
-									<div class="contact-add-info">
-										<div class="single-contact-add-info">
-											<h3>phone</h3>
-											<p>987-123-6547</p>
-										</div>
-										<div class="single-contact-add-info">
-											<h3>email</h3>
-											<p>browny@info.com</p>
-										</div>
-										<div class="single-contact-add-info">
-											<h3>website</h3>
-											<p>www.brownsine.com</p>
-										</div>
-									</div>
-								</div><!--/.contact-adress-->
-								<!--<div class="hm-foot-icon">
-									<ul>
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li><!--/li-->
-										<!--<li><a href="#"><i class="fa fa-dribbble"></i></a></li><!--/li-->
-										<!--<li><a href="#"><i class="fa fa-twitter"></i></a></li><!--/li-->
-										<!--<li><a href="#"><i class="fa fa-linkedin"></i></a></li><!--/li-->
-										<!--<li><a href="#"><i class="fa fa-instagram"></i></a></li><!--/li-->
-									</ul><!--/ul-->
-								</div><!--/.hm-foot-icon-->
-							</div><!--/.single-contact-box-->
-						</div><!--/.col-->
-					</div><!--/.row-->
-				</div><!--/.contact-content-->
-			</div><!--/.container-->
-
-		</section><!--/.contact-->
-		<!--contact end -->
-		
-		<!-- Contact Start -->
-		<section id="contact" class="contact">
-			<div class="section-heading text-center">
-				<h2>Contact Me</h2>
-			</div>
-			<div class="container text-center" style="margin-top: 20px;">
-				<div class="contact-info">
-			            <p><strong>Hila Sabouni</strong></p>
-			            <p>
-			                    <i class="fas fa-envelope icon"></i>hsabouni[at]iastate[dot]edu
-			            </p>
-			            <p>
-			                
-			                    <i class="fab fa-linkedin icon"></i><a href="https://www.linkedin.com/in/hilasabouni" target="_blank">www.linkedin.com/in/hilasabouni</a>
-			                
-			            </p>
-			        </div>
-			</div>
-		</section>
-		<!-- Contact End -->
-
-		<!--footer-copyright start-->
-		<footer id="footer-copyright" class="footer-copyright">
-			<div class="container">
-				<div class="hm-footer-copyright text-center">
-					<p>
-						&copy; copyright HilaSabouni. design and developed by <a href="https://www.themesine.com/">themesine</a>
-					</p><!--/p-->
-				</div><!--/.text-center-->
-			</div><!--/.container-->
-
-			<div id="scroll-Top">
-				<div class="return-to-top">
-					<i class="fa fa-angle-up " id="scroll-top" ></i>
-				</div>
-				
-			</div><!--/.scroll-Top-->
-			
-        </footer><!--/.footer-copyright-->
-		<!--footer-copyright end-->
-		
-		<!-- Include all js compiled plugins (below), or include individual files as needed -->
-
-		<script src="assets/js/jquery.js"></script>
-        
-        <!--modernizr.min.js-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		
-		<!--bootstrap.min.js-->
-        <script src="assets/js/bootstrap.min.js"></script>
-		
-		<!-- bootsnav js -->
-		<script src="assets/js/bootsnav.js"></script>
-		
-		<!-- jquery.sticky.js -->
-		<script src="assets/js/jquery.sticky.js"></script>
-		
-		<!-- for progress bar start-->
-
-		<!-- progressbar js -->
-		<script src="assets/js/progressbar.js"></script>
-
-		<!-- appear js -->
-		<script src="assets/js/jquery.appear.js"></script>
-
-		<!-- for progress bar end -->
-
-		<!--owl.carousel.js-->
-        <script src="assets/js/owl.carousel.min.js"></script>
-
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-		
-        
-        <!--Custom JS-->
-        <script src="assets/js/custom.js"></script>
-        
-    </body>
-	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    
+    <!--Custom JS-->
+    <script src="assets/js/custom.js"></script>
+    
+</body>
 </html>

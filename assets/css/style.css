@@ -645,6 +645,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 .profiles-content {padding-top: 0;}
 .profiles-content .col-sm-3{padding:0;}
+/* Remove gutters for 3-col publication grid as well */
+.profiles-content .col-sm-4{padding:0;}
 .profile-txt {
     display: flex;
     align-items: center;
