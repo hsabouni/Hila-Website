@@ -428,7 +428,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f92c2c;}
 --------------------------------------*/
 
 .education {
-    background:  #f9fbfd;
+    background:  #faf8f6;
     padding-top:  50px;
 }
 .education-horizontal-timeline {
@@ -441,7 +441,73 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f92c2c;}
 .single-horizontal-timeline .experience-time h3{text-transform: capitalize;}
 .single-horizontal-timeline .experience-time h3 span{text-transform:lowercase;}
 .single-horizontal-timeline .timeline-content h5 {margin: 15px 0;}
-.single-horizontal-timeline p {color: #999fb3;max-width: 335px; text-align: justify;}
+.single-horizontal-timeline p {color: #999fb3;max-width: 335px;text-align:left;}
+.education-toggle {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    color: inherit;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+}
+.education-toggle h2 {margin: 0;}
+.education-toggle h3 {margin: 0;}
+.education-toggle:focus {outline: 2px solid #f92c2c;outline-offset: 7px;}
+.education-toggle-label {
+    display: inline-block;
+    margin-top: 20px;
+    color: #9ca2af;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: .2px;
+    text-transform: none;
+    transition: color .2s ease;
+}
+.education-toggle:hover .education-toggle-label,
+.education-toggle:focus .education-toggle-label {color:#8f2020;}
+.education-toggle-label:after {margin-left:5px;content:"+";color:#c86a6a;font-size:12px;}
+.education-story.is-open .education-toggle-label:after {content:"−";}
+.current-focus-badge {
+    display: block;
+    width: max-content;
+    margin: 6px 0 8px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    color: #8f2020;
+    background: #f5e7e7;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+}
+.education-panel {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: max-height .5s ease,opacity .35s ease,transform .35s ease;
+}
+.education-story.is-open .education-panel {
+    max-height: 280px;
+    opacity: 1;
+    transform: translateY(0);
+}
+.education-bridge {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #e1e6eb;
+    font-size: 12px;
+    line-height: 1.7;
+}
+.education-bridge strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #8f2020;
+    font-size: 10px;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
 
 /*.timeline-horizontal-border*/
 .timeline-horizontal-border {
@@ -449,6 +515,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f92c2c;}
     align-items: center;
     padding: 26px 0 30px;
 }
+.education-story .timeline-horizontal-border {padding-top: 6px;}
 .timeline-horizontal-border i {
     font-size:  10px;
     color: #f92c2c;
@@ -461,6 +528,7 @@ span.single-timeline-horizontal {
     width: 380px;
 }
 span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
+.education-story span.single-timeline-horizontal {width: calc(100% - 15px);}
 /*.timeline-horizontal-border*/
 
 /*.education-horizontal-timeline*/
@@ -600,7 +668,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .main-timeline .description {
     font-size: 14px;
     color: #999fb3;
-    text-align: justify;
+    text-align: left;
 }
 .main-timeline .timeline-content h4.title {
     margin-bottom: 0;
@@ -829,6 +897,56 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     overflow: hidden;
     background: #fff;
 }
+
+/* Guided scroll storytelling */
+.motion-ready .scroll-reveal {
+    opacity: 0;
+    transform: translateY(34px);
+    transition: opacity .85s ease,transform .85s ease;
+}
+.motion-ready .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.motion-ready .experience.scroll-reveal .timeline-axis {
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: top center;
+    transition: transform 1.4s ease .25s;
+}
+.motion-ready .experience.scroll-reveal.is-visible .timeline-axis {
+    transform: translateX(-50%) scaleY(1);
+}
+.motion-ready .publications.scroll-reveal .publication-ribbon .col-sm-2 {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .5s ease,transform .5s ease;
+}
+.motion-ready .publications.scroll-reveal.is-visible .publication-ribbon .col-sm-2 {opacity:1;transform:translateY(0);}
+.motion-ready .publications.scroll-reveal.is-visible .publication-ribbon .col-sm-2:nth-child(1) {transition-delay:.10s;}
+.motion-ready .publications.scroll-reveal.is-visible .publication-ribbon .col-sm-2:nth-child(2) {transition-delay:.18s;}
+.motion-ready .publications.scroll-reveal.is-visible .publication-ribbon .col-sm-2:nth-child(3) {transition-delay:.26s;}
+.motion-ready .publications.scroll-reveal.is-visible .publication-ribbon .col-sm-2:nth-child(4) {transition-delay:.34s;}
+.motion-ready .publications.scroll-reveal.is-visible .publication-ribbon .col-sm-2:nth-child(5) {transition-delay:.42s;}
+.motion-ready .publications.scroll-reveal.is-visible .publication-ribbon .col-sm-2:nth-child(6) {transition-delay:.50s;}
+.motion-ready #experience .experience-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .75s ease,transform .75s ease;
+}
+.motion-ready #experience .experience-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+    .motion-ready .scroll-reveal,
+    .motion-ready .experience.scroll-reveal .timeline-axis,
+    .motion-ready .publications.scroll-reveal .publication-ribbon .col-sm-2,
+    .motion-ready #experience .experience-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
 .publication-ribbon .row {margin: 0;}
 .publication-ribbon .publication-link {
     display: block;
@@ -877,6 +995,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     .publication-ribbon .col-sm-2:nth-child(2n) .single-profile {border-right: 0;}
     .publication-ribbon .col-sm-2:nth-last-child(-n+2) .single-profile {border-bottom: 0;}
 }
+.publications .section-heading h2 {border-bottom: 0;}
+.publications + .portfolio {border-top: 0;}
 /*-------------------------------------
         9. Portfolio
 --------------------------------------*/
@@ -1119,7 +1239,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         11. Contact
 --------------------------------------*/
 .contact {
-    background: #f9fbfd;
+    background: #faf8f6;
     padding: 50px 0 100px;
 }
 .single-contact-box {padding-top: 100px;}
@@ -1329,7 +1449,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
   }
   
 .dicot {
-    background:  #f9fbfd;
+    background:  #faf8f6;
     padding-top:  50px;
     padding-bottom: 20px;
 }

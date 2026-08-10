@@ -36,10 +36,10 @@
     <link rel="stylesheet" href="assets/css/bootsnav.css">
     
     <!--style.css-->
-    <link rel="stylesheet" href="assets/css/style.css?v=20260810-11">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260810-27">
     
     <!--responsive.css-->
-    <link rel="stylesheet" href="assets/css/responsive.css?v=20260810-5">
+    <link rel="stylesheet" href="assets/css/responsive.css?v=20260810-6">
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -151,16 +151,17 @@
             <div class="education-horizontal-timeline">
                 <div class="row">
                     <div class="col-sm-3">
-                        <div class="single-horizontal-timeline">
-                            <div class="experience-time">
+                        <div class="single-horizontal-timeline education-story">
+                            <button class="education-toggle experience-time" type="button" aria-expanded="false" aria-controls="education-panel-barch">
                                 <h2>2012 - 2016</h2>
                                 <h3>B.Arch.</h3>
-                            </div><!--/.experience-time-->
+                                <span class="education-toggle-label">Explore</span>
+                            </button><!--/.experience-time-->
                             <div class="timeline-horizontal-border">
                                 <i class="fa fa-circle" aria-hidden="true"></i>
                                 <span class="single-timeline-horizontal"></span>
                             </div>
-                            <div class="timeline">
+                            <div class="timeline education-panel" id="education-panel-barch" aria-hidden="true">
                                 <div class="timeline-content">
                                     <h4 class="title">
                                         Azad University
@@ -173,16 +174,17 @@
                         </div>
                     </div>
                     <div class="col-sm-3">
-                        <div class="single-horizontal-timeline">
-                            <div class="experience-time">
+                        <div class="single-horizontal-timeline education-story">
+                            <button class="education-toggle experience-time" type="button" aria-expanded="false" aria-controls="education-panel-march">
                                 <h2>2020 - 2022</h2>
                                 <h3>M.Arch.</h3>
-                            </div><!--/.experience-time-->
+                                <span class="education-toggle-label">Explore</span>
+                            </button><!--/.experience-time-->
                             <div class="timeline-horizontal-border">
                                 <i class="fa fa-circle" aria-hidden="true"></i>
                                 <span class="single-timeline-horizontal"></span>
                             </div>
-                            <div class="timeline">
+                            <div class="timeline education-panel" id="education-panel-march" aria-hidden="true">
                                 <div class="timeline-content">
                                     <h4 class="title">
                                         Iowa State University
@@ -195,16 +197,17 @@
                         </div>
                     </div>
                     <div class="col-sm-3">
-                        <div class="single-horizontal-timeline">
-                            <div class="experience-time">
+                        <div class="single-horizontal-timeline education-story">
+                            <button class="education-toggle experience-time" type="button" aria-expanded="false" aria-controls="education-panel-ms">
                                 <h2>2022 - 2023</h2>
                                 <h3>M.S. <span>in </span> HCI</h3>
-                            </div><!--/.experience-time-->
+                                <span class="education-toggle-label">Explore</span>
+                            </button><!--/.experience-time-->
                             <div class="timeline-horizontal-border">
                                 <i class="fa fa-circle" aria-hidden="true"></i>
                                 <span class="single-timeline-horizontal"></span>
                             </div>
-                            <div class="timeline">
+                            <div class="timeline education-panel" id="education-panel-ms" aria-hidden="true">
                                 <div class="timeline-content">
                                     <h4 class="title">
                                         Iowa State University
@@ -217,19 +220,21 @@
                         </div>
                     </div>
                     <div class="col-sm-3">
-                        <div class="single-horizontal-timeline">
-                            <div class="experience-time">
+                        <div class="single-horizontal-timeline education-story is-open">
+                            <button class="education-toggle experience-time" type="button" aria-expanded="true" aria-controls="education-panel-phd">
                                 <h2>2023 - 2027(expected)</h2>
                                 <h3>Ph.D. <span>in </span> HCI</h3>
-                            </div><!--/.experience-time-->
+                                <span class="education-toggle-label">Explore</span>
+                            </button><!--/.experience-time-->
                             <div class="timeline-horizontal-border">
                                 <i class="fa fa-circle" aria-hidden="true"></i>
-                                <span class="single-timeline-horizontal spacial-horizontal-line"></span>
+                                <span class="single-timeline-horizontal"></span>
                             </div>
-                            <div class="timeline">
+                            <div class="timeline education-panel" id="education-panel-phd" aria-hidden="false">
                                 <div class="timeline-content">
                                     <h4 class="title">
                                         Iowa State University
+                                        <span class="current-focus-badge">Current focus</span>
                                     </h4>
                                     <p class="description">
                                         Research how people make consequential decisions with AI under social influence.
@@ -616,7 +621,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     
     <!--Custom JS-->
-    <script src="assets/js/custom.js?v=20260810-2"></script>
+    <script src="assets/js/custom.js?v=20260810-4"></script>
     
 </body>
 </html>

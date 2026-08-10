@@ -154,4 +154,51 @@ $(document).ready(function(){
 			}
 		});
 
+	// 6. Interactive education story
+		$('.education-toggle').on('click',function(){
+			var selectedStory = $(this).closest('.education-story');
+			var allStories = selectedStory.closest('.row').find('.education-story');
+
+			allStories.removeClass('is-open');
+			allStories.find('.education-toggle').attr('aria-expanded','false');
+			allStories.find('.education-panel').attr('aria-hidden','true');
+
+			selectedStory.addClass('is-open');
+			selectedStory.find('.education-toggle').attr('aria-expanded','true');
+			selectedStory.find('.education-panel').attr('aria-hidden','false');
+		});
+
+	// 7. Reveal the page structure as it enters the viewport
+		var revealSections = $('#about,#education,#experience,#publications,#portfolio,#contact');
+		revealSections.addClass('scroll-reveal');
+		$('body').addClass('motion-ready');
+
+		if ('IntersectionObserver' in window) {
+			var revealObserver = new IntersectionObserver(function(entries,observer){
+				entries.forEach(function(entry){
+					if (entry.isIntersecting) {
+						$(entry.target).addClass('is-visible');
+						observer.unobserve(entry.target);
+					}
+				});
+			},{threshold:.12,rootMargin:'0px 0px -10% 0px'});
+
+			revealSections.each(function(){revealObserver.observe(this);});
+		} else {
+			revealSections.addClass('is-visible');
+		}
+
+		var experienceEntries = $('#experience .single-timeline-box').addClass('experience-reveal');
+		if ('IntersectionObserver' in window) {
+			var experienceObserver = new IntersectionObserver(function(entries){
+				entries.forEach(function(entry){
+					$(entry.target).toggleClass('is-visible',entry.isIntersecting);
+				});
+			},{threshold:.18,rootMargin:'-6% 0px -8% 0px'});
+
+			experienceEntries.each(function(){experienceObserver.observe(this);});
+		} else {
+			experienceEntries.addClass('is-visible');
+		}
+
 });
