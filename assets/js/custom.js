@@ -144,6 +144,30 @@ $(document).ready(function(){
 			$('.header-text').addClass('hero-animate');
 		});
 
+		function alignHeroTopics(){
+			var tagline = document.querySelector('.hero-tagline');
+			var topics = document.querySelector('.hero-focus');
+			if (!tagline || !topics) {return;}
+			topics.style.width = '';
+			if (window.innerWidth <= 767) {return;}
+			var textNode = tagline.firstChild;
+			var wordIndex = textNode.textContent.indexOf('between');
+			if (wordIndex < 0) {return;}
+			var wordRange = document.createRange();
+			wordRange.setStart(textNode,wordIndex);
+			wordRange.setEnd(textNode,wordIndex + 'between'.length);
+			var rowLeft = topics.getBoundingClientRect().left;
+			var targetRight = wordRange.getBoundingClientRect().right;
+			topics.style.width = Math.max(0,targetRight - rowLeft).toFixed(1) + 'px';
+		}
+
+		if (document.fonts && document.fonts.ready) {
+			document.fonts.ready.then(alignHeroTopics);
+		} else {
+			window.setTimeout(alignHeroTopics,300);
+		}
+		$(window).on('resize',alignHeroTopics);
+
 		var decisionField = document.querySelector('.decision-field');
 		if (decisionField && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 			var decisionState = decisionField.querySelector('.decision-state');

@@ -229,12 +229,12 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f92c2c;}
 .header-text .hero-focus {
     display:flex;
     align-items:center;
-    justify-content:flex-start;
-    gap:14px;
+    justify-content:space-between;
+    gap:0;
     max-width:520px;
     margin:0 0 64px;
     color: #8a5360;
-    font-size: 9px;
+    font-size: 11.5px;
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -245,7 +245,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f92c2c;}
     position: relative;
     display: inline-block;
     color: #8a5360;
-    font-size: 9px;
+    font-size: 11.5px;
+    white-space:nowrap;
     text-decoration: none;
     transition: color .2s ease;
 }
@@ -286,6 +287,10 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f92c2c;}
 .hero-topic:hover:before,.hero-topic:focus:before {transform:scaleX(1);}
 .hero-topic:hover:after,.hero-topic:focus:after {opacity:1;transform:translate(-50%,0);}
 .header-text a.resume-download {
+    display:block;
+    margin-right:auto;
+    margin-left:0;
+    text-align:center;
     width: 180px;
     height: 52px;
     line-height: 52px;
