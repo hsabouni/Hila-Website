@@ -790,6 +790,149 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     top:0;
 }/*.isotope-overlay*/
 
+/* PhD research journal */
+.journal-portfolio-card {
+    min-height: 260px;
+    background: linear-gradient(145deg, #5f0a0a 0%, #8f2020 55%, #b43b3b 100%);
+}
+.journal-portfolio-card > a {
+    display: block;
+    min-height: 260px;
+    color: #fff;
+}
+.journal-card-content {
+    min-height: 260px;
+    padding: 38px 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.journal-card-label,
+.journal-eyebrow,
+.research-note-type {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.journal-card-content h3 {
+    color: #fff;
+    font-size: 25px;
+    line-height: 1.25;
+    margin: 12px 0 10px;
+}
+.journal-card-content p {
+    color: rgba(255,255,255,.82);
+    font-size: 14px;
+    line-height: 1.7;
+}
+.journal-card-link {margin-top: 18px;font-weight: 500;}
+.journal-card-link i {margin-left: 7px;transition: transform .2s ease;}
+.journal-portfolio-card:hover .journal-card-link i {transform: translateX(5px);}
+
+.research-journal-page {background: #fbfaf8;color: #30343b;}
+.research-journal-page .navbar {background: #fff;border-bottom: 1px solid #e8e4df;}
+.research-journal-page .navbar-brand {color: #8f2020!important;}
+.research-journal-hero {
+    padding: 180px 0 100px;
+    background: linear-gradient(135deg, #fff 0%, #f4ece8 100%);
+}
+.journal-eyebrow {color: #9b2828;margin-bottom: 20px;}
+.research-journal-hero h1 {
+    color: #25272c;
+    font-size: 52px;
+    font-weight: 650;
+    line-height: 1.18;
+    max-width: 850px;
+}
+.research-journal-hero .journal-intro {
+    max-width: 760px;
+    margin-top: 28px;
+    color: #5b6069;
+    font-size: 19px;
+    line-height: 1.85;
+}
+.journal-status {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 9px 14px;
+    border: 1px solid #d9baba;
+    border-radius: 30px;
+    color: #852222;
+    font-size: 13px;
+}
+.journal-section {padding: 90px 0;}
+.journal-section-alt {background: #fff;}
+.journal-section-heading {margin-bottom: 42px;}
+.journal-section-heading h2 {color:#25272c;font-size:34px;font-weight:600;margin-bottom:14px;}
+.journal-section-heading p {max-width:700px;color:#747983;font-size:16px;line-height:1.75;}
+.journal-info-card {
+    min-height: 250px;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #e7e1dc;
+    border-radius: 4px;
+}
+.journal-info-card h3 {color:#7f2020;font-size:19px;margin-bottom:18px;}
+.journal-info-card p {color:#656a72;font-size:15px;line-height:1.8;}
+.journal-direction {
+    padding: 42px;
+    background: #742020;
+    color: #fff;
+    border-radius: 4px;
+}
+.journal-direction h3 {color:#fff;font-size:23px;margin-bottom:16px;}
+.journal-direction p {color:rgba(255,255,255,.84);font-size:16px;line-height:1.85;}
+.research-note {
+    padding: 34px 0;
+    border-top: 1px solid #ded9d4;
+}
+.research-note:last-child {border-bottom:1px solid #ded9d4;}
+.research-note-meta {color:#9b2828;margin-bottom:12px;}
+.research-note h3 {color:#2e3035;font-size:24px;margin-bottom:12px;}
+.research-note p {max-width:780px;color:#686d75;font-size:15px;line-height:1.85;}
+.research-note-tags {margin-top:18px;}
+.research-note-tags span {
+    display:inline-block;
+    margin:0 7px 7px 0;
+    padding:6px 10px;
+    background:#f1ece8;
+    color:#6f4a46;
+    font-size:12px;
+}
+.journal-editing-note {margin-top:38px;color:#777;font-size:13px;font-style:italic;}
+.portfolio-journal-layout .journal-project-intro {padding-top: 120px;}
+.portfolio-journal-layout .journal-section-kicker {
+    margin-top: 22px;
+    color: #777d88;
+    font-size: 15px;
+    letter-spacing: .3px;
+}
+.portfolio-journal-layout .journal-portfolio-section {
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.portfolio-journal-layout .journal-portfolio-content {padding-top: 100px;}
+.portfolio-journal-layout .journal-notes-intro {padding-bottom: 50px;}
+.portfolio-journal-layout .journal-note-section {padding: 100px 0;}
+.portfolio-journal-layout .journal-note-section .about-content {padding-top: 0;}
+.portfolio-journal-layout .journal-note-section .single-about-txt h2 {
+    color: #303443;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.45;
+    margin-bottom: 28px;
+}
+.portfolio-journal-layout .journal-note-section .single-about-txt h3 {margin-bottom: 0;}
+@media (max-width: 767px) {
+    .research-journal-hero {padding:135px 0 70px;}
+    .research-journal-hero h1 {font-size:38px;}
+    .journal-info-card {min-height:auto;margin-bottom:20px;}
+    .journal-direction {padding:30px;}
+    .portfolio-journal-layout .journal-project-intro {padding-top: 95px;}
+    .portfolio-journal-layout .journal-note-section {padding: 70px 0;}
+}
+
 /*-------------------------------------
         10. Clients
 --------------------------------------*/
