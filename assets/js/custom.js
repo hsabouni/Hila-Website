@@ -144,6 +144,38 @@ $(document).ready(function(){
 			$('.header-text').addClass('hero-animate');
 		});
 
+		var decisionField = document.querySelector('.decision-field');
+		if (decisionField && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+			var decisionState = decisionField.querySelector('.decision-state');
+			var decisionSources = decisionField.querySelectorAll('.decision-source');
+			var decisionLines = decisionField.querySelectorAll('.influence-line');
+			var influenceLabels = ['Personal judgment','AI-supported judgment','Socially negotiated judgment'];
+			decisionField.addEventListener('pointermove',function(event){
+				var bounds = decisionField.getBoundingClientRect();
+				var y = Math.max(0,Math.min(1,(event.clientY - bounds.top) / bounds.height));
+				var centers = [.2,.45,.7];
+				var weights = centers.map(function(center){return Math.max(.18,1 - Math.abs(y - center) * 2.8);});
+				decisionField.style.setProperty('--self-weight',weights[0].toFixed(2));
+				decisionField.style.setProperty('--ai-weight',weights[1].toFixed(2));
+				decisionField.style.setProperty('--group-weight',weights[2].toFixed(2));
+				var strongest = weights.indexOf(Math.max.apply(null,weights));
+				decisionSources.forEach(function(source,index){source.classList.toggle('is-dominant',index === strongest);});
+				decisionLines.forEach(function(line,index){line.classList.toggle('is-dominant',index === strongest);});
+				decisionState.textContent = influenceLabels[strongest];
+				decisionField.classList.add('is-active');
+				decisionField.classList.add('has-interacted');
+			});
+			decisionField.addEventListener('pointerleave',function(){
+				decisionField.style.setProperty('--self-weight','.62');
+				decisionField.style.setProperty('--ai-weight','.8');
+				decisionField.style.setProperty('--group-weight','.48');
+				decisionState.textContent = 'Negotiated judgment';
+				decisionSources.forEach(function(source){source.classList.remove('is-dominant');});
+				decisionLines.forEach(function(line){line.classList.remove('is-dominant');});
+				decisionField.classList.remove('is-active');
+			});
+		}
+
 		$('.hero-topic[href^="#"]').on('click',function(event){
 			var target = $($(this).attr('href'));
 			if (target.length) {
@@ -154,21 +186,7 @@ $(document).ready(function(){
 			}
 		});
 
-	// 6. Interactive education story
-		$('.education-toggle').on('click',function(){
-			var selectedStory = $(this).closest('.education-story');
-			var allStories = selectedStory.closest('.row').find('.education-story');
-
-			allStories.removeClass('is-open');
-			allStories.find('.education-toggle').attr('aria-expanded','false');
-			allStories.find('.education-panel').attr('aria-hidden','true');
-
-			selectedStory.addClass('is-open');
-			selectedStory.find('.education-toggle').attr('aria-expanded','true');
-			selectedStory.find('.education-panel').attr('aria-hidden','false');
-		});
-
-	// 7. Reveal the page structure as it enters the viewport
+	// 6. Reveal the page structure as it enters the viewport
 		var revealSections = $('#about,#education,#experience,#publications,#portfolio,#contact');
 		revealSections.addClass('scroll-reveal');
 		$('body').addClass('motion-ready');
@@ -189,6 +207,7 @@ $(document).ready(function(){
 		}
 
 		var experienceEntries = $('#experience .single-timeline-box').addClass('experience-reveal');
+		var educationEntries = $('#education .single-horizontal-timeline').addClass('education-reveal');
 		if ('IntersectionObserver' in window) {
 			var experienceObserver = new IntersectionObserver(function(entries){
 				entries.forEach(function(entry){
@@ -197,8 +216,17 @@ $(document).ready(function(){
 			},{threshold:.18,rootMargin:'-6% 0px -8% 0px'});
 
 			experienceEntries.each(function(){experienceObserver.observe(this);});
+
+			var educationObserver = new IntersectionObserver(function(entries){
+				entries.forEach(function(entry){
+					$(entry.target).toggleClass('is-visible',entry.isIntersecting);
+				});
+			},{threshold:.2,rootMargin:'-5% 0px -8% 0px'});
+
+			educationEntries.each(function(){educationObserver.observe(this);});
 		} else {
 			experienceEntries.addClass('is-visible');
+			educationEntries.addClass('is-visible');
 		}
 
 });

@@ -33,6 +33,12 @@
 }/*max-width:992px*/
 
 @media screen and (max-width:991px){
+	.welcome-hero {height:auto;max-height:none;min-height:850px;padding:120px 0 80px;}
+	.hero-layout {display:block;}
+	.header-text {max-width:680px;margin:0 auto 55px;text-align:center;}
+	.header-text .hero-tagline {margin-left:auto;margin-right:auto;}
+	.header-text .hero-focus {margin-left:auto;margin-right:auto;}
+	.decision-field {max-width:540px;margin:0 auto;text-align:left;}
 	.experience-time-responsive{display: block;}
 	.experience-time-main{display: none;}
 	.experience-time,.timeline-content{text-align: left;margin-bottom: 20px;margin-left: 40px;}
@@ -51,8 +57,12 @@
 	.welcome-hero {height:auto;min-height:620px;padding:110px 0 80px;}
 	.header-text h2 {font-size:38px;}
 	.header-text .hero-tagline {font-size:20px;white-space:normal;}
-	.header-text .hero-focus {font-size:11px;line-height:2;}
+	.header-text .hero-focus {display:block;font-size:8px;line-height:2.2;white-space:normal;}
+	.header-text .hero-focus .hero-topic:last-child {transform:none;}
 	.hero-topic:after {display:none;}
+	.decision-field {min-height:320px;padding:24px 20px 18px;border-radius:22px;}
+	.decision-map {height:225px;transform:scale(.9);transform-origin:left top;}
+	.decision-caption {margin-bottom:4px;}
 	.single-about-img {max-width: 450px;}
 	.experience-time span>i,.timeline-content span>i,.main-timeline:before,.timeline-axis {display: none;}
 	.experience-time, .timeline-content {margin-left: 0;}
@@ -79,6 +89,7 @@
 }/*max-width:580px*/
 
 @media screen and (max-width: 540px){
+	.decision-field {display:none;}
 	.subscribe-title h2 {font-size: 24px;}
 
 }/*max-width:540px*/

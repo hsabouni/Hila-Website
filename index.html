@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="assets/css/bootsnav.css">
     
     <!--style.css-->
-    <link rel="stylesheet" href="assets/css/style.css?v=20260810-27">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260810-43">
     
     <!--responsive.css-->
     <link rel="stylesheet" href="assets/css/responsive.css?v=20260810-6">
@@ -50,7 +50,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body class="home-page">
     <!--[if lte IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
@@ -93,8 +93,8 @@
     <!--welcome-hero start -->
     <section id="welcome-hero" class="welcome-hero">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
+            <div class="row hero-layout">
+                <div class="col-md-6">
                     <div class="header-text">
                         <h2>hi <span>,</span> i am hila <span>.</span></h2>
                         <p class="hero-tagline">Interested in the messy space between people and technology</p>
@@ -107,6 +107,23 @@
                         </p>
                         <a class="resume-download" href="assets/resume/Sabouni_Hila_Resume.pdf" download>Download My Resume</a>
                     </div><!--/.header-text-->
+                </div><!--/.col-->
+                <div class="col-md-6">
+                    <div class="decision-field" role="img" aria-label="A dynamic research visualization showing personal judgment, an AI recommendation, and group opinion shaping a final decision.">
+                        <p class="decision-caption">Move your pointer up and down to change what carries weight.</p>
+                        <div class="decision-map" aria-hidden="true">
+                            <div class="decision-source source-self"><span class="source-dot"></span><strong>Your judgment</strong><small>experience</small></div>
+                            <div class="decision-source source-ai"><span class="source-dot"></span><strong>AI recommendation</strong><small>confidence</small></div>
+                            <div class="decision-source source-group"><span class="source-dot"></span><strong>Group opinion</strong><small>social influence</small></div>
+                            <span class="influence-line line-self"></span>
+                            <span class="influence-line line-ai"></span>
+                            <span class="influence-line line-group"></span>
+                            <span class="decision-junction"></span>
+                            <span class="outcome-line"></span>
+                            <div class="decision-outcome"><small>Final decision</small><strong class="decision-state">Negotiated judgment</strong></div>
+                        </div>
+                        <p class="decision-question">What happens when all three carry weight at once?</p>
+                    </div>
                 </div><!--/.col-->
             </div><!-- /.row-->
         </div><!-- /.container-->
@@ -126,9 +143,8 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="single-about-txt">
-                            <h3>
-                                I study how people make consequential and subjective decisions when AI becomes part of the process. I am especially interested in group settings, where people are not only interpreting AI but also each other. As people work through a decision, social influence changes what they trust, whose judgment carries more weight, and how different positions are negotiated before they settle on an answer. My work looks at these dynamics closely and asks why people rely on AI in some moments, rely on each other in others, and how those choices shape the final outcome. My background in design, human computer interaction, and emerging technology gives me a way to look at these questions as both behavioral patterns and design problems, asking not just how people decide alongside AI, but how these systems could be built to support that better.
-                            </h3>
+                            <p class="about-positioning">I am a human-centered technology researcher studying how people make consequential and subjective decisions when AI becomes part of the process, especially in groups, where people interpret both AI and one another.</p>
+                            <p class="about-methods">I use experiments, interviews, surveys, and mixed-methods analysis to understand behavior and translate findings into design guidance for more supportive AI systems. My background in design, HCI, and emerging technology helps me approach these questions as both behavioral patterns and design problems.</p>
                         </div>
                     </div>
                     <div class="col-sm-offset-1 col-sm-5">
@@ -151,17 +167,16 @@
             <div class="education-horizontal-timeline">
                 <div class="row">
                     <div class="col-sm-3">
-                        <div class="single-horizontal-timeline education-story">
-                            <button class="education-toggle experience-time" type="button" aria-expanded="false" aria-controls="education-panel-barch">
+                        <div class="single-horizontal-timeline">
+                            <div class="experience-time">
                                 <h2>2012 - 2016</h2>
                                 <h3>B.Arch.</h3>
-                                <span class="education-toggle-label">Explore</span>
-                            </button><!--/.experience-time-->
+                            </div><!--/.experience-time-->
                             <div class="timeline-horizontal-border">
                                 <i class="fa fa-circle" aria-hidden="true"></i>
                                 <span class="single-timeline-horizontal"></span>
                             </div>
-                            <div class="timeline education-panel" id="education-panel-barch" aria-hidden="true">
+                            <div class="timeline">
                                 <div class="timeline-content">
                                     <h4 class="title">
                                         Azad University
@@ -174,17 +189,16 @@
                         </div>
                     </div>
                     <div class="col-sm-3">
-                        <div class="single-horizontal-timeline education-story">
-                            <button class="education-toggle experience-time" type="button" aria-expanded="false" aria-controls="education-panel-march">
+                        <div class="single-horizontal-timeline">
+                            <div class="experience-time">
                                 <h2>2020 - 2022</h2>
                                 <h3>M.Arch.</h3>
-                                <span class="education-toggle-label">Explore</span>
-                            </button><!--/.experience-time-->
+                            </div><!--/.experience-time-->
                             <div class="timeline-horizontal-border">
                                 <i class="fa fa-circle" aria-hidden="true"></i>
                                 <span class="single-timeline-horizontal"></span>
                             </div>
-                            <div class="timeline education-panel" id="education-panel-march" aria-hidden="true">
+                            <div class="timeline">
                                 <div class="timeline-content">
                                     <h4 class="title">
                                         Iowa State University
@@ -197,17 +211,16 @@
                         </div>
                     </div>
                     <div class="col-sm-3">
-                        <div class="single-horizontal-timeline education-story">
-                            <button class="education-toggle experience-time" type="button" aria-expanded="false" aria-controls="education-panel-ms">
+                        <div class="single-horizontal-timeline">
+                            <div class="experience-time">
                                 <h2>2022 - 2023</h2>
                                 <h3>M.S. <span>in </span> HCI</h3>
-                                <span class="education-toggle-label">Explore</span>
-                            </button><!--/.experience-time-->
+                            </div><!--/.experience-time-->
                             <div class="timeline-horizontal-border">
                                 <i class="fa fa-circle" aria-hidden="true"></i>
                                 <span class="single-timeline-horizontal"></span>
                             </div>
-                            <div class="timeline education-panel" id="education-panel-ms" aria-hidden="true">
+                            <div class="timeline">
                                 <div class="timeline-content">
                                     <h4 class="title">
                                         Iowa State University
@@ -220,17 +233,16 @@
                         </div>
                     </div>
                     <div class="col-sm-3">
-                        <div class="single-horizontal-timeline education-story is-open">
-                            <button class="education-toggle experience-time" type="button" aria-expanded="true" aria-controls="education-panel-phd">
+                        <div class="single-horizontal-timeline">
+                            <div class="experience-time">
                                 <h2>2023 - 2027(expected)</h2>
                                 <h3>Ph.D. <span>in </span> HCI</h3>
-                                <span class="education-toggle-label">Explore</span>
-                            </button><!--/.experience-time-->
+                            </div><!--/.experience-time-->
                             <div class="timeline-horizontal-border">
                                 <i class="fa fa-circle" aria-hidden="true"></i>
                                 <span class="single-timeline-horizontal"></span>
                             </div>
-                            <div class="timeline education-panel" id="education-panel-phd" aria-hidden="false">
+                            <div class="timeline">
                                 <div class="timeline-content">
                                     <h4 class="title">
                                         Iowa State University
@@ -259,7 +271,7 @@
                 <div class="main-timeline">
                     <span class="timeline-axis" aria-hidden="true"></span>
                     <ul>
-                        <li>
+                        <li id="generative-ai-decisions">
                             <div class="single-timeline-box fix">
                                 <div class="row">
                                     <div class="col-md-5">
@@ -277,8 +289,9 @@
                                                 </h4>
                                                 <h5>Iowa State University, IA, USA</h5>
                                                 <p class="description">
-                                                    How people make consequential decisions with AI, alone and in groups, and how social influence shapes judgment.
+                                                    Designing a mixed-method research program using experiments, surveys, and interviews to examine how individuals and groups respond to AI recommendations. I study how social influence changes what people trust, whose judgment carries weight, and how positions are negotiated before a final decision.
                                                 </p>
+                                                <a class="experience-journal-link" href="phd-research.html"><span>Current Ph.D. research</span>Read the research journal <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                                             </div><!--/.timeline-content-->
                                         </div><!--/.timeline-->
                                     </div><!--/.col-->
@@ -286,7 +299,7 @@
                             </div><!--/.single-timeline-box-->
                         </li>
 
-                        <li id="generative-ai-decisions">
+                        <li>
                             <div class="single-timeline-box fix">
                                 <div class="row">
                                     <div class="col-md-5">
@@ -304,7 +317,7 @@
                                                 </h4>
                                                 <h5>Iowa State University, IA, USA</h5>
                                                 <p class="description">
-                                                    How immersive training prepares people to decide and perform under pressure.
+                                                    Investigating how immersive training can prepare people to make and act on high-stakes decisions under pressure, with attention to judgment, performance, and transfer from simulation to practice.
                                                 </p>
                                             </div><!--/.timeline-content-->
                                         </div><!--/.timeline-->
@@ -331,7 +344,7 @@
                                                 </h4>
                                                 <h5>Iowa State University, IA, USA</h5>
                                                 <p class="description">
-                                                    How sensory cues shape perception, performance, and interaction in virtual environments.
+                                                    Designed and ran a mixed-method VR study comparing haptic, audio, and visual guidance cues for off-screen targets. Evaluated performance and user experience to understand how sensory feedback affects navigation and immersion.
                                                 </p>
                                             </div><!--/.timeline-content-->
                                         </div><!--/.timeline-->
@@ -358,7 +371,7 @@
                                                 </h4>
                                                 <h5>Rocket Mortgage, Detroit, MI, USA</h5>
                                                 <p class="description">
-                                                    Bringing generative AI into qualitative workflows, from tagging and sentiment to insight generation.
+                                                    Benchmarked Qualtrics Text iQ against ChatGPT for qualitative tagging and sentiment analysis, then developed a reusable prompt framework for research workflows. Analyzed NPS shifts across clients, delivered product recommendations for the digital mortgage journey, and won Best Use of AI for Discovery &amp; Research at a company-wide hackathon.
                                                 </p>
                                             </div><!--/.timeline-content-->
                                         </div><!--/.timeline-->
@@ -385,7 +398,7 @@
                                                 </h4>
                                                 <h5>Iowa State University, IA, USA</h5>
                                                 <p class="description">
-                                                    Designing VR experiences that introduce cybersecurity to rural English learners.
+                                                    Worked with an interdisciplinary team to design inclusive VR learning experiences that introduce cybersecurity to rural English learners. Used user research and Unity prototyping to translate complex concepts into interactive lessons for middle-school students.
                                                 </p>
                                             </div><!--/.timeline-content-->
                                         </div><!--/.timeline-->
@@ -412,7 +425,7 @@
                                                 </h4>
                                                 <h5>Iowa State University, IA, USA</h5>
                                                 <p class="description">
-                                                    Teaching and mentoring students in research, design, and interactive learning.
+                                                    Taught second-year architecture studios and mentored undergraduate researchers in research design, Blender, and interactive learning projects. Guided critique, study development, and the creation of 3D educational experiences for middle-school English learners.
                                                 </p>
                                             </div><!--/.timeline-content-->
                                         </div><!--/.timeline-->
@@ -621,7 +634,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     
     <!--Custom JS-->
-    <script src="assets/js/custom.js?v=20260810-4"></script>
+    <script src="assets/js/custom.js?v=20260810-9"></script>
     
 </body>
 </html>
