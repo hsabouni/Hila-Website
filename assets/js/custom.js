@@ -55,6 +55,33 @@ $(document).ready(function(){
 			offset:0
 		});
 
+	// Keep the experience axis centered between its first and last markers.
+	function positionExperienceAxis() {
+		var timeline = $('#experience .main-timeline');
+		var axis = timeline.find('.timeline-axis');
+		var dots = timeline.find('.timeline-content .fa-circle');
+
+		if (!timeline.length || !axis.length || dots.length < 2) {
+			return;
+		}
+
+		var timelineOffset = timeline.offset();
+		var firstDot = dots.first();
+		var lastDot = dots.last();
+		var firstCenterY = firstDot.offset().top - timelineOffset.top + (firstDot.outerHeight() / 2);
+		var lastCenterY = lastDot.offset().top - timelineOffset.top + (lastDot.outerHeight() / 2);
+		var centerX = firstDot.offset().left - timelineOffset.left + (firstDot.outerWidth() / 2);
+
+		axis.css({
+			left: centerX,
+			top: firstCenterY,
+			height: Math.max(0, lastCenterY - firstCenterY)
+		});
+	}
+
+	positionExperienceAxis();
+	$(window).on('load resize', positionExperienceAxis);
+
 	// 3. Progress-bar
 	
 		var dataToggleTooTip = $('[data-toggle="tooltip"]');
@@ -111,17 +138,20 @@ $(document).ready(function(){
 				})
 
 
-    // 5. welcome animation support
+    // 5. Homepage entrance and research-theme navigation
 
-        $(window).load(function(){
-        	$(".header-text h2,.header-text p").removeClass("animated fadeInUp").css({'opacity':'0'});
-            $(".header-text a").removeClass("animated fadeInDown").css({'opacity':'0'});
-        });
+		window.requestAnimationFrame(function(){
+			$('.header-text').addClass('hero-animate');
+		});
 
-        $(window).load(function(){
-        	$(".header-text h2,.header-text p").addClass("animated fadeInUp").css({'opacity':'0'});
-            $(".header-text a").addClass("animated fadeInDown").css({'opacity':'0'});
-        });
+		$('.hero-topic[href^="#"]').on('click',function(event){
+			var target = $($(this).attr('href'));
+			if (target.length) {
+				event.preventDefault();
+				$('html, body').stop().animate({
+					scrollTop: target.offset().top - 75
+				}, 900, 'easeInOutExpo');
+			}
+		});
 
-});	
-	
+});

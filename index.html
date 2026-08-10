@@ -36,10 +36,10 @@
     <link rel="stylesheet" href="assets/css/bootsnav.css">
     
     <!--style.css-->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260810-11">
     
     <!--responsive.css-->
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/responsive.css?v=20260810-5">
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -97,12 +97,22 @@
                 <div class="col-md-12 text-center">
                     <div class="header-text">
                         <h2>hi <span>,</span> i am hila <span>.</span></h2>
-                        <p>interested in the messy space between people and technology</p>
-                        <a href="assets/resume/Sabouni_Hila_Resume.pdf" download>Check Out My Resume</a>
+                        <p class="hero-tagline">Interested in the messy space between people and technology</p>
+                        <p class="hero-focus" aria-label="Research themes">
+                            <a class="hero-topic" href="#experience" data-description="How people understand and work with intelligent systems." aria-label="Human–AI Interaction: How people understand and work with intelligent systems.">Human–AI Interaction</a>
+                            <span aria-hidden="true">&middot;</span>
+                            <a class="hero-topic" href="#generative-ai-decisions" data-description="How people judge, trust, and act with AI." aria-label="Decision Making: How people judge, trust, and act with AI.">Decision Making</a>
+                            <span aria-hidden="true">&middot;</span>
+                            <a class="hero-topic" href="phd-research.html" data-description="How groups shape trust, negotiation, and outcomes." aria-label="Social Influence: How groups shape trust, negotiation, and outcomes.">Social Influence</a>
+                        </p>
+                        <a class="resume-download" href="assets/resume/Sabouni_Hila_Resume.pdf" download>Download My Resume</a>
                     </div><!--/.header-text-->
                 </div><!--/.col-->
             </div><!-- /.row-->
         </div><!-- /.container-->
+        <a class="hero-scroll" href="#about" aria-label="Continue to About Me">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </a>
     </section><!--/.welcome-hero-->
     <!--welcome-hero end -->
 
@@ -242,6 +252,7 @@
         <div class="container">
             <div class="experience-content">
                 <div class="main-timeline">
+                    <span class="timeline-axis" aria-hidden="true"></span>
                     <ul>
                         <li>
                             <div class="single-timeline-box fix">
@@ -270,12 +281,12 @@
                             </div><!--/.single-timeline-box-->
                         </li>
 
-                        <li>
+                        <li id="generative-ai-decisions">
                             <div class="single-timeline-box fix">
                                 <div class="row">
                                     <div class="col-md-5">
                                         <div class="experience-time text-right">
-                                            <h2>2026 – 2027</h2>
+                                            <h2>2025 – 2027</h2>
                                             <h3>UX researcher & designer</h3>
                                         </div><!--/.experience-time-->
                                     </div><!--/.col-->
@@ -419,95 +430,63 @@
                 <h2>publications</h2>
             </div>
             <div class="container">
-                <div class="profiles-content">
+                <div class="profiles-content publication-ribbon">
                     <div class="row">
-                        <div class="col-sm-4">
-                            <div class="single-profile">
-                                <div class="profile-txt">
-                                    <div class="profile-icon-name">Electronic Imaging Symposium</div>
-                                </div>
-                                <a href="https://library.imaging.org/jpi/articles/8/0/000403" target="_blank">
-                                    <div class="single-profile-overlay">
-                                        <div class="profile-txt">
-                                            <div class="profile-icon-name">Electronic Imaging Symposium</div>
-                                            (Click to view)
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="single-profile">
-                                <div class="profile-txt">
-                                    <div class="profile-icon-name">CHI</div>
-                                </div>
-                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8R1s_VIAAAAJ&sortby=pubdate&citation_for_view=8R1s_VIAAAAJ:u-x6o8ySG0sC" target="_blank">
-                                    <div class="single-profile-overlay">
-                                        <div class="profile-txt">
-                                            <div class="profile-icon-name">CHI</div>
-                                            (Click to view)
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="single-profile profile-no-border">
-                                <div class="profile-txt">
-                                    <div class="profile-icon-name">HCI International</div>
-                                </div>
-                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8R1s_VIAAAAJ&citation_for_view=8R1s_VIAAAAJ:u5HHmVD_uO8C" target="_blank">
-                                    <div class="single-profile-overlay">
-                                        <div class="profile-txt">
-                                            <div class="profile-icon-name">HCI International</div>
-                                            (Click to view)
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <hr style="margin: 0px 0; border: 0; border-top: 1px solid #ddd;">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="single-profile">
-                                <div class="profile-txt">
-                                    <div class="profile-icon-name">ANNSIM</div>
-                                </div>
-                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8R1s_VIAAAAJ&citation_for_view=8R1s_VIAAAAJ:9yKSN-GCB0IC" target="_blank">
-                                    <div class="single-profile-overlay">
-                                        <div class="profile-txt">
-                                            <div class="profile-icon-name">ANNSIM</div>
-                                            (Click to view)
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="single-profile">
-                                <div class="profile-txt">
-                                    <div class="profile-icon-name">HFES</div>
-                                </div>
-                                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8R1s_VIAAAAJ&citation_for_view=8R1s_VIAAAAJ:2osOgNQ5qMEC" target="_blank">
-                                    <div class="single-profile-overlay">
-                                        <div class="profile-txt">
-                                            <div class="profile-icon-name">HFES</div>
-                                            (Click to view)
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="single-profile profile-no-border">
-                                <div class="profile-txt">
-                                    <div class="profile-icon-name">SimAUD</div>
-                                </div>
-                                <div class="single-profile-overlay">
+                        <div class="col-sm-2">
+                            <a class="publication-link" href="https://library.imaging.org/jpi/articles/8/0/000403" target="_blank" rel="noopener">
+                                <div class="single-profile">
                                     <div class="profile-txt">
-                                        <div class="profile-icon-name">SimAUD</div>
+                                        <strong class="publication-acronym">EI</strong>
+                                        <span class="publication-name">Electronic Imaging</span>
                                     </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="publication-link" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8R1s_VIAAAAJ&sortby=pubdate&citation_for_view=8R1s_VIAAAAJ:u-x6o8ySG0sC" target="_blank" rel="noopener">
+                                <div class="single-profile">
+                                    <div class="profile-txt">
+                                        <strong class="publication-acronym">CHI</strong>
+                                        <span class="publication-name">Computer-Human Interaction</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="publication-link" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8R1s_VIAAAAJ&citation_for_view=8R1s_VIAAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener">
+                                <div class="single-profile">
+                                    <div class="profile-txt">
+                                        <strong class="publication-acronym">HCII</strong>
+                                        <span class="publication-name">HCI International</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="publication-link" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8R1s_VIAAAAJ&citation_for_view=8R1s_VIAAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener">
+                                <div class="single-profile">
+                                    <div class="profile-txt">
+                                        <strong class="publication-acronym">ANNSIM</strong>
+                                        <span class="publication-name">Annual Simulation Conference</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="publication-link" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8R1s_VIAAAAJ&citation_for_view=8R1s_VIAAAAJ:2osOgNQ5qMEC" target="_blank" rel="noopener">
+                                <div class="single-profile">
+                                    <div class="profile-txt">
+                                        <strong class="publication-acronym">HFES</strong>
+                                        <span class="publication-name">Human Factors &amp; Ergonomics</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="single-profile publication-unlinked">
+                                <div class="profile-txt">
+                                    <strong class="publication-acronym">SimAUD</strong>
+                                    <span class="publication-name">Simulation for Architecture and Urban Design</span>
                                 </div>
                             </div>
                         </div>
@@ -637,7 +616,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     
     <!--Custom JS-->
-    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/custom.js?v=20260810-2"></script>
     
 </body>
 </html>
