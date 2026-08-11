@@ -60,7 +60,7 @@
 	.header-text .hero-focus {display:block;font-size:8px;line-height:2.2;white-space:normal;}
 	.header-text .hero-focus .hero-topic:last-child {transform:none;}
 	.hero-topic:after {display:none;}
-	.decision-field {min-height:320px;padding:24px 20px 18px;border-radius:22px;}
+	.decision-field {min-height:395px;padding:24px 20px 18px;border-radius:22px;}
 	.decision-map {height:225px;transform:scale(.9);transform-origin:left top;}
 	.decision-caption {margin-bottom:4px;}
 	.single-about-img {max-width: 450px;}

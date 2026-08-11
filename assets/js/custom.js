@@ -81,6 +81,13 @@ $(document).ready(function(){
 
 	positionExperienceAxis();
 	$(window).on('load resize', positionExperienceAxis);
+	$('#experience').on('transitionend', '.experience-reveal, .timeline-axis', positionExperienceAxis);
+	if (window.ResizeObserver) {
+		var experienceTimeline = document.querySelector('#experience .main-timeline');
+		if (experienceTimeline) {
+			new ResizeObserver(positionExperienceAxis).observe(experienceTimeline);
+		}
+	}
 
 	// 3. Progress-bar
 	
@@ -173,29 +180,36 @@ $(document).ready(function(){
 			var decisionState = decisionField.querySelector('.decision-state');
 			var decisionSources = decisionField.querySelectorAll('.decision-source');
 			var decisionLines = decisionField.querySelectorAll('.influence-line');
-			var influenceLabels = ['Personal judgment','AI-supported judgment','Socially negotiated judgment'];
-			decisionField.addEventListener('pointermove',function(event){
-				var bounds = decisionField.getBoundingClientRect();
-				var y = Math.max(0,Math.min(1,(event.clientY - bounds.top) / bounds.height));
-				var centers = [.2,.45,.7];
-				var weights = centers.map(function(center){return Math.max(.18,1 - Math.abs(y - center) * 2.8);});
+			var outcomeFactors = decisionField.querySelectorAll('.outcome-factor');
+			var influenceLabels = [
+				'Experience leads; AI + teammate still contribute',
+				'AI guides; you + teammate still contribute',
+				'Social influence leads; you + AI still contribute'
+			];
+			function activateDecisionSource(strongest){
+				var weights = strongest === 2 ? [.28,.28,.28] : [.5,.5,.5];
+				weights[strongest] = 1;
 				decisionField.style.setProperty('--self-weight',weights[0].toFixed(2));
 				decisionField.style.setProperty('--ai-weight',weights[1].toFixed(2));
 				decisionField.style.setProperty('--group-weight',weights[2].toFixed(2));
-				var strongest = weights.indexOf(Math.max.apply(null,weights));
 				decisionSources.forEach(function(source,index){source.classList.toggle('is-dominant',index === strongest);});
 				decisionLines.forEach(function(line,index){line.classList.toggle('is-dominant',index === strongest);});
+				outcomeFactors.forEach(function(factor,index){factor.classList.toggle('is-emphasized',index === strongest);});
 				decisionState.textContent = influenceLabels[strongest];
 				decisionField.classList.add('is-active');
 				decisionField.classList.add('has-interacted');
+			}
+			decisionSources.forEach(function(source,index){
+				source.addEventListener('mouseenter',function(){activateDecisionSource(index);});
 			});
 			decisionField.addEventListener('pointerleave',function(){
 				decisionField.style.setProperty('--self-weight','.62');
-				decisionField.style.setProperty('--ai-weight','.8');
-				decisionField.style.setProperty('--group-weight','.48');
-				decisionState.textContent = 'Negotiated judgment';
+				decisionField.style.setProperty('--ai-weight','.62');
+				decisionField.style.setProperty('--group-weight','.62');
+				decisionState.textContent = 'All three contribute';
 				decisionSources.forEach(function(source){source.classList.remove('is-dominant');});
 				decisionLines.forEach(function(line){line.classList.remove('is-dominant');});
+				outcomeFactors.forEach(function(factor){factor.classList.remove('is-emphasized');});
 				decisionField.classList.remove('is-active');
 			});
 		}
