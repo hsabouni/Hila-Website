@@ -1265,7 +1265,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 .research-journal-page {background: #fbfaf8;color: #30343b;}
 .research-journal-page .navbar {background: #fff;border-bottom: 1px solid #e8e4df;}
-.research-journal-page .navbar-brand {color: #8f2020!important;}
+.research-journal-page .navbar-brand {color: #f92c2c!important;}
 .research-journal-hero {
     padding: 180px 0 100px;
     background: linear-gradient(135deg, #fff 0%, #f4ece8 100%);
@@ -1357,6 +1357,86 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     margin-bottom: 28px;
 }
 .portfolio-journal-layout .journal-note-section .single-about-txt h3 {margin-bottom: 0;}
+.portfolio-journal-layout .journal-role,
+.portfolio-journal-layout .journal-body-copy {
+    color:#596073;
+    font-size:16px;
+    line-height:1.85;
+}
+.portfolio-journal-layout .journal-role {margin-top:26px;}
+.portfolio-journal-layout .journal-body-copy {margin-top:22px;}
+.journal-study-section .about-content {padding-top:70px;}
+.research-phase {
+    display:grid;
+    grid-template-columns:70px 1fr;
+    gap:28px;
+    padding:0 0 54px;
+}
+.research-phase-marker {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:54px;
+    height:54px;
+    border:1px solid rgba(249,44,44,.32);
+    border-radius:50%;
+    color:#f92c2c;
+    font-size:13px;
+    font-weight:600;
+}
+.research-phase-label {
+    margin-bottom:10px;
+    color:#f92c2c;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+}
+.research-phase-content h3 {
+    margin-bottom:18px;
+    color:#303443;
+    font-size:27px;
+    font-weight:500;
+    line-height:1.4;
+}
+.research-phase-content > p:not(.research-phase-label) {
+    max-width:840px;
+    color:#646a77;
+    font-size:15px;
+    line-height:1.8;
+}
+.research-phase-question {color:#3f4555!important;font-size:17px!important;font-weight:500;}
+.research-phase-takeaway {
+    margin-top:18px;
+    padding:18px 22px;
+    background:#fff;
+    border-left:3px solid #f92c2c;
+}
+.research-transition {
+    margin:0 0 58px 98px;
+    padding:23px 28px;
+    background:#f6f1ee;
+    border-radius:4px;
+}
+.research-transition span {
+    color:#f92c2c;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+.research-transition p {margin:8px 0 0;color:#414756;font-size:17px;line-height:1.65;}
+.research-phase-current .research-phase-marker {background:#f92c2c;color:#fff;}
+.research-status-note {margin-top:18px;color:#777d88!important;font-size:13px!important;font-style:italic;}
+.motion-ready.research-journal-page .research-entry-reveal {
+    opacity:0;
+    transform:translateY(22px);
+    transition:opacity .75s ease,transform .75s ease;
+}
+.motion-ready.research-journal-page .research-entry-reveal.is-visible {
+    opacity:1;
+    transform:translateY(0);
+}
 @media (max-width: 767px) {
     .research-journal-hero {padding:135px 0 70px;}
     .research-journal-hero h1 {font-size:38px;}
@@ -1364,6 +1444,18 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     .journal-direction {padding:30px;}
     .portfolio-journal-layout .journal-project-intro {padding-top: 95px;}
     .portfolio-journal-layout .journal-note-section {padding: 70px 0;}
+    .journal-study-section .about-content {padding-top:50px;}
+    .research-phase {grid-template-columns:46px 1fr;gap:18px;}
+    .research-phase-marker {width:42px;height:42px;}
+    .research-transition {margin:0 0 50px 64px;padding:20px;}
+    .research-phase-content h3 {font-size:22px;}
+}
+@media (prefers-reduced-motion: reduce) {
+    .motion-ready.research-journal-page .research-entry-reveal {
+        opacity:1;
+        transform:none;
+        transition:none;
+    }
 }
 
 /*-------------------------------------
@@ -1783,6 +1875,17 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     .portfolio-two-page .portfolio-two-process-grid,
     .portfolio-two-page .portfolio-two-finding-grid,
     .portfolio-two-page .portfolio-two-lesson-grid {grid-template-columns:1fr;}
+}
+
+/* Cross-project navigation */
+.project-navigation {padding:38px 0 44px;border-top:1px solid #e5e9ee;background:#faf8f6;}
+.project-navigation h2 {margin:0 0 22px;color:#3c4258;font-size:18px;font-weight:500;text-transform:none;}
+.project-navigation-actions {display:flex;align-items:center;justify-content:center;gap:12px;}
+.project-navigation-link {display:inline-flex;align-items:center;justify-content:center;min-width:210px;height:46px;padding:0 20px;border:1px solid #f92c2c;border-radius:4px;color:#f92c2c;background:#fff;font-size:12px;font-weight:600;transition:color .3s ease,background-color .3s ease,box-shadow .3s ease,transform .3s ease;}
+.project-navigation-link:hover,.project-navigation-link:focus {color:#fff;background:#f92c2c;box-shadow:0 8px 20px rgba(60,66,88,.14);text-decoration:none;transform:translateY(-2px);}
+@media (max-width:520px) {
+    .project-navigation-actions {flex-direction:column;}
+    .project-navigation-link {width:100%;max-width:260px;}
 }
 
 .about-contribution {padding-top: 50px;}

@@ -256,7 +256,7 @@ $(document).ready(function(){
 		});
 
 	// 6. Reveal the page structure as it enters the viewport
-		var revealSections = $('.home-page #about, .home-page #education, .home-page #experience, .home-page #publications, .home-page #portfolio, .home-page #contact, .portfolio-one-page #intro, .portfolio-one-page #method, .portfolio-one-page #task-design, .portfolio-one-page #study-design, .portfolio-one-page #analysis, .portfolio-one-page #about, .portfolio-one-page #lessons_learned, .portfolio-one-page #contact, .portfolio-two-page .case-study-section');
+		var revealSections = $('.home-page #about, .home-page #education, .home-page #experience, .home-page #publications, .home-page #portfolio, .home-page #contact, .portfolio-one-page #intro, .portfolio-one-page #method, .portfolio-one-page #task-design, .portfolio-one-page #study-design, .portfolio-one-page #analysis, .portfolio-one-page #about, .portfolio-one-page #lessons_learned, .portfolio-one-page #contact, .portfolio-two-page .case-study-section, .research-journal-page .journal-project-intro, .research-journal-page .journal-portfolio-section, .research-journal-page .journal-notes-intro, .research-journal-page .journal-note-section, .research-journal-page .project-navigation');
 		revealSections.addClass('scroll-reveal');
 		$('body').addClass('motion-ready');
 
@@ -274,6 +274,7 @@ $(document).ready(function(){
 
 		var experienceEntries = $('#experience .single-timeline-box, .portfolio-one-page #task-design .single-timeline-box, .portfolio-one-page #study-design .single-timeline-box').addClass('experience-reveal');
 		var educationEntries = $('#education .single-horizontal-timeline, .portfolio-one-page #method .single-horizontal-timeline, .portfolio-two-page .portfolio-two-method .single-horizontal-timeline').addClass('education-reveal');
+		var researchEntries = $('.research-journal-page .research-phase, .research-journal-page .research-transition').addClass('research-entry-reveal');
 		if ('IntersectionObserver' in window) {
 			var experienceObserver = new IntersectionObserver(function(entries){
 				entries.forEach(function(entry){
@@ -290,9 +291,18 @@ $(document).ready(function(){
 			},{threshold:.2,rootMargin:'-5% 0px -8% 0px'});
 
 			educationEntries.each(function(){educationObserver.observe(this);});
+
+			var researchObserver = new IntersectionObserver(function(entries){
+				entries.forEach(function(entry){
+					$(entry.target).toggleClass('is-visible',entry.isIntersecting);
+				});
+			},{threshold:.16,rootMargin:'-4% 0px -8% 0px'});
+
+			researchEntries.each(function(){researchObserver.observe(this);});
 		} else {
 			experienceEntries.addClass('is-visible');
 			educationEntries.addClass('is-visible');
+			researchEntries.addClass('is-visible');
 		}
 
 });
