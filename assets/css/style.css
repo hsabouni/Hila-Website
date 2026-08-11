@@ -999,21 +999,29 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .motion-ready .publications.scroll-reveal.is-visible .publication-ribbon .col-sm-2:nth-child(4) {transition-delay:.34s;}
 .motion-ready .publications.scroll-reveal.is-visible .publication-ribbon .col-sm-2:nth-child(5) {transition-delay:.42s;}
 .motion-ready .publications.scroll-reveal.is-visible .publication-ribbon .col-sm-2:nth-child(6) {transition-delay:.50s;}
-.motion-ready #experience .experience-reveal {
+.motion-ready #experience .experience-reveal,
+.motion-ready.portfolio-one-page #task-design .experience-reveal,
+.motion-ready.portfolio-one-page #study-design .experience-reveal {
     opacity: 0;
     transform: translateY(24px);
     transition: opacity .75s ease,transform .75s ease;
 }
-.motion-ready #experience .experience-reveal.is-visible {
+.motion-ready #experience .experience-reveal.is-visible,
+.motion-ready.portfolio-one-page #task-design .experience-reveal.is-visible,
+.motion-ready.portfolio-one-page #study-design .experience-reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
-.motion-ready #education .education-reveal {
+.motion-ready #education .education-reveal,
+.motion-ready.portfolio-one-page #method .education-reveal,
+.motion-ready.portfolio-two-page .portfolio-two-method .education-reveal {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity .7s ease,transform .7s ease;
 }
-.motion-ready #education .education-reveal.is-visible {opacity:1;transform:translateY(0);}
+.motion-ready #education .education-reveal.is-visible,
+.motion-ready.portfolio-one-page #method .education-reveal.is-visible,
+.motion-ready.portfolio-two-page .portfolio-two-method .education-reveal.is-visible {opacity:1;transform:translateY(0);}
 .experience-journal-link {
     display: inline-flex;
     align-items: center;
@@ -1037,7 +1045,11 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     .motion-ready .experience.scroll-reveal .timeline-axis,
     .motion-ready .publications.scroll-reveal .publication-ribbon .col-sm-2,
     .motion-ready #experience .experience-reveal,
-    .motion-ready #education .education-reveal {
+    .motion-ready #education .education-reveal,
+    .motion-ready.portfolio-one-page #task-design .experience-reveal,
+    .motion-ready.portfolio-one-page #study-design .experience-reveal,
+    .motion-ready.portfolio-one-page #method .education-reveal,
+    .motion-ready.portfolio-two-page .portfolio-two-method .education-reveal {
         opacity: 1;
         transform: none;
         transition: none;
@@ -1209,6 +1221,47 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .journal-card-link {margin-top: 18px;font-weight: 500;}
 .journal-card-link i {margin-left: 7px;transition: transform .2s ease;}
 .journal-portfolio-card:hover .journal-card-link i {transform: translateX(5px);}
+
+/* Selected work cards */
+.portfolio .isotope > .row {display:flex;align-items:stretch;}
+.portfolio .isotope > .row > [class*="col-"] {display:flex;}
+.portfolio .work-card {
+    width:100%;
+    height:100%;
+    min-height: 455px;
+    border: 1px solid #e2e5ea;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(60,66,88,.07);
+    transition: transform .45s cubic-bezier(.22,.61,.36,1),box-shadow .45s ease,border-color .45s ease;
+}
+.portfolio .work-card > a {display:flex;min-height:455px;color:inherit;flex-direction:column;text-decoration:none;}
+.portfolio .work-card-media {position:relative;height:auto;aspect-ratio:16/9;overflow:hidden;background:#f3f1ef;}
+.portfolio .work-card-media img {width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .55s cubic-bezier(.22,.61,.36,1);}
+.portfolio .work-card-research {display:flex;align-items:flex-end;padding:24px;background:linear-gradient(135deg,#f92c2c 0%,#db4138 52%,#3c4258 100%);}
+.portfolio .work-card-research:before {position:absolute;content:"";inset:0;background:radial-gradient(circle at 75% 25%,rgba(255,255,255,.24),transparent 34%);}
+.portfolio .work-card-research span {position:relative;color:#fff;font-size:11px;font-weight:600;letter-spacing:1.5px;}
+.portfolio .work-card-research-image {padding:0;background:#fbf7f4;}
+.portfolio .work-card-research-image img {object-fit:cover;object-position:center 52%;transform:scale(1.02);}
+.portfolio .work-card:hover .work-card-research-image img {transform:scale(1.05);}
+.portfolio .work-card-body {display:flex;min-height:285px;padding:24px;flex:1;flex-direction:column;}
+.portfolio .work-card-meta {margin-bottom:10px;color:#f92c2c;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.portfolio .work-card h3 {margin:0 0 12px;color:#3c4258;font-size:19px;font-weight:600;line-height:1.38;text-transform:none;}
+.portfolio .work-card p {margin:0 0 18px;color:#777e91;font-size:13px;line-height:1.7;}
+.portfolio .work-card-role {margin-top:auto;color:#596073;font-size:11px;font-weight:500;line-height:1.5;}
+.portfolio .work-card-link {margin-top:14px;color:#f92c2c;font-size:12px;font-weight:600;}
+.portfolio .work-card-link i {margin-left:6px;transition:transform .35s ease;}
+.portfolio .work-card:hover {border-color:#f1b1ad;box-shadow:0 18px 38px rgba(60,66,88,.13);transform:translateY(-6px);}
+.portfolio .work-card:hover .work-card-media img {transform:scale(1.05);}
+.portfolio .work-card:hover .work-card-link i {transform:translateX(5px);}
+.portfolio .work-card > a:focus {outline:3px solid rgba(249,44,44,.35);outline-offset:-3px;}
+@media (max-width:767px) {
+    .portfolio .isotope > .row {display:block;}
+    .portfolio .isotope > .row > [class*="col-"] {display:block;}
+    .portfolio .work-card,
+    .portfolio .work-card > a {min-height:0;}
+    .portfolio .work-card-body {min-height:275px;}
+}
 
 .research-journal-page {background: #fbfaf8;color: #30343b;}
 .research-journal-page .navbar {background: #fff;border-bottom: 1px solid #e8e4df;}
@@ -1571,6 +1624,166 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .home-page #contact {padding: 36px 0 46px;}
 .home-page #contact .single-contact-box {padding-top:38px;}
 .home-page #contact .contact-add-info {margin:28px 0 34px;}
+.home-page #contact {padding:32px 0 38px;}
+.home-page #contact .section-heading h2 {padding-bottom:20px;}
+.home-page .contact-actions {display:flex;align-items:center;justify-content:center;gap:12px;}
+.home-page .contact-action {display:inline-flex;align-items:center;justify-content:center;min-width:142px;height:44px;padding:0 20px;border:1px solid #f92c2c;border-radius:4px;color:#f92c2c;background:#fff;font-size:13px;font-weight:600;transition:color .3s ease,background-color .3s ease,box-shadow .3s ease,transform .3s ease;}
+.home-page .contact-action i {margin-right:8px;}
+.home-page .contact-action-primary {color:#fff;background:#f92c2c;}
+.home-page .contact-action:hover,.home-page .contact-action:focus {color:#fff;background:#d92f2f;box-shadow:0 8px 20px rgba(60,66,88,.14);text-decoration:none;transform:translateY(-2px);}
+@media (max-width:480px) {
+    .home-page .contact-actions {flex-direction:column;}
+    .home-page .contact-action {width:100%;max-width:240px;}
+}
+
+/* Portfolio One: match the homepage's compact, scannable rhythm */
+.portfolio-one-page .section-heading h2 {padding-bottom:24px;}
+.portfolio-one-page #intro {padding:112px 0 46px;}
+.portfolio-one-page #intro .about-content {padding-top:34px;}
+.portfolio-one-page #intro .single-method-img {padding-top:32px;}
+.portfolio-one-page #method {padding:36px 0 44px;}
+.portfolio-one-page #method .education-horizontal-timeline {padding:34px 0 0;}
+.portfolio-one-page #method .timeline-horizontal-border {padding:14px 0 20px;}
+.portfolio-one-page #task-design,
+.portfolio-one-page #study-design {padding:36px 0 46px;}
+.portfolio-one-page .main-timeline-task:before,
+.portfolio-one-page .main-timeline-study:before {content:none;}
+.portfolio-one-page #task-design .experience-content,
+.portfolio-one-page #study-design .experience-content {padding-top:38px;}
+.portfolio-one-page #task-design .single-timeline-box,
+.portfolio-one-page #study-design .single-timeline-box {margin-bottom:38px;}
+.portfolio-one-page #task-design li:last-child .single-timeline-box,
+.portfolio-one-page #study-design li:last-child .single-timeline-box {margin-bottom:0;}
+.portfolio-one-page #analysis,
+.portfolio-one-page #about,
+.portfolio-one-page #lessons_learned {padding:36px 0 46px;}
+.portfolio-one-page #analysis .about-content,
+.portfolio-one-page #about .about-content,
+.portfolio-one-page #lessons_learned .about-content {padding-top:34px;}
+.portfolio-one-page #analysis .single-method-img,
+.portfolio-one-page #about .single-method-img {padding-top:32px;}
+.portfolio-one-page #contact {padding:36px 0 46px;}
+.portfolio-one-page #contact .section-heading h2 {padding-bottom:0;}
+.portfolio-one-page .case-study-meta-grid,
+.portfolio-one-page .case-study-finding-grid,
+.portfolio-one-page .case-study-lesson-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px;}
+.portfolio-one-page .case-study-meta-card,
+.portfolio-one-page .case-study-finding-grid > div,
+.portfolio-one-page .case-study-lesson-grid > div {padding:22px;border:1px solid #e4e7ec;border-radius:10px;background:#fff;}
+.portfolio-one-page .case-study-finding-grid > div,
+.portfolio-one-page .case-study-lesson-grid > div {padding:16px 4px;border:0;border-top:2px solid #f92c2c;border-radius:0;background:transparent;}
+.portfolio-one-page .case-study-meta-card span,
+.portfolio-one-page .case-study-finding-grid span,
+.portfolio-one-page .case-study-implication > span {display:block;margin-bottom:8px;color:#f92c2c;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.portfolio-one-page .case-study-meta-card strong,
+.portfolio-one-page .case-study-finding-grid strong,
+.portfolio-one-page .case-study-lesson-grid strong {display:block;margin-bottom:9px;color:#3c4258;font-size:15px;line-height:1.45;}
+.portfolio-one-page .case-study-meta-card p,
+.portfolio-one-page .case-study-finding-grid p,
+.portfolio-one-page .case-study-lesson-grid p,
+.portfolio-one-page .case-study-implication p,
+.portfolio-one-page .case-study-next-step p {margin:0;color:#777e91;font-size:13px;line-height:1.75;}
+.portfolio-one-page .case-study-key-result {border-color:#f92c2c;background:#fff4f2;}
+.portfolio-one-page .case-study-caption {max-width:720px;margin:12px auto 0;color:#8a909e;font-size:12px;line-height:1.65;text-align:left;}
+.portfolio-one-page .case-study-implication {padding:28px;border-left:4px solid #f92c2c;background:#fff4f2;}
+.portfolio-one-page .case-study-implication h3 {margin:0 0 12px;color:#3c4258;font-size:21px;line-height:1.55;text-transform:none;}
+.portfolio-one-page .case-study-next-step {margin-top:24px;padding-top:24px;border-top:1px solid #e4e7ec;}
+.portfolio-one-page .case-study-next-step h3 {margin:0 0 10px;color:#3c4258;font-size:18px;text-transform:none;}
+.portfolio-one-page .legacy-lessons,
+.portfolio-one-page .legacy-mirror-figure,
+.portfolio-one-page .legacy-qualitative-results,
+.portfolio-one-page #method .education-horizontal-timeline,
+.portfolio-one-page #task-design,
+.portfolio-one-page #study-design {display:none;}
+.portfolio-one-page .case-study-process-grid,
+.portfolio-one-page .case-study-condition-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;}
+.portfolio-one-page .case-study-process-grid {margin-top:34px;}
+.portfolio-one-page .case-study-condition-grid {margin-top:18px;}
+.portfolio-one-page .case-study-process-grid > div,
+.portfolio-one-page .case-study-condition-grid > div {padding:20px;border:1px solid #e4e7ec;background:#fff;}
+.portfolio-one-page .case-study-process-grid > div {padding:16px 4px;border:0;border-top:2px solid #f92c2c;background:transparent;}
+.portfolio-one-page .case-study-process-grid span,
+.portfolio-one-page .case-study-condition-grid span {display:block;margin-bottom:8px;color:#f92c2c;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.portfolio-one-page .case-study-subheading {margin-top:34px;}
+.portfolio-one-page .case-study-subheading span {display:block;margin-bottom:7px;color:#f92c2c;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.portfolio-one-page .case-study-subheading h3 {margin:0;color:#3c4258;font-size:18px;font-weight:500;line-height:1.55;text-transform:none;}
+.portfolio-one-page .timeline-axis {background:#f92c2c;}
+.portfolio-one-page .fa-circle {color:#f92c2c;}
+.portfolio-one-page .case-study-process-grid strong,
+.portfolio-one-page .case-study-condition-grid strong {display:block;margin-bottom:8px;color:#3c4258;font-size:14px;line-height:1.45;}
+.portfolio-one-page .case-study-process-grid p,
+.portfolio-one-page .case-study-condition-grid p {margin:0;color:#777e91;font-size:12px;line-height:1.65;}
+.portfolio-one-page .case-study-qual-figure {margin-top:8px;}
+.portfolio-one-page #contact .button {width:250px;}
+@media (max-width:767px) {
+    .portfolio-one-page .case-study-meta-grid,
+    .portfolio-one-page .case-study-finding-grid,
+    .portfolio-one-page .case-study-lesson-grid,
+    .portfolio-one-page .case-study-process-grid,
+    .portfolio-one-page .case-study-condition-grid {grid-template-columns:1fr;}
+}
+
+/* Portfolio Two: use the same compact case-study rhythm */
+.portfolio-two-page .section-heading h2 {padding-bottom:24px;}
+.portfolio-two-page .portfolio-two-intro {padding:112px 0 46px;}
+.portfolio-two-page .portfolio-two-intro .about-content {padding-top:34px;}
+.portfolio-two-page .portfolio-two-intro .youtube-video-padding {padding-top:0;}
+.portfolio-two-page .portfolio-two-intro iframe {display:block;width:100%;max-width:560px;margin:0 auto;}
+.portfolio-two-page .portfolio-two-method {padding:36px 0 44px;}
+.portfolio-two-page .portfolio-two-method .education-horizontal-timeline {padding:34px 0 0;}
+.portfolio-two-page .portfolio-two-method .timeline-horizontal-border {padding:14px 0 20px;}
+.portfolio-two-page .portfolio-two-method-detail {padding:36px 0 46px;}
+.portfolio-two-page .portfolio-two-method-detail .method-content {padding-top:0;}
+.portfolio-two-page .portfolio-two-content {padding:36px 0 46px;}
+.portfolio-two-page .portfolio-two-content .about-content {padding-top:34px;}
+.portfolio-two-page .portfolio-two-content .about-contribution {padding-top:34px;}
+.portfolio-two-page .portfolio-two-method-detail .single-method-img,
+.portfolio-two-page .portfolio-two-content .single-method-img {padding-top:32px;}
+.portfolio-two-page .portfolio-two-contact {padding:36px 0 46px;}
+.portfolio-two-page .portfolio-two-contact .button {width:240px;}
+.portfolio-two-page .case-study-award {margin-top:8px;color:#f92c2c;font-size:13px;font-weight:600;letter-spacing:.3px;}
+.portfolio-two-page .portfolio-two-meta-grid,
+.portfolio-two-page .portfolio-two-process-grid,
+.portfolio-two-page .portfolio-two-finding-grid,
+.portfolio-two-page .portfolio-two-lesson-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px;}
+.portfolio-two-page .portfolio-two-meta-grid > div {padding:22px;border:1px solid #e4e7ec;border-radius:10px;background:#fff;}
+.portfolio-two-page .portfolio-two-process-grid > div,
+.portfolio-two-page .portfolio-two-finding-grid > div,
+.portfolio-two-page .portfolio-two-lesson-grid > div {padding:16px 4px;border-top:2px solid #f92c2c;}
+.portfolio-two-page .portfolio-two-meta-grid span,
+.portfolio-two-page .portfolio-two-process-grid span,
+.portfolio-two-page .portfolio-two-finding-grid span,
+.portfolio-two-page .portfolio-two-implication > span,
+.portfolio-two-page .portfolio-two-lens-heading span {display:block;margin-bottom:8px;color:#f92c2c;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.portfolio-two-page .portfolio-two-meta-grid strong,
+.portfolio-two-page .portfolio-two-process-grid strong,
+.portfolio-two-page .portfolio-two-finding-grid strong,
+.portfolio-two-page .portfolio-two-lesson-grid strong {display:block;margin-bottom:9px;color:#3c4258;font-size:15px;line-height:1.45;}
+.portfolio-two-page .portfolio-two-meta-grid p,
+.portfolio-two-page .portfolio-two-process-grid p,
+.portfolio-two-page .portfolio-two-finding-grid p,
+.portfolio-two-page .portfolio-two-lesson-grid p,
+.portfolio-two-page .portfolio-two-implication p,
+.portfolio-two-page .portfolio-two-next-step p {margin:0;color:#777e91;font-size:13px;line-height:1.75;}
+.portfolio-two-page .portfolio-two-key-result {border-color:#f92c2c!important;background:#fff4f2!important;}
+.portfolio-two-page .portfolio-two-lens-heading {margin-top:34px;}
+.portfolio-two-page .portfolio-two-lens-heading h3 {margin:0;color:#3c4258;font-size:18px;font-weight:500;line-height:1.55;text-transform:none;}
+.portfolio-two-page .portfolio-two-method .education-horizontal-timeline {display:none;}
+.portfolio-two-page .portfolio-two-caption {max-width:720px;margin:12px auto 0;color:#8a909e;font-size:12px;line-height:1.65;text-align:left;}
+.portfolio-two-page .portfolio-two-implication {padding:28px;border-left:4px solid #f92c2c;background:#fff4f2;}
+.portfolio-two-page .portfolio-two-implication h3 {margin:0 0 12px;color:#3c4258;font-size:21px;line-height:1.55;text-transform:none;}
+.portfolio-two-page .portfolio-two-next-step {margin-top:24px;padding-top:24px;border-top:1px solid #e4e7ec;}
+.portfolio-two-page .portfolio-two-next-step h3 {margin:0 0 10px;color:#3c4258;font-size:18px;text-transform:none;}
+.portfolio-two-page #conclusion .about-content > .row,
+.portfolio-two-page #contribution {display:none;}
+.portfolio-two-page .timeline-horizontal-border i {color:#f92c2c;}
+.portfolio-two-page .timeline-horizontal-border span {background:#f92c2c;}
+@media (max-width:767px) {
+    .portfolio-two-page .portfolio-two-meta-grid,
+    .portfolio-two-page .portfolio-two-process-grid,
+    .portfolio-two-page .portfolio-two-finding-grid,
+    .portfolio-two-page .portfolio-two-lesson-grid {grid-template-columns:1fr;}
+}
 
 .about-contribution {padding-top: 50px;}
 

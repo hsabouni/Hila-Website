@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="assets/css/bootsnav.css">
     
     <!--style.css-->
-    <link rel="stylesheet" href="assets/css/style.css?v=20260811-11">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260811-24">
     
     <!--responsive.css-->
     <link rel="stylesheet" href="assets/css/responsive.css?v=20260810-6">
@@ -520,43 +520,59 @@
     <section id="portfolio" class="portfolio">
         <div class="portfolio-details">
             <div class="section-heading text-center">
-                <h2>portfolio</h2>
+                <h2>Selected Work</h2>
             </div>
             <div class="container">
                 <div class="portfolio-content">
                     <div class="isotope">
                         <div class="row">
                             <div class="col-sm-4">
-                                <div class="item">
-                                    <a href="./portfolio_one.html">
-                                        <img src="assets/images/portfolio/p3.jpg" alt="portfolio image"/>
-                                        <div class="isotope-overlay">
-                                            Individual Project
-                                        </div><!-- /.isotope-overlay -->
-                                    </a>
-                                </div><!-- /.item -->
-                            </div><!-- /.col -->
-                            <div class="col-sm-4">
-                                <div class="item">
-                                    <a href="./portfolio_two.html">
-                                        <img src="assets/images/portfolio/kn.jpg" alt="portfolio image"/>
-                                        <div class="isotope-overlay">
-                                            Group Project
-                                        </div><!-- /.isotope-overlay -->
-                                    </a>
-                                </div><!-- /.item -->
-                            </div><!-- /.col -->
-                            <div class="col-sm-4">
-                                <div class="item journal-portfolio-card">
-                                    <a href="./phd-research.html" aria-label="Open the PhD Research Journal">
-                                        <div class="journal-card-content">
-                                            <span class="journal-card-label">Living research project</span>
-                                            <h3>PhD Research Journal</h3>
-                                            <p>Notes on AI, consequential decisions, and social influence.</p>
-                                            <span class="journal-card-link">Explore the journal <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                                <article class="item work-card work-card-current">
+                                    <a href="./phd-research.html" aria-label="Explore AI-Supported Group Decision Making">
+                                        <div class="work-card-media work-card-research-image">
+                                            <img src="assets/images/portfolio/ai-group-decision-warm.png" alt="Two teammates, an AI system, and their inputs converging into a group decision"/>
+                                        </div>
+                                        <div class="work-card-body">
+                                            <span class="work-card-meta">Current PhD research</span>
+                                            <h3>AI-Supported Group Decision Making</h3>
+                                            <p>How people negotiate consequential decisions when personal judgment, AI recommendations, and teammates all carry weight.</p>
+                                            <span class="work-card-role">End-to-end researcher &amp; experience designer</span>
+                                            <span class="work-card-link">Explore the research <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
                                         </div>
                                     </a>
-                                </div><!-- /.item -->
+                                </article>
+                            </div><!-- /.col -->
+                            <div class="col-sm-4">
+                                <article class="item work-card">
+                                    <a href="./portfolio_one.html" aria-label="View Finding the Right Sensory Cue for VR Navigation">
+                                        <div class="work-card-media">
+                                            <img src="assets/images/portfolio/p3.jpg" alt="A participant navigating a virtual museum environment"/>
+                                        </div>
+                                        <div class="work-card-body">
+                                            <span class="work-card-meta">Master&rsquo;s research</span>
+                                            <h3>Finding the Right Sensory Cue for VR Navigation</h3>
+                                            <p>Haptic guidance reduced search burden, while a rear-view display added visual and cognitive load.</p>
+                                            <span class="work-card-role">End-to-end researcher &amp; experience designer</span>
+                                            <span class="work-card-link">Explore the research <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div><!-- /.col -->
+                            <div class="col-sm-4">
+                                <article class="item work-card">
+                                    <a href="./portfolio_two.html" aria-label="View What Keeps Conversational Agents From Becoming Effective Collaborators">
+                                        <div class="work-card-media">
+                                            <img src="assets/images/portfolio/kn.jpg" alt="The Knowledge Navigator conversational agent concept"/>
+                                        </div>
+                                        <div class="work-card-body">
+                                            <span class="work-card-meta">CHI 2024 Honorable Mention</span>
+                                            <h3>Conversational Agents as Collaborators</h3>
+                                            <p>Why capability alone is not enough: privacy, trust, social norms, and control shape adoption.</p>
+                                            <span class="work-card-role">Researcher &amp; co-author</span>
+                                            <span class="work-card-link">Explore the research <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                                        </div>
+                                    </a>
+                                </article>
                             </div><!-- /.col -->
                         </div><!-- /.row -->
                     </div><!--/.isotope-->
@@ -569,17 +585,16 @@
     <!--contact start -->
     <section id="contact" class="contact">
         <div class="section-heading text-center">
-            <h2>Contact Me</h2>
+            <h2>Let&rsquo;s Connect</h2>
         </div>
-        <div class="container text-center" style="margin-top: 20px;">
-            <div class="contact-info">
-                <p><strong>Hila Sabouni</strong></p>
-                <p>
-                    <i class="fas fa-envelope icon"></i>hsabouni[at]iastate[dot]edu
-                </p>
-                <p>
-                    <i class="fab fa-linkedin icon"></i><a href="https://www.linkedin.com/in/hilasabouni" target="_blank">www.linkedin.com/in/hilasabouni</a>
-                </p>
+        <div class="container text-center">
+            <div class="contact-actions">
+                <a class="contact-action contact-action-primary" href="mailto:hsabouni@iastate.edu">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>Email Hila
+                </a>
+                <a class="contact-action" href="https://www.linkedin.com/in/hilasabouni" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn
+                </a>
             </div>
         </div>
     </section>

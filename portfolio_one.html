@@ -39,7 +39,7 @@
 	<link rel="stylesheet" href="assets/css/bootsnav.css">
 
 	<!--style.css-->
-	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/style.css?v=20260811-17">
 
 	<!--responsive.css-->
 	<link rel="stylesheet" href="assets/css/responsive.css">
@@ -54,7 +54,7 @@
 
 </head>
 
-<body>
+<body class="portfolio-one-page">
 	<!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -102,7 +102,7 @@
 
 	<section id="intro" class="about">
 		<div class="section-heading text-center">
-			<h2>Effectiveness of Guidance Cues for Visual Targets in Virtual Environments</h2>
+			<h2>Finding the Right Sensory Cue for VR Navigation</h2>
 		</div>
 		<div class="container">
 			<div class="about-content">
@@ -110,21 +110,37 @@
 					<div class="col-sm-12">
 						<div class="single-about-txt">
 							<h3>
-								How can we help users navigate virtual reality without breaking their sense of
-								immersion? This mixed-method study evaluates passive (rear-view mirror) and active
-								(audio and haptic) cues in a VR scavenger hunt, finding that haptics are the most
-								effective, followed by audio, while rear-view mirrors prove unsuitable for such
-								environments and tasks.
+								Which sensory cue helps people find a target most effectively and efficiently in a
+								virtual museum? I investigated this question through a mixed-method study comparing
+								a rear-view mirror, audio guidance, haptic guidance, and a control condition in a VR
+								scavenger hunt.
 							</h3>
 						</div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="case-study-meta-grid" aria-label="Project overview">
+					<div class="case-study-meta-card">
+						<span>My role</span>
+						<strong>End-to-end researcher and experience designer</strong>
+						<p>I led the research end to end: framed the question, designed and built the VR study, recruited and tested 71 participants, analyzed the quantitative and qualitative data, and translated the findings into design implications.</p>
+					</div>
+					<div class="case-study-meta-card">
+						<span>Project context</span>
+						<strong>End-to-end academic research study</strong>
+						<p>A mixed-method, between-subjects experiment with 71 participants using behavioral measures, validated questionnaires, and qualitative responses.</p>
+					</div>
+					<div class="case-study-meta-card case-study-key-result">
+						<span>Key result</span>
+						<strong>Haptic guidance emerged strongest overall</strong>
+						<p>Active cues reduced task-list checks, while the mirror increased checks and completion time. Only 6% of mirror participants used it frequently; reported enjoyment reached 100% with audio and 86% with haptics.</p>
+					</div>
+				</div>
+				<div class="row legacy-mirror-figure">
 					<div class="col-sm-8 col-md-offset-2">
 						<div>
 							<img class="single-method-img" src="assets/images/mirrorcondition.png"
 								alt="mirrorcondition">
-							<p style="text-align: left; padding-left: 100px;">Rear-view mirror condition</p>
+							<p class="case-study-caption">The rear-view mirror condition expanded visibility behind the participant but also introduced competing visual information.</p>
 						</div>
 					</div>
 				</div>
@@ -139,6 +155,22 @@
 			<h2>Method</h2>
 		</div>
 		<div class="container">
+			<div class="case-study-process-grid">
+				<div><span>01</span><strong>Build</strong><p>Recreated part of the Louvre in Rhinoceros 3D and Unity, placed seven target paintings, and built the Meta Quest Pro interactions.</p></div>
+				<div><span>02</span><strong>Study design</strong><p>Designed a controlled between-subjects comparison that isolated four guidance conditions while keeping the museum task consistent.</p></div>
+				<div><span>03</span><strong>Data collection</strong><p>Recruited and tested 71 participants using a consistent screening, instruction, practice, task, and survey protocol.</p></div>
+				<div><span>04</span><strong>Analysis</strong><p>Combined task behavior, completion time, validated questionnaires, and qualitative responses to explain both performance and experience.</p></div>
+			</div>
+			<div class="case-study-subheading">
+				<span>Study conditions</span>
+				<h3>Four sensory guidance conditions were tested in the same museum task.</h3>
+			</div>
+			<div class="case-study-condition-grid" aria-label="Study conditions">
+				<div><span>Control</span><strong>No guidance</strong><p>A 90-degree forward field of view with no additional cue.</p></div>
+				<div><span>Mirror</span><strong>Visual guidance</strong><p>A rear-view display extended awareness behind the participant.</p></div>
+				<div><span>Audio</span><strong>Proximity guidance</strong><p>A beep activated within five meters of a target.</p></div>
+				<div><span>Haptic</span><strong>Proximity guidance</strong><p>Controller vibration activated within five meters of a target.</p></div>
+			</div>
 			<div class="education-horizontal-timeline">
 				<div class="row">
 					<div class="col-sm-3 col-md-offset-3">
@@ -194,6 +226,7 @@
 		<div class="container">
 			<div class="experience-content">
 				<div class="main-timeline-task">
+					<span class="timeline-axis" aria-hidden="true"></span>
 					<ul>
 						<li>
 							<div class="single-timeline-box fix">
@@ -338,6 +371,7 @@
 		<div class="container">
 			<div class="experience-content">
 				<div class="main-timeline-study">
+					<span class="timeline-axis" aria-hidden="true"></span>
 					<ul>
 						<li>
 							<div class="single-timeline-box fix">
@@ -394,7 +428,7 @@
 								<div class="row">
 									<div class="col-md-5">
 										<div class="experience-time text-right">
-											<h2>Target Introduction, Practice Session, Task</h2>
+											<h2>Study Procedure</h2>
 											<h3>Unity</h3>
 										</div><!--/.study design-time-->
 									</div><!--/.col-->
@@ -403,16 +437,10 @@
 											<div class="timeline-content">
 												<span><i class="fa fa-circle" aria-hidden="true"></i></span>
 												<p class="description">
-													Participants were first shown a printed list of seven target
-													paintings, along with a brief introduction to each one, including
-													their names and stories. This gave them time to memorize the
-													paintings and provided context to make recall easier, as the focus
-													was not on testing memory or cognition. In the VR environment, they
-													could also access the list at any time in their left hand for
-													reference. Next, they completed a three-minute practice session in a
-													simple VR setting, where they learned the controllers and task
-													requirements, seeing only the target paintings. Finally, they began
-													the main task, which was recorded in a timed 20-minute session.
+											Participants reviewed the seven target paintings, completed a
+											three-minute controller practice, and then entered the timed
+											20-minute museum task. The target list remained available in VR so
+											the study measured navigation and cue effectiveness rather than memory.
 												</p>
 											</div><!--/.timeline-content-->
 										</div><!--/.timeline-->
@@ -454,7 +482,7 @@
 
 	<section id="analysis" class="about">
 		<div class="section-heading text-center">
-			<h2>Quantitative Findings and Analysis</h2>
+			<h2>What we found</h2>
 		</div>
 		<div class="container">
 			<div class="about-content">
@@ -462,23 +490,32 @@
 					<div class="col-sm-12">
 						<div class="single-about-txt">
 							<h3>
-								Key evaluation metrics included (1) frequency of task list checks, (2) total task
-								completion time, and (3) responses from three survey questionnaires. The findings
-								revealed that guidance cues influenced participants' attention orientation, with some
-								unexpected results. As expected, active cues (audio and haptic) reduced the frequency of
-								task list checks. However, the rear-view mirror unexpectedly led to more frequent task
-								list checks and longer completion times, possibly due to its placement or the added
-								cognitive load from additional input, which may have increased the overall workload.
+								Audio and haptic cues helped participants orient toward targets with fewer task-list
+								checks. The rear-view mirror produced the opposite pattern: participants checked the
+								list more often and took longer to finish. The added visual channel appears to have
+								competed for attention rather than reducing search effort.
 							</h3>
 						</div>
 					</div>
+				</div>
+				<div class="case-study-finding-grid">
+					<div><span>01</span><strong>Active cues reduced search burden</strong><p>Audio and haptic guidance helped participants orient toward targets with fewer task-list checks.</p></div>
+					<div><span>02</span><strong>More visual information was not better</strong><p>The mirror condition increased checks and completion time, suggesting additional input raised cognitive load.</p></div>
+					<div><span>03</span><strong>Efficiency and experience aligned</strong><p>Participants described audio and haptic cues as helpful and engaging, supporting the behavioral results.</p></div>
 				</div>
 				<div class="row">
 					<div class="col-sm-8 col-md-offset-2">
 						<div>
 							<img class="single-method-img" src="assets/images/sensory/quanttables.png"
 								alt="quanttables_image">
+							<p class="case-study-caption"><strong>What to notice:</strong> active cues reduced search effort, while the mirror condition increased checking behavior and completion time.</p>
 						</div>
+					</div>
+				</div>
+				<div class="row case-study-qual-figure">
+					<div class="col-sm-6 col-md-offset-3">
+						<img class="single-method-img" src="assets/images/sensory/qualfigure.png" alt="Themes from participant feedback across the four guidance conditions">
+						<p class="case-study-caption"><strong>What to notice:</strong> participants connected active cues with effectiveness and engagement, while the mirror was used infrequently and was more often described as challenging.</p>
 					</div>
 				</div>
 			</div>
@@ -486,7 +523,7 @@
 	</section>
 
 
-	<section id="about" class="dicot">
+	<section id="about" class="dicot legacy-qualitative-results">
 		<div class="section-heading text-center">
 			<h2>Qualitative Findings and Analysis</h2>
 		</div>
@@ -520,6 +557,7 @@
 						<div>
 							<img class="single-method-img" src="assets/images/sensory/qualfigure.png"
 								alt="qualfigure_image">
+							<p class="case-study-caption">Qualitative responses converged around effectiveness, challenge, engagement, and time awareness.</p>
 						</div>
 					</div>
 				</div>
@@ -530,11 +568,25 @@
 
 	<section id="lessons_learned" class="about">
 		<div class="section-heading text-center">
-			<h2>lessons learned</h2>
+			<h2>Design implications &amp; next steps</h2>
 		</div>
 		<div class="container">
 			<div class="about-content">
-				<div class="row">
+				<div class="case-study-implication">
+					<span>Final design implication</span>
+					<h3>Guidance in immersive environments should direct attention without competing for it.</h3>
+					<p>For comparable visual-search tasks, haptic guidance is the strongest starting point for further validation because it supports orientation without occupying the visual channel. I would prototype proximity-based vibration that increases as users approach a target, offers distinct directional patterns, and lets users adjust intensity or switch to an audio fallback. Persistent rear-view displays should be reserved for tasks that truly require continuous awareness behind the user.</p>
+				</div>
+				<div class="case-study-lesson-grid">
+					<div><strong>Designing a cue means designing attention</strong><p>A feature can provide more information and still make performance worse. Every cue must be evaluated by what it helps people ignore as well as what it helps them notice.</p></div>
+					<div><strong>Efficiency needs multiple measures</strong><p>Completion time alone would not explain the experience. Combining time, task-list checks, workload, presence, sickness, and participant accounts revealed why each condition performed differently.</p></div>
+					<div><strong>Protocol consistency is part of research quality</strong><p>Testing 71 people in VR required consistent instruction, safety screening, equipment setup, practice, and observation. Small procedural differences could otherwise become confounds.</p></div>
+				</div>
+				<div class="case-study-next-step">
+					<h3>What I would change next</h3>
+					<p>I would measure path efficiency, head movement, cue-response latency, and missed-target recovery in addition to completion time. I would also prototype alternative mirror placements before the main study, test adjustable cue intensity and accessibility preferences, and use a counterbalanced within-subject follow-up to separate cue effectiveness from individual differences and novelty effects.</p>
+				</div>
+				<div class="row legacy-lessons">
 					<div class="col-sm-12">
 						<div class="single-about-txt">
 							<h3>
@@ -564,7 +616,7 @@
 	<section id="contact" class="about">
 		<div class="section-heading text-center">
 			<!-- <h2>Contact Me</h2> -->
-			<a class="button" href="portfolio_two.html">Go to Portfolio Two</a>
+			<a class="button" href="portfolio_two.html">Next: Conversational Agents</a>
 		</div>
 	</section>
 	<!-- Contact End -->
@@ -632,7 +684,7 @@
 
 
 	<!--Custom JS-->
-	<script src="assets/js/custom.js"></script>
+	<script src="assets/js/custom.js?v=20260811-10"></script>
 
 </body>
 

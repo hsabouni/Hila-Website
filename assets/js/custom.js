@@ -89,6 +89,37 @@ $(document).ready(function(){
 		}
 	}
 
+	// Fit each portfolio case-study axis exactly between its first and last dots.
+	function positionPortfolioAxes() {
+		$('.portfolio-one-page .main-timeline-task, .portfolio-one-page .main-timeline-study').each(function () {
+			var timeline = $(this);
+			var axis = timeline.children('.timeline-axis');
+			var dots = timeline.find('.timeline-content .fa-circle');
+			if (!axis.length || dots.length < 2) {return;}
+
+			var timelineOffset = timeline.offset();
+			var firstDot = dots.first();
+			var lastDot = dots.last();
+			var firstCenterY = firstDot.offset().top - timelineOffset.top + (firstDot.outerHeight() / 2);
+			var lastCenterY = lastDot.offset().top - timelineOffset.top + (lastDot.outerHeight() / 2);
+			var centerX = firstDot.offset().left - timelineOffset.left + (firstDot.outerWidth() / 2);
+
+			axis.css({
+				left: centerX,
+				top: firstCenterY,
+				height: Math.max(0, lastCenterY - firstCenterY)
+			});
+		});
+	}
+
+	positionPortfolioAxes();
+	$(window).on('load resize', positionPortfolioAxes);
+	if (window.ResizeObserver) {
+		document.querySelectorAll('.portfolio-one-page .main-timeline-task, .portfolio-one-page .main-timeline-study').forEach(function (timeline) {
+			new ResizeObserver(positionPortfolioAxes).observe(timeline);
+		});
+	}
+
 	// 3. Progress-bar
 	
 		var dataToggleTooTip = $('[data-toggle="tooltip"]');
@@ -225,17 +256,14 @@ $(document).ready(function(){
 		});
 
 	// 6. Reveal the page structure as it enters the viewport
-		var revealSections = $('#about,#education,#experience,#publications,#portfolio,#contact');
+		var revealSections = $('.home-page #about, .home-page #education, .home-page #experience, .home-page #publications, .home-page #portfolio, .home-page #contact, .portfolio-one-page #intro, .portfolio-one-page #method, .portfolio-one-page #task-design, .portfolio-one-page #study-design, .portfolio-one-page #analysis, .portfolio-one-page #about, .portfolio-one-page #lessons_learned, .portfolio-one-page #contact, .portfolio-two-page .case-study-section');
 		revealSections.addClass('scroll-reveal');
 		$('body').addClass('motion-ready');
 
 		if ('IntersectionObserver' in window) {
-			var revealObserver = new IntersectionObserver(function(entries,observer){
+			var revealObserver = new IntersectionObserver(function(entries){
 				entries.forEach(function(entry){
-					if (entry.isIntersecting) {
-						$(entry.target).addClass('is-visible');
-						observer.unobserve(entry.target);
-					}
+					$(entry.target).toggleClass('is-visible',entry.isIntersecting);
 				});
 			},{threshold:.12,rootMargin:'0px 0px -10% 0px'});
 
@@ -244,8 +272,8 @@ $(document).ready(function(){
 			revealSections.addClass('is-visible');
 		}
 
-		var experienceEntries = $('#experience .single-timeline-box').addClass('experience-reveal');
-		var educationEntries = $('#education .single-horizontal-timeline').addClass('education-reveal');
+		var experienceEntries = $('#experience .single-timeline-box, .portfolio-one-page #task-design .single-timeline-box, .portfolio-one-page #study-design .single-timeline-box').addClass('experience-reveal');
+		var educationEntries = $('#education .single-horizontal-timeline, .portfolio-one-page #method .single-horizontal-timeline, .portfolio-two-page .portfolio-two-method .single-horizontal-timeline').addClass('education-reveal');
 		if ('IntersectionObserver' in window) {
 			var experienceObserver = new IntersectionObserver(function(entries){
 				entries.forEach(function(entry){
