@@ -1428,6 +1428,110 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .research-transition p {margin:8px 0 0;color:#414756;font-size:17px;line-height:1.65;}
 .research-phase-current .research-phase-marker {background:#f92c2c;color:#fff;}
 .research-status-note {margin-top:18px;color:#777d88!important;font-size:13px!important;font-style:italic;}
+
+/* PhD journal: compact case-study rhythm */
+.research-journal-page .portfolio-journal-layout .journal-project-intro {
+    padding:100px 0 46px;
+}
+.research-journal-page .journal-project-intro .about-content {padding-top:34px;}
+.research-journal-page .portfolio-journal-layout .journal-section-kicker {margin-top:12px;}
+.research-journal-page .portfolio-journal-layout .journal-role {margin-top:16px;}
+.research-journal-page .portfolio-journal-layout .journal-portfolio-section {
+    padding:36px 0 46px;
+}
+.research-journal-page .portfolio-journal-layout .journal-portfolio-content,
+.research-journal-page .journal-study-section .about-content {padding-top:34px;}
+.research-journal-page .portfolio-journal-layout .journal-body-copy {margin-top:16px;}
+.research-journal-page .research-phase {gap:22px;padding-bottom:38px;}
+.research-journal-page .research-phase-label {margin-bottom:6px;}
+.research-journal-page .research-phase-content h3 {margin-bottom:12px;}
+.research-journal-page .research-phase-takeaway {margin-top:14px;padding:15px 19px;}
+.research-journal-page .research-transition {margin:0 0 38px 92px;padding:18px 22px;}
+.research-journal-page .research-transition p {margin-top:5px;}
+.research-journal-page .portfolio-journal-layout .journal-notes-intro {padding:36px 0 30px;}
+.research-journal-page .portfolio-journal-layout .journal-note-section {padding:46px 0;}
+.research-journal-page .portfolio-journal-layout .journal-note-section .single-about-txt h2 {margin-bottom:16px;}
+.research-journal-page .journal-editing-note {margin-top:24px;}
+.research-journal-page + .project-navigation,
+.research-journal-page .project-navigation {padding:32px 0 38px;}
+
+/* Match Portfolio One's first two-section structure exactly */
+.research-journal-page .section-heading h2 {padding-bottom:24px;}
+.research-journal-page .portfolio-journal-layout .journal-opening-intro {
+    padding:112px 0 46px;
+}
+.research-journal-page .journal-opening-intro .about-content {padding-top:34px;}
+.research-journal-page .portfolio-journal-layout .journal-opening-problem {
+    padding:36px 0 44px;
+}
+.research-journal-page .journal-opening-problem .journal-portfolio-content {padding-top:34px;}
+.research-journal-page .journal-opening-intro .single-about-txt,
+.research-journal-page .journal-opening-problem .single-about-txt {max-width:none;}
+.research-journal-page .journal-meta-grid {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:16px;
+    margin-top:30px;
+}
+.research-journal-page .journal-meta-grid .case-study-meta-card {
+    padding:22px;
+    border:1px solid #e4e7ec;
+    border-radius:10px;
+    background:#fff;
+}
+.research-journal-page .journal-meta-grid .case-study-meta-card > span {
+    display:block;
+    margin-bottom:8px;
+    color:#f92c2c;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+.research-journal-page .journal-meta-grid .case-study-meta-card > strong {
+    display:block;
+    margin-bottom:9px;
+    color:#3c4258;
+    font-size:15px;
+    line-height:1.45;
+}
+.research-journal-page .journal-meta-grid .case-study-meta-card p {
+    color:#777e91;
+    font-size:13px;
+    line-height:1.7;
+}
+.research-journal-page .journal-meta-grid .case-study-meta-card p strong {color:#596073;font-weight:600;}
+
+/* PhD journal palette: match Portfolio One */
+.research-journal-page {background:#fff;color:#3c4258;}
+.research-journal-page .navbar {background:#fff;border-bottom-color:#e4e7ec;}
+.research-journal-page .section-heading h2,
+.research-journal-page .single-about-txt h2,
+.research-journal-page .single-about-txt h3,
+.research-journal-page .research-phase-content h3 {color:#3c4258;}
+.research-journal-page .journal-section-kicker,
+.research-journal-page .journal-body-copy,
+.research-journal-page .research-phase-content > p:not(.research-phase-label) {color:#777e91;}
+.research-journal-page .journal-eyebrow,
+.research-journal-page .journal-status,
+.research-journal-page .journal-info-card h3,
+.research-journal-page .research-note-meta,
+.research-journal-page .research-phase-label,
+.research-journal-page .research-transition span {color:#f92c2c;}
+.research-journal-page .journal-status,
+.research-journal-page .research-note-tags span {background:#fff4f2;color:#6f5962;}
+.research-journal-page .journal-info-card,
+.research-journal-page .research-phase-takeaway {background:#fff;border-color:#e4e7ec;}
+.research-journal-page .journal-direction {background:#f92c2c;}
+.research-journal-page .research-transition {background:#faf8f6;}
+.research-journal-page .journal-meta-grid .case-study-key-result {border-color:#f92c2c;background:#fff4f2;}
+.research-journal-page .education,
+.research-journal-page .dicot {background:#faf8f6;}
+.research-journal-page .about {background:#fff;}
+.research-journal-page .research-phase-marker {border-color:#f92c2c;color:#f92c2c;}
+.research-journal-page .research-phase-current .research-phase-marker {background:#f92c2c;color:#fff;}
+.research-journal-page .research-phase-takeaway {border-left-color:#f92c2c;}
+.research-journal-page .research-note {border-color:#e4e7ec;}
 .motion-ready.research-journal-page .research-entry-reveal {
     opacity:0;
     transform:translateY(22px);
@@ -1449,6 +1553,13 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     .research-phase-marker {width:42px;height:42px;}
     .research-transition {margin:0 0 50px 64px;padding:20px;}
     .research-phase-content h3 {font-size:22px;}
+    .research-journal-page .portfolio-journal-layout .journal-project-intro {padding:88px 0 40px;}
+    .research-journal-page .portfolio-journal-layout .journal-portfolio-section {padding:32px 0 40px;}
+    .research-journal-page .portfolio-journal-layout .journal-note-section {padding:40px 0;}
+    .research-journal-page .research-transition {margin:0 0 34px 64px;padding:17px 18px;}
+    .research-journal-page .portfolio-journal-layout .journal-opening-intro {padding:95px 0 40px;}
+    .research-journal-page .portfolio-journal-layout .journal-opening-problem {padding:32px 0 40px;}
+    .research-journal-page .journal-meta-grid {grid-template-columns:1fr;}
 }
 @media (prefers-reduced-motion: reduce) {
     .motion-ready.research-journal-page .research-entry-reveal {
@@ -1704,7 +1815,6 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 /* A short ambient handoff from the hero into About */
 .home-page #about {position:relative;}
-.home-page .hero-scroll {display:none;}
 .hero-about-sequence {
     position:relative;
     z-index:2;
@@ -1713,6 +1823,14 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     margin:-34px auto;
     transform:translateY(13px);
     pointer-events:none;
+}
+.research-journal-page .journal-relationship-band {
+    padding:26px 0 24px;
+    background:#fff;
+}
+.research-journal-page .hero-about-sequence {
+    margin:0 auto;
+    transform:none;
 }
 .hero-about-sequence-track {
     position:absolute;
@@ -2059,12 +2177,65 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 /* Cross-project navigation */
+.custom-cursor-ring,
+.custom-cursor-dot {
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:99999;
+    border-radius:50%;
+    pointer-events:none;
+    opacity:0;
+    transform:translate(-50%,-50%);
+}
+.custom-cursor-ring {
+    width:26px;
+    height:26px;
+    border:1.5px solid rgba(249,44,44,.78);
+    transition:width .28s ease,height .28s ease,border-color .28s ease,background-color .28s ease,opacity .18s ease;
+}
+.custom-cursor-dot {
+    width:4px;
+    height:4px;
+    background:#f92c2c;
+    transition:width .2s ease,height .2s ease,opacity .18s ease;
+}
+body.custom-cursor-ready,
+body.custom-cursor-ready a,
+body.custom-cursor-ready button,
+body.custom-cursor-ready [role="button"] {cursor:none;}
+body.custom-cursor-ready input,
+body.custom-cursor-ready textarea,
+body.custom-cursor-ready [contenteditable="true"] {cursor:text;}
+.custom-cursor-ring.is-visible,
+.custom-cursor-dot.is-visible {opacity:1;}
+.custom-cursor-ring.is-active {
+    width:42px;
+    height:42px;
+    border-color:#f92c2c;
+    background:rgba(249,44,44,.06);
+}
+.custom-cursor-dot.is-active {width:3px;height:3px;}
+@media (hover:none), (pointer:coarse), (prefers-reduced-motion:reduce) {
+    .custom-cursor-ring,.custom-cursor-dot {display:none!important;}
+    body.custom-cursor-ready,body.custom-cursor-ready a,body.custom-cursor-ready button,body.custom-cursor-ready [role="button"] {cursor:auto;}
+    body.custom-cursor-ready input,body.custom-cursor-ready textarea,body.custom-cursor-ready [contenteditable="true"] {cursor:text;}
+}
+.page-contact {padding:32px 0 38px;background:#fff;border-top:1px solid #e5e9ee;}
+.page-contact .section-heading h2 {padding-bottom:20px;}
+.page-contact .contact-actions {display:flex;align-items:center;justify-content:center;gap:12px;}
+.page-contact .contact-action {display:inline-flex;align-items:center;justify-content:center;min-width:142px;height:44px;padding:0 20px;border:1px solid #f92c2c;border-radius:4px;color:#f92c2c;background:#fff;font-size:13px;font-weight:600;transition:color .3s ease,background-color .3s ease,box-shadow .3s ease,transform .3s ease;}
+.page-contact .contact-action i {margin-right:8px;}
+.page-contact .contact-action-primary {color:#fff;background:#f92c2c;}
+.page-contact .contact-action:hover,.page-contact .contact-action:focus {color:#fff;background:#d92f2f;box-shadow:0 8px 20px rgba(60,66,88,.14);text-decoration:none;transform:translateY(-2px);}
 .project-navigation {padding:38px 0 44px;border-top:1px solid #e5e9ee;background:#faf8f6;}
 .project-navigation h2 {margin:0 0 22px;color:#3c4258;font-size:18px;font-weight:500;text-transform:none;}
 .project-navigation-actions {display:flex;align-items:center;justify-content:center;gap:12px;}
 .project-navigation-link {display:inline-flex;align-items:center;justify-content:center;min-width:210px;height:46px;padding:0 20px;border:1px solid #f92c2c;border-radius:4px;color:#f92c2c;background:#fff;font-size:12px;font-weight:600;transition:color .3s ease,background-color .3s ease,box-shadow .3s ease,transform .3s ease;}
 .project-navigation-link:hover,.project-navigation-link:focus {color:#fff;background:#f92c2c;box-shadow:0 8px 20px rgba(60,66,88,.14);text-decoration:none;transform:translateY(-2px);}
 @media (max-width:520px) {
+    .page-contact .contact-actions {flex-direction:column;}
+    .page-contact .contact-action {width:100%;max-width:240px;}
     .project-navigation-actions {flex-direction:column;}
     .project-navigation-link {width:100%;max-width:260px;}
 }
