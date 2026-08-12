@@ -390,8 +390,8 @@ $(document).ready(function(){
 				cursorDot.classList.add('is-visible');
 			}
 			function animateCustomCursor() {
-				ringX += (pointerX - ringX) * .18;
-				ringY += (pointerY - ringY) * .18;
+				ringX += (pointerX - ringX) * .28;
+				ringY += (pointerY - ringY) * .28;
 				cursorRing.style.left = ringX + 'px';
 				cursorRing.style.top = ringY + 'px';
 				window.requestAnimationFrame(animateCustomCursor);

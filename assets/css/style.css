@@ -1878,8 +1878,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .hero-about-sequence-node {
     position:absolute;
     top:14px;
-    width:19px;
-    height:14px;
+    width:16px;
+    height:16px;
     margin-left:-7px;
     border:2px solid #f92c2c;
     border-radius:50%;
@@ -2218,7 +2218,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     border:0;
     background:#2563eb;
     clip-path:polygon(50% 0,100% 88%,0 88%);
-    transform:translate(-50%,-50%) rotate(45deg);
+    transform-origin:50% 0;
+    transform:translate(-50%,0);
     transition:width .28s ease,height .28s ease,background-color .28s ease,opacity .18s ease;
 }
 .custom-cursor-dot {
@@ -2234,9 +2235,9 @@ body.custom-cursor-ready [contenteditable="true"] {cursor:text;}
 .custom-cursor-ring.is-visible,
 .custom-cursor-dot.is-visible {opacity:1;}
 .custom-cursor-ring.is-active {
-    width:27px;
-    height:20px;
-    background:#f92c2c;
+    width:19px;
+    height:19px;
+    background:#2563eb;
 }
 @media (hover:none), (pointer:coarse), (prefers-reduced-motion:reduce) {
     .custom-cursor-ring,.custom-cursor-dot {display:none!important;}
