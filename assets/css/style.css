@@ -1701,6 +1701,143 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .home-page #about {padding: 36px 0 46px;}
 .home-page #about .about-content {padding-top: 34px;}
 .home-page #about .single-about-txt .about-methods {padding-top:16px;}
+
+/* A short ambient handoff from the hero into About */
+.home-page #about {position:relative;}
+.home-page .hero-scroll {display:none;}
+.hero-about-sequence {
+    position:relative;
+    z-index:2;
+    width:min(760px,78vw);
+    height:68px;
+    margin:-34px auto;
+    transform:translateY(13px);
+    pointer-events:none;
+}
+.hero-about-sequence-track {
+    position:absolute;
+    inset:0;
+}
+.hero-about-sequence-line {
+    position:absolute;
+    top:20px;
+    left:4%;
+    width:92%;
+    height:2px;
+    border-radius:999px;
+    background:linear-gradient(90deg,rgba(249,44,44,.18),#f92c2c);
+    transform:scaleX(0);
+    transform-origin:left center;
+    animation:heroAboutLine 15.6s cubic-bezier(.55,.05,.28,1) infinite;
+}
+.hero-about-sequence-curve {
+    position:absolute;
+    top:0;
+    left:4%;
+    width:92%;
+    height:44px;
+    pointer-events:none;
+}
+.hero-about-sequence-node {
+    position:absolute;
+    top:14px;
+    width:14px;
+    height:14px;
+    margin-left:-7px;
+    border:2px solid #f92c2c;
+    border-radius:50%;
+    background:transparent;
+    opacity:0;
+    transform:scale(.45);
+    animation-duration:15.6s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count:infinite;
+}
+.hero-about-sequence-node:after {
+    position:absolute;
+    content:"";
+    inset:-2px;
+    border:2px solid rgba(249,44,44,.42);
+    border-radius:50%;
+    opacity:0;
+    animation:heroAboutHeartbeat 1.7s ease-out infinite;
+}
+.hero-about-sequence-node-two:after {animation-delay:.22s;}
+.hero-about-sequence-node-three:after {animation-delay:.44s;}
+.hero-about-sequence-node-one {left:22%;animation-name:heroAboutNodeOne;}
+.hero-about-sequence-node-two {left:48%;animation-name:heroAboutNodeTwo;}
+.hero-about-sequence-node-three {left:74%;animation-name:heroAboutNodeThree;}
+.hero-about-sequence-label {
+    position:absolute;
+    top:-5px;
+    color:#676e80;
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:.06em;
+    opacity:0;
+    transform:translate(-50%,5px);
+    animation-duration:15.6s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count:infinite;
+}
+.hero-about-sequence-label-one {left:22%;animation-name:heroAboutLabelOne;}
+.hero-about-sequence-label-two {left:48%;animation-name:heroAboutLabelTwo;}
+.hero-about-sequence-label-three {left:74%;animation-name:heroAboutLabelThree;}
+@keyframes heroAboutLine {
+    0%,70% {opacity:0;transform:scaleX(0);}
+    73% {opacity:1;transform:scaleX(0);}
+    82%,84% {opacity:1;transform:scaleX(1);}
+    88%,100% {opacity:0;transform:scaleX(1);}
+}
+@keyframes heroAboutNodeOne {
+    0%,4% {opacity:0;transform:scale(.45);}
+    9%,94% {opacity:1;transform:scale(1);}
+    98%,100% {opacity:0;transform:scale(.65);}
+}
+@keyframes heroAboutNodeTwo {
+    0%,24% {opacity:0;transform:scale(.45);}
+    29%,94% {opacity:1;transform:scale(1);}
+    98%,100% {opacity:0;transform:scale(.65);}
+}
+@keyframes heroAboutNodeThree {
+    0%,44% {opacity:0;transform:scale(.45);}
+    49%,94% {opacity:1;transform:scale(1);}
+    98%,100% {opacity:0;transform:scale(.65);}
+}
+@keyframes heroAboutHeartbeat {
+    0% {opacity:.55;transform:scale(.75);}
+    48% {opacity:0;transform:scale(2.05);}
+    49%,100% {opacity:0;transform:scale(.75);}
+}
+@keyframes heroAboutLabelOne {
+    0%,5% {opacity:0;transform:translate(-50%,5px);}
+    10%,94% {opacity:1;transform:translate(-50%,0);}
+    98%,100% {opacity:0;transform:translate(-50%,0);}
+}
+@keyframes heroAboutLabelTwo {
+    0%,25% {opacity:0;transform:translate(-50%,5px);}
+    30%,94% {opacity:1;transform:translate(-50%,0);}
+    98%,100% {opacity:0;transform:translate(-50%,0);}
+}
+@keyframes heroAboutLabelThree {
+    0%,45% {opacity:0;transform:translate(-50%,5px);}
+    50%,94% {opacity:1;transform:translate(-50%,0);}
+    98%,100% {opacity:0;transform:translate(-50%,0);}
+}
+@media (max-width:767px) {
+    .hero-about-sequence {width:min(410px,86vw);height:58px;margin:-29px auto;transform:translateY(11px);}
+    .hero-about-sequence-line {top:17px;width:92%;}
+    .hero-about-sequence-curve {height:36px;}
+    .hero-about-sequence-node {top:11px;}
+    .hero-about-sequence-label {top:-5px;font-size:9px;}
+}
+@media (prefers-reduced-motion:reduce) {
+    .hero-about-sequence-line {opacity:.65;transform:scaleX(1);animation:none;}
+    .hero-about-sequence-curve {display:none;}
+    .hero-about-sequence-node {opacity:1;transform:scale(1);animation:none;}
+    .hero-about-sequence-label {opacity:1;transform:translate(-50%,0);animation:none;}
+    .hero-about-sequence-node:after {display:none;}
+}
 .home-page #education {padding: 36px 0 44px;}
 .home-page #education .education-horizontal-timeline {padding: 34px 0 0;}
 .home-page #education .timeline-horizontal-border {padding:12px 0 20px;}
@@ -1723,6 +1860,50 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .home-page .contact-action i {margin-right:8px;}
 .home-page .contact-action-primary {color:#fff;background:#f92c2c;}
 .home-page .contact-action:hover,.home-page .contact-action:focus {color:#fff;background:#d92f2f;box-shadow:0 8px 20px rgba(60,66,88,.14);text-decoration:none;transform:translateY(-2px);}
+
+/* Homepage color hierarchy: warm canvas, stronger contrast, selective accent */
+.home-page {background:#fcfbf9;color:#4f5668;}
+.home-page .welcome-hero {background:linear-gradient(135deg,#fff 0%,#f8f1ed 56%,#eadbd4 100%);}
+.home-page .welcome-hero:before {background:radial-gradient(circle at 78% 30%,rgba(249,44,44,.09),transparent 37%);}
+.home-page .header-text h2,
+.home-page .section-heading h2,
+.home-page .single-about-txt h3,
+.home-page .timeline-content h4.title,
+.home-page .experience-time h2,
+.home-page .portfolio .work-card h3 {color:#303544;}
+.home-page .header-text .hero-tagline {color:#51596d;}
+.home-page .header-text .hero-focus,
+.home-page .hero-topic {color:#6f5962;}
+.home-page .header-text .hero-focus span {color:#f92c2c;}
+.home-page .decision-field {border-color:rgba(92,67,63,.14);background:rgba(255,255,255,.76);box-shadow:0 24px 60px rgba(66,49,47,.10);}
+.home-page .decision-kicker {color:#64697a;}
+.home-page .decision-context,
+.home-page .decision-source {color:#454c60;}
+.home-page .decision-source small,
+.home-page .decision-caption {color:#7c8394;}
+.home-page .decision-outcome {background:#444957;box-shadow:0 12px 28px rgba(48,53,68,.22);}
+.home-page .decision-source.is-dominant strong {color:#303544;}
+.home-page #about,
+.home-page #experience,
+.home-page #portfolio {background:#fff;}
+.home-page #education,
+.home-page #publications,
+.home-page #contact {background:#f1ece7;}
+.home-page #experience,
+.home-page #publications,
+.home-page #portfolio,
+.home-page #contact {border-color:#e8e3df;}
+.home-page #about .about-methods,
+.home-page #education .single-horizontal-timeline p,
+.home-page #experience .main-timeline .description,
+.home-page #experience .timeline-content h5,
+.home-page #experience .experience-time h3,
+.home-page .portfolio .work-card-summary,
+.home-page .portfolio .work-card-role {color:#666e80;}
+.home-page .publication-ribbon {border-color:#ddd8d3;}
+.home-page .publication-ribbon .publication-name {color:#737b8c;}
+.home-page .publication-ribbon .publication-acronym {color:#363c4d;}
+.home-page .portfolio .work-card {border-color:#e1ddd8;}
 @media (max-width:480px) {
     .home-page .contact-actions {flex-direction:column;}
     .home-page .contact-action {width:100%;max-width:240px;}

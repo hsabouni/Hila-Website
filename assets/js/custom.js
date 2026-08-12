@@ -305,4 +305,60 @@ $(document).ready(function(){
 			researchEntries.addClass('is-visible');
 		}
 
+		// Draw a changing relationship as one continuous curve through every factor.
+		var relationshipCanvas = document.querySelector('.hero-about-sequence-curve');
+		if (relationshipCanvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+			var relationshipContext = relationshipCanvas.getContext('2d');
+			var relationshipCycle = 15600;
+			function drawRelationshipCurve(now) {
+				var width = relationshipCanvas.clientWidth;
+				var height = relationshipCanvas.clientHeight;
+				var ratio = window.devicePixelRatio || 1;
+				if (relationshipCanvas.width !== Math.round(width * ratio) || relationshipCanvas.height !== Math.round(height * ratio)) {
+					relationshipCanvas.width = Math.round(width * ratio);
+					relationshipCanvas.height = Math.round(height * ratio);
+				}
+				relationshipContext.setTransform(ratio,0,0,ratio,0,0);
+				relationshipContext.clearRect(0,0,width,height);
+				var phase = (now % relationshipCycle) / relationshipCycle;
+				if (phase >= .82 && phase <= .995) {
+					var progress = Math.min(1,(phase - .82) / .13);
+					progress = progress * progress * (3 - 2 * progress);
+					var curveOpacity = phase > .95 ? Math.max(0,1 - ((phase - .95) / .045)) : 1;
+					var anchors = [0,.19565,.47826,.76087,1];
+					var amplitudes = [-9,12,-12,10];
+					var baseline = 20;
+					var endX = width * progress;
+					var startX = Math.max(0,endX - (width * .48));
+					function curveY(x) {
+						var normalizedX = x / width;
+						var segment = 0;
+						while (segment < anchors.length - 2 && normalizedX > anchors[segment + 1]) segment++;
+						var start = anchors[segment];
+						var finish = anchors[segment + 1];
+						var local = Math.max(0,Math.min(1,(normalizedX - start) / (finish - start)));
+						return baseline + amplitudes[segment] * Math.sin(Math.PI * local);
+					}
+					relationshipContext.beginPath();
+					relationshipContext.moveTo(startX,curveY(startX));
+					for (var x = startX + 2; x <= endX; x += 2) {
+						relationshipContext.lineTo(x,curveY(x));
+					}
+					var movingFade = relationshipContext.createLinearGradient(startX,0,Math.max(startX + 1,endX),0);
+					movingFade.addColorStop(0,'rgba(249,44,44,0)');
+					movingFade.addColorStop(.35,'rgba(249,44,44,.42)');
+					movingFade.addColorStop(1,'rgba(249,44,44,1)');
+					relationshipContext.strokeStyle = movingFade;
+					relationshipContext.globalAlpha = curveOpacity;
+					relationshipContext.lineWidth = 2;
+					relationshipContext.lineCap = 'round';
+					relationshipContext.lineJoin = 'round';
+					relationshipContext.stroke();
+					relationshipContext.globalAlpha = 1;
+				}
+				window.requestAnimationFrame(drawRelationshipCurve);
+			}
+			window.requestAnimationFrame(drawRelationshipCurve);
+		}
+
 });
