@@ -309,7 +309,8 @@ $(document).ready(function(){
 		var relationshipCanvas = document.querySelector('.hero-about-sequence-curve');
 		if (relationshipCanvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 			var relationshipContext = relationshipCanvas.getContext('2d');
-			var relationshipCycle = 15600;
+			var relationshipNodes = Array.prototype.slice.call(document.querySelectorAll('.hero-about-sequence-node'));
+			var relationshipCycle = 9600;
 			function drawRelationshipCurve(now) {
 				var width = relationshipCanvas.clientWidth;
 				var height = relationshipCanvas.clientHeight;
@@ -324,8 +325,10 @@ $(document).ready(function(){
 				if (phase >= .82 && phase <= .995) {
 					var progress = Math.min(1,(phase - .82) / .13);
 					progress = progress * progress * (3 - 2 * progress);
+					progress = Math.max(0,Math.min(1,progress + Math.sin(progress * Math.PI * 4) * .025));
 					var curveOpacity = phase > .95 ? Math.max(0,1 - ((phase - .95) / .045)) : 1;
-					var anchors = [0,.19565,.47826,.76087,1];
+					var nodeAnchors = width <= 430 ? [.15217,.5,.84783] : [.26087,.5,.73913];
+					var anchors = [0,nodeAnchors[0],nodeAnchors[1],nodeAnchors[2],1];
 					var amplitudes = [-9,12,-12,10];
 					var baseline = 20;
 					var endX = width * progress;
@@ -355,6 +358,13 @@ $(document).ready(function(){
 					relationshipContext.lineJoin = 'round';
 					relationshipContext.stroke();
 					relationshipContext.globalAlpha = 1;
+					relationshipNodes.forEach(function(node,index){
+						var nodePosition = nodeAnchors[index];
+						var emphasis = Math.max(0,1 - Math.abs(progress - nodePosition) / .09);
+						node.style.setProperty('--curve-emphasis',emphasis.toFixed(2));
+					});
+				} else {
+					relationshipNodes.forEach(function(node){node.style.setProperty('--curve-emphasis','0');});
 				}
 				window.requestAnimationFrame(drawRelationshipCurve);
 			}
