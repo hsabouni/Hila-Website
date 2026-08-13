@@ -2406,7 +2406,6 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     left:12.5%;
     width:75%;
     height:2px;
-    z-index:0;
     background:#9da5b2;
     opacity:.75;
 }
@@ -2418,8 +2417,9 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     height:12px;
     border-top:3px solid #f92c2c;
     border-right:3px solid #f92c2c;
+    z-index:3;
     transform:rotate(45deg);
-    animation:educationJourneyArrow 5.5s ease-in-out infinite;
+    animation:educationJourneyArrow 9s ease-in-out infinite;
 }
 @keyframes educationJourneyArrow {
     0% {left:0;opacity:0;}
@@ -2474,7 +2474,7 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
         top:0;
         left:-5px;
         transform:rotate(135deg);
-        animation:educationJourneyArrowMobile 5.5s ease-in-out infinite;
+        animation:educationJourneyArrowMobile 9s ease-in-out infinite;
     }
     @keyframes educationJourneyArrowMobile {
         0% {top:0;opacity:0;}
