@@ -2393,7 +2393,7 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     transition: 0.3s linear;
 }
 
-/* Education journey: one connected path from architecture to HCI. */
+/* Education journey: one moving direction through four connected stops. */
 .home-page #education .education-journey {
     position:relative;
     display:grid;
@@ -2407,29 +2407,25 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     width:75%;
     height:2px;
     z-index:0;
-}
-.home-page #education .education-journey-thread {
-    position:absolute;
-    right:0;
-    left:0;
-    height:2px;
     background:#9da5b2;
-    opacity:.5;
-    transform-origin:right center;
+    opacity:.75;
 }
-.home-page #education .education-journey-thread-one {transform:rotate(2.8deg);}
-.home-page #education .education-journey-thread-two {opacity:.8;}
-.home-page #education .education-journey-thread-three {transform:rotate(-2.8deg);}
-.home-page #education .education-journey-thread-two:after {
+.home-page #education .education-journey-arrow {
     position:absolute;
-    top:-5px;
-    right:-1px;
-    width:10px;
-    height:10px;
-    border-top:2px solid #d04a4a;
-    border-right:2px solid #d04a4a;
-    content:"";
+    top:-6px;
+    left:0;
+    width:12px;
+    height:12px;
+    border-top:3px solid #f92c2c;
+    border-right:3px solid #f92c2c;
     transform:rotate(45deg);
+    animation:educationJourneyArrow 5.5s ease-in-out infinite;
+}
+@keyframes educationJourneyArrow {
+    0% {left:0;opacity:0;}
+    8% {opacity:1;}
+    88% {left:calc(100% - 12px);opacity:1;}
+    100% {left:calc(100% - 12px);opacity:0;}
 }
 .home-page #education .education-journey-stop {position:relative;z-index:1;min-width:0;}
 .home-page #education .education-journey-marker {
@@ -2438,18 +2434,6 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     align-items:center;
     height:34px;
     margin:8px 0 12px;
-}
-.home-page #education .education-journey-stop:not(:last-child) .education-journey-marker:after {
-    position:absolute;
-    top:12px;
-    right:-4px;
-    width:8px;
-    height:8px;
-    border-top:1.5px solid #d04a4a;
-    border-right:1.5px solid #d04a4a;
-    content:"";
-    opacity:.8;
-    transform:rotate(45deg);
 }
 .home-page #education .education-journey-node {
     display:block;
@@ -2486,14 +2470,17 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
         width:2px;
         height:auto;
     }
-    .home-page #education .education-journey-thread {top:0;bottom:0;left:0;width:2px;height:auto;transform:none;}
-    .home-page #education .education-journey-thread-one {left:-5px;transform:rotate(-.35deg);transform-origin:bottom center;}
-    .home-page #education .education-journey-thread-three {left:5px;transform:rotate(.35deg);transform-origin:bottom center;}
-    .home-page #education .education-journey-thread-two:after {
-        top:auto;
-        right:-4px;
-        bottom:-1px;
+    .home-page #education .education-journey-arrow {
+        top:0;
+        left:-5px;
         transform:rotate(135deg);
+        animation:educationJourneyArrowMobile 5.5s ease-in-out infinite;
+    }
+    @keyframes educationJourneyArrowMobile {
+        0% {top:0;opacity:0;}
+        8% {opacity:1;}
+        88% {top:calc(100% - 12px);opacity:1;}
+        100% {top:calc(100% - 12px);opacity:0;}
     }
     .home-page #education .education-journey-stop {padding:0 0 32px;}
     .home-page #education .education-journey-stop:last-child {padding-bottom:0;}
@@ -2506,10 +2493,23 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
         margin:0;
         transform:none!important;
     }
-    .home-page #education .education-journey-stop:not(:last-child) .education-journey-marker:after {display:none;}
     .home-page #education .education-journey-node,
     .home-page #education .education-journey-current .education-journey-node {margin:0;}
     .home-page #education .education-journey .experience-time,
     .home-page #education .education-journey .timeline-content {padding:0;}
     .home-page #education .education-journey .timeline-content {margin-top:10px;}
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .home-page #education .education-journey-arrow {
+        left:calc(100% - 12px);
+        opacity:1;
+        animation:none;
+    }
+}
+@media (max-width:767px) and (prefers-reduced-motion:reduce) {
+    .home-page #education .education-journey-arrow {
+        top:calc(100% - 12px);
+        left:-5px;
+    }
 }
