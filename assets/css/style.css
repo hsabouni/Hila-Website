@@ -2400,28 +2400,56 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     grid-template-columns:repeat(4,minmax(0,1fr));
     gap:0;
 }
-.home-page #education .education-journey:before {
+.home-page #education .education-journey-path {
     position:absolute;
-    top:79px;
+    top:91px;
     left:12.5%;
     width:75%;
-    height:24px;
-    border-top:2px solid #9da5b2;
-    border-radius:50%;
+    height:2px;
+    z-index:0;
+}
+.home-page #education .education-journey-thread {
+    position:absolute;
+    right:0;
+    left:0;
+    height:2px;
+    background:#9da5b2;
+    opacity:.5;
+    transform-origin:right center;
+}
+.home-page #education .education-journey-thread-one {transform:rotate(2.8deg);}
+.home-page #education .education-journey-thread-two {opacity:.8;}
+.home-page #education .education-journey-thread-three {transform:rotate(-2.8deg);}
+.home-page #education .education-journey-thread-two:after {
+    position:absolute;
+    top:-5px;
+    right:-1px;
+    width:10px;
+    height:10px;
+    border-top:2px solid #d04a4a;
+    border-right:2px solid #d04a4a;
     content:"";
-    opacity:.7;
-    transform:rotate(-1.2deg);
-    transform-origin:center;
+    transform:rotate(45deg);
 }
 .home-page #education .education-journey-stop {position:relative;z-index:1;min-width:0;}
-.home-page #education .education-journey-stop:nth-child(2) .education-journey-marker {transform:translateY(-3px);}
-.home-page #education .education-journey-stop:nth-child(3) .education-journey-marker {transform:translateY(-5px);}
-.home-page #education .education-journey-stop:nth-child(4) .education-journey-marker {transform:translateY(-7px);}
 .home-page #education .education-journey-marker {
+    position:relative;
     display:flex;
     align-items:center;
     height:34px;
     margin:8px 0 12px;
+}
+.home-page #education .education-journey-stop:not(:last-child) .education-journey-marker:after {
+    position:absolute;
+    top:12px;
+    right:-4px;
+    width:8px;
+    height:8px;
+    border-top:1.5px solid #d04a4a;
+    border-right:1.5px solid #d04a4a;
+    content:"";
+    opacity:.8;
+    transform:rotate(45deg);
 }
 .home-page #education .education-journey-node {
     display:block;
@@ -2451,16 +2479,21 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 
 @media (max-width:767px) {
     .home-page #education .education-journey {display:block;padding-left:28px;}
-    .home-page #education .education-journey:before {
+    .home-page #education .education-journey-path {
         top:13px;
         bottom:24px;
         left:12px;
         width:2px;
         height:auto;
-        border:0;
-        border-left:2px solid #9da5b2;
-        border-radius:0;
-        transform:none;
+    }
+    .home-page #education .education-journey-thread {top:0;bottom:0;left:0;width:2px;height:auto;transform:none;}
+    .home-page #education .education-journey-thread-one {left:-5px;transform:rotate(-.35deg);transform-origin:bottom center;}
+    .home-page #education .education-journey-thread-three {left:5px;transform:rotate(.35deg);transform-origin:bottom center;}
+    .home-page #education .education-journey-thread-two:after {
+        top:auto;
+        right:-4px;
+        bottom:-1px;
+        transform:rotate(135deg);
     }
     .home-page #education .education-journey-stop {padding:0 0 32px;}
     .home-page #education .education-journey-stop:last-child {padding-bottom:0;}
@@ -2473,6 +2506,7 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
         margin:0;
         transform:none!important;
     }
+    .home-page #education .education-journey-stop:not(:last-child) .education-journey-marker:after {display:none;}
     .home-page #education .education-journey-node,
     .home-page #education .education-journey-current .education-journey-node {margin:0;}
     .home-page #education .education-journey .experience-time,
