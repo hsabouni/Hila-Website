@@ -119,7 +119,7 @@ nav.navbar.bootsnav {
 /*.navbar-brand*/
 .navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus {
     display: inline-block;
-    color: #f92c2c;
+    color: #d92f2f;
     font-size: 20px;
     font-weight: 600;
     padding: 33px 0px 57px;
@@ -195,6 +195,14 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f92c2c;}
     min-height:580px;
     height:72vh;
     max-height:680px;
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+    outline:3px solid #2563eb!important;
+    outline-offset:4px!important;
+    border-radius:2px;
 }
 .welcome-hero:before{
     position:absolute;
