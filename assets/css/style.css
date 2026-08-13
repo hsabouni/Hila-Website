@@ -988,12 +988,12 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     transform: translateY(0);
 }
 .motion-ready .experience.scroll-reveal .timeline-axis {
-    transform: translateX(-50%) scaleY(0);
-    transform-origin: top center;
-    transition: transform 1.4s ease .25s;
+    opacity:0;
+    transform:translateX(-50%);
+    transition:opacity .5s ease .15s;
 }
 .motion-ready .experience.scroll-reveal.is-visible .timeline-axis {
-    transform: translateX(-50%) scaleY(1);
+    opacity:1;
 }
 .motion-ready .publications.scroll-reveal .publication-ribbon .col-sm-2 {
     opacity: 0;
@@ -1007,12 +1007,16 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .motion-ready .publications.scroll-reveal.is-visible .publication-ribbon .col-sm-2:nth-child(4) {transition-delay:.34s;}
 .motion-ready .publications.scroll-reveal.is-visible .publication-ribbon .col-sm-2:nth-child(5) {transition-delay:.42s;}
 .motion-ready .publications.scroll-reveal.is-visible .publication-ribbon .col-sm-2:nth-child(6) {transition-delay:.50s;}
-.motion-ready #experience .experience-reveal,
+.motion-ready #experience .experience-reveal {
+    opacity: 0;
+    transform:none;
+    transition:opacity .75s ease;
+}
 .motion-ready.portfolio-one-page #task-design .experience-reveal,
 .motion-ready.portfolio-one-page #study-design .experience-reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity .75s ease,transform .75s ease;
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity .75s ease,transform .75s ease;
 }
 .motion-ready #experience .experience-reveal.is-visible,
 .motion-ready.portfolio-one-page #task-design .experience-reveal.is-visible,
@@ -1062,6 +1066,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         transform: none;
         transition: none;
     }
+}
+@media (prefers-reduced-motion: reduce) {
+    .motion-ready .experience.scroll-reveal .timeline-axis {opacity:1;transform:translateX(-50%);}
 }
 .publication-ribbon .row {margin: 0;}
 .publication-ribbon .publication-link {

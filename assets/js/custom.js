@@ -80,7 +80,6 @@ $(document).ready(function(){
 
 	positionExperienceAxis();
 	$(window).on('load resize', positionExperienceAxis);
-	$('#experience').on('transitionend', '.experience-reveal, .timeline-axis', positionExperienceAxis);
 	if (window.ResizeObserver) {
 		var experienceTimeline = document.querySelector('#experience .main-timeline');
 		if (experienceTimeline) {
