@@ -391,44 +391,4 @@ $(document).ready(function(){
 			window.requestAnimationFrame(drawRelationshipCurve);
 		}
 
-		// Subtle node-inspired cursor for fine-pointer devices.
-		if (window.matchMedia('(hover:hover) and (pointer:fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-			var cursorRing = document.createElement('span');
-			var cursorDot = document.createElement('span');
-			cursorRing.className = 'custom-cursor-ring';
-			cursorDot.className = 'custom-cursor-dot';
-			document.body.appendChild(cursorRing);
-			document.body.appendChild(cursorDot);
-			document.body.classList.add('custom-cursor-ready');
-			var pointerX = -60, pointerY = -60, ringX = -60, ringY = -60;
-			function moveCustomCursor(event) {
-				pointerX = event.clientX;
-				pointerY = event.clientY;
-				cursorDot.style.left = pointerX + 'px';
-				cursorDot.style.top = pointerY + 'px';
-				cursorRing.classList.add('is-visible');
-				cursorDot.classList.add('is-visible');
-			}
-			function animateCustomCursor() {
-				ringX += (pointerX - ringX) * .28;
-				ringY += (pointerY - ringY) * .28;
-				cursorRing.style.left = ringX + 'px';
-				cursorRing.style.top = ringY + 'px';
-				window.requestAnimationFrame(animateCustomCursor);
-			}
-			document.addEventListener('mousemove',moveCustomCursor,{passive:true});
-			document.addEventListener('mouseout',function(event){
-				if (!event.relatedTarget) {
-					cursorRing.classList.remove('is-visible');
-					cursorDot.classList.remove('is-visible');
-				}
-			});
-			document.addEventListener('mouseover',function(event){
-				var interactive = event.target.closest('a,button,[role="button"],input,textarea,select');
-				cursorRing.classList.toggle('is-active',Boolean(interactive));
-				cursorDot.classList.toggle('is-active',Boolean(interactive));
-			});
-			window.requestAnimationFrame(animateCustomCursor);
-		}
-
 });

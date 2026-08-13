@@ -2223,48 +2223,12 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     .portfolio-two-page .portfolio-two-lesson-grid {grid-template-columns:1fr;}
 }
 
+/* Native cursor states */
+a,button,[role="button"],input[type="button"],input[type="submit"],input[type="reset"] {cursor:pointer;}
+input:not([type="button"]):not([type="submit"]):not([type="reset"]),textarea,[contenteditable="true"] {cursor:text;}
+button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled="true"] {cursor:not-allowed;}
+
 /* Cross-project navigation */
-.custom-cursor-ring,
-.custom-cursor-dot {
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:99999;
-    pointer-events:none;
-    opacity:0;
-}
-.custom-cursor-ring {
-    width:19px;
-    height:14px;
-    border:0;
-    background:#2563eb;
-    clip-path:polygon(50% 0,100% 88%,0 88%);
-    transform-origin:50% 0;
-    transform:translate(-50%,0);
-    transition:width .28s ease,height .28s ease,background-color .28s ease,opacity .18s ease;
-}
-.custom-cursor-dot {
-    display:none;
-}
-body.custom-cursor-ready,
-body.custom-cursor-ready a,
-body.custom-cursor-ready button,
-body.custom-cursor-ready [role="button"] {cursor:none;}
-body.custom-cursor-ready input,
-body.custom-cursor-ready textarea,
-body.custom-cursor-ready [contenteditable="true"] {cursor:text;}
-.custom-cursor-ring.is-visible,
-.custom-cursor-dot.is-visible {opacity:1;}
-.custom-cursor-ring.is-active {
-    width:19px;
-    height:19px;
-    background:#2563eb;
-}
-@media (hover:none), (pointer:coarse), (prefers-reduced-motion:reduce) {
-    .custom-cursor-ring,.custom-cursor-dot {display:none!important;}
-    body.custom-cursor-ready,body.custom-cursor-ready a,body.custom-cursor-ready button,body.custom-cursor-ready [role="button"] {cursor:auto;}
-    body.custom-cursor-ready input,body.custom-cursor-ready textarea,body.custom-cursor-ready [contenteditable="true"] {cursor:text;}
-}
 .page-contact {padding:32px 0 38px;background:#fff;border-top:1px solid #e5e9ee;}
 .page-contact .section-heading h2 {padding-bottom:20px;}
 .page-contact .contact-actions {display:flex;align-items:center;justify-content:center;gap:12px;}
