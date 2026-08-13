@@ -2554,6 +2554,6 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     font-size:0;
     transform:translate(-3px,-3px);
 }
-.home-page #experience #generative-ai-decisions .experience-journal-link,
-.home-page #experience #generative-ai-decisions .experience-journal-link:hover,
-.home-page #experience #generative-ai-decisions .experience-journal-link:focus {text-decoration:none;}
+.home-page #experience .experience-journal-link,
+.home-page #experience .experience-journal-link:hover,
+.home-page #experience .experience-journal-link:focus {text-decoration:none;}
