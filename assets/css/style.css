@@ -2428,10 +2428,9 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .home-page.motion-ready #education.education-started .education-journey-arrow,
 .home-page:not(.motion-ready) #education .education-journey-arrow {animation:educationJourneyArrow 14s ease-in-out infinite;}
 @keyframes educationJourneyArrow {
-    0% {left:0;opacity:0;}
-    8% {opacity:1;}
+    0% {left:0;opacity:1;}
     88% {left:calc(100% - 12px);opacity:1;}
-    100% {left:calc(100% - 12px);opacity:0;}
+    100% {left:calc(100% - 12px);opacity:1;}
 }
 .home-page #education .education-journey-stop {position:relative;z-index:1;min-width:0;}
 .home-page #education .education-journey-marker {
@@ -2485,10 +2484,9 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     .home-page.motion-ready #education.education-started .education-journey-arrow,
     .home-page:not(.motion-ready) #education .education-journey-arrow {animation:educationJourneyArrowMobile 14s ease-in-out infinite;}
     @keyframes educationJourneyArrowMobile {
-        0% {top:0;opacity:0;}
-        8% {opacity:1;}
+        0% {top:0;opacity:1;}
         88% {top:calc(100% - 12px);opacity:1;}
-        100% {top:calc(100% - 12px);opacity:0;}
+        100% {top:calc(100% - 12px);opacity:1;}
     }
     .home-page #education .education-journey-stop {padding:0 0 32px;}
     .home-page #education .education-journey-stop:last-child {padding-bottom:0;}
