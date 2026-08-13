@@ -2325,6 +2325,9 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .portfolio-one-page,
 .portfolio-two-page,
 .research-journal-page {background:#fcfbf9;color:#565e70;}
+.portfolio-one-page .navbar-brand,
+.portfolio-two-page .navbar-brand,
+.research-journal-page .navbar-brand {color:#d92f2f!important;}
 .portfolio-one-page .about,
 .portfolio-two-page .about,
 .research-journal-page .about,
@@ -2350,7 +2353,18 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .portfolio-two-page .single-about-txt p,
 .research-journal-page .journal-body-copy,
 .research-journal-page .research-phase-content p,
-.research-journal-page .journal-info-card p {color:#565e70;}
+.research-journal-page .journal-info-card p,
+.research-journal-page .journal-section-kicker,
+.research-journal-page .research-status-note,
+.research-journal-page .hero-about-sequence-label,
+.research-journal-page .journal-implication-grid p {color:#565e70!important;}
+.research-journal-page .journal-eyebrow,
+.research-journal-page .journal-status,
+.research-journal-page .journal-info-card h3,
+.research-journal-page .research-note-meta,
+.research-journal-page .research-phase-label,
+.research-journal-page .research-transition span,
+.research-journal-page .journal-meta-grid .case-study-meta-card > span {color:#4f5668;}
 .portfolio-one-page .section-heading,
 .portfolio-two-page .section-heading,
 .research-journal-page .section-heading,
