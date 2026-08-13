@@ -2248,6 +2248,79 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     .project-navigation-link {width:100%;max-width:260px;}
 }
 
+/* Color accessibility pass: preserve the warm red, cream, and navy palette. */
+.single-about-txt p,
+.single-horizontal-timeline p,
+.main-timeline .description,
+.main-timeline-task .description,
+.main-timeline-study .description {color:#565e70;}
+.single-about-txt .about-methods,
+.portfolio .work-card p,
+.portfolio-one-page .case-study-meta-card p,
+.portfolio-one-page .case-study-finding-grid p,
+.portfolio-one-page .case-study-lesson-grid p,
+.portfolio-one-page .case-study-implication p,
+.portfolio-one-page .case-study-next-step p,
+.portfolio-one-page .case-study-caption,
+.portfolio-two-page .portfolio-two-meta-grid p,
+.portfolio-two-page .portfolio-two-process-grid p,
+.portfolio-two-page .portfolio-two-finding-grid p,
+.portfolio-two-page .portfolio-two-lesson-grid p,
+.portfolio-two-page .portfolio-two-implication p,
+.portfolio-two-page .portfolio-two-next-step p,
+.portfolio-two-page .portfolio-two-caption {color:#5b6273;}
+.home-page #about .about-methods,
+.home-page #education .single-horizontal-timeline p,
+.home-page #experience .main-timeline .description,
+.home-page #experience .timeline-content h5,
+.home-page #experience .experience-time h3,
+.home-page .portfolio .work-card-summary,
+.home-page .portfolio .work-card-role,
+.home-page .publication-ribbon .publication-name {color:#565e70;}
+.home-page #education,
+.home-page #publications,
+.home-page #contact {background:#e9dfd8;}
+
+.current-focus-badge,
+.experience-journal-link span,
+.portfolio .work-card-meta,
+.research-journal-page .research-phase-label,
+.research-journal-page .research-transition span,
+.research-journal-page .journal-status,
+.research-journal-page .research-note-tags span,
+.portfolio-one-page .case-study-meta-card span,
+.portfolio-one-page .case-study-finding-grid span,
+.portfolio-one-page .case-study-implication > span,
+.portfolio-one-page .case-study-process-grid span,
+.portfolio-one-page .case-study-condition-grid span,
+.portfolio-one-page .case-study-subheading span,
+.portfolio-two-page .case-study-award,
+.portfolio-two-page .portfolio-two-meta-grid span,
+.portfolio-two-page .portfolio-two-process-grid span,
+.portfolio-two-page .portfolio-two-finding-grid span,
+.portfolio-two-page .portfolio-two-implication > span,
+.portfolio-two-page .portfolio-two-lens-heading span {color:#4f5668;}
+
+.experience-journal-link,
+.portfolio .work-card-link {
+    color:#3c4258;
+    text-decoration:underline;
+    text-decoration-color:#c86a6a;
+    text-underline-offset:3px;
+}
+.experience-journal-link:hover,.experience-journal-link:focus {color:#303544;text-decoration-thickness:2px;}
+
+.home-page .contact-action,
+.page-contact .contact-action,
+.project-navigation-link {border-color:#6f5962;color:#3c4258;background:#fff;}
+.home-page .contact-action:hover,.home-page .contact-action:focus,
+.page-contact .contact-action:hover,.page-contact .contact-action:focus,
+.project-navigation-link:hover,.project-navigation-link:focus {border-color:#6f5962;color:#303544;background:#f1ece7;}
+.home-page .contact-action-primary,
+.page-contact .contact-action-primary {border-color:#f92c2c;color:#fff;background:#f92c2c;}
+.home-page .contact-action-primary:hover,.home-page .contact-action-primary:focus,
+.page-contact .contact-action-primary:hover,.page-contact .contact-action-primary:focus {border-color:#d92f2f;color:#fff;background:#d92f2f;}
+
 .about-contribution {padding-top: 50px;}
 
 .button {
