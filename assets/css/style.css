@@ -2521,7 +2521,8 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     display:flex;
     align-items:center;
     gap:7px;
-    margin:5px 0 4px;
+    min-height:23px;
+    margin:-12px 0 9px;
     color:#303544;
 }
 .home-page #experience .experience-theme-icons svg {
@@ -2530,6 +2531,12 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     height:23px;
     flex:0 0 23px;
     overflow:visible;
+}
+.home-page #experience .experience-theme-icons svg[aria-label="AI"] {
+    width:21px;
+    height:21px;
+    margin:1px;
+    flex-basis:21px;
 }
 .home-page #experience #generative-ai-decisions .timeline-content h4.title span > i,
 .home-page #experience .main-timeline > ul > li:nth-child(3) .timeline-content h4.title span > i {
