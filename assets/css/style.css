@@ -2308,6 +2308,7 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     text-underline-offset:3px;
 }
 .experience-journal-link:hover,.experience-journal-link:focus {color:#303544;text-decoration-thickness:2px;}
+.home-page #portfolio .work-card-link {text-decoration:none;}
 
 .home-page .contact-action,
 .page-contact .contact-action,
