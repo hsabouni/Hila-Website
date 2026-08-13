@@ -992,7 +992,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     transform-origin: top center;
     transition: transform 1.4s ease .25s;
 }
-.motion-ready .experience.scroll-reveal.is-visible .timeline-axis {
+.motion-ready .experience.scroll-reveal.experience-started .timeline-axis {
     transform: translateX(-50%) scaleY(1);
 }
 .motion-ready .publications.scroll-reveal .publication-ribbon .col-sm-2 {
@@ -2410,6 +2410,8 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     background:#9da5b2;
     opacity:.75;
 }
+.home-page.motion-ready #education .education-journey-path {opacity:0;transition:opacity .45s ease;}
+.home-page.motion-ready #education.education-started .education-journey-path {opacity:.75;}
 .home-page #education .education-journey-arrow {
     position:absolute;
     top:-5px;
@@ -2420,8 +2422,11 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     border-right:3px solid #f92c2c;
     z-index:3;
     transform:rotate(45deg);
-    animation:educationJourneyArrow 14s ease-in-out infinite;
+    opacity:0;
+    animation:none;
 }
+.home-page.motion-ready #education.education-started .education-journey-arrow,
+.home-page:not(.motion-ready) #education .education-journey-arrow {animation:educationJourneyArrow 14s ease-in-out infinite;}
 @keyframes educationJourneyArrow {
     0% {left:0;opacity:0;}
     8% {opacity:1;}
@@ -2475,8 +2480,10 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
         top:0;
         left:-5px;
         transform:rotate(135deg);
-        animation:educationJourneyArrowMobile 14s ease-in-out infinite;
+        animation:none;
     }
+    .home-page.motion-ready #education.education-started .education-journey-arrow,
+    .home-page:not(.motion-ready) #education .education-journey-arrow {animation:educationJourneyArrowMobile 14s ease-in-out infinite;}
     @keyframes educationJourneyArrowMobile {
         0% {top:0;opacity:0;}
         8% {opacity:1;}
