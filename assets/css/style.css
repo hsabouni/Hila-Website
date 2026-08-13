@@ -1989,11 +1989,13 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     .outcome-factor {animation:none!important;transition:none!important;}
 }
 .home-page #education {padding: 36px 0 44px;}
-.home-page #education .education-horizontal-timeline {padding: 34px 0 0;}
+.home-page #education .education-horizontal-timeline {padding: 42px 0 0;}
+.home-page #education .single-horizontal-timeline {min-height:235px;padding:0 12px;}
+.home-page #education .timeline-content {padding-top:2px;}
 .home-page #education .timeline-horizontal-border {padding:12px 0 20px;}
 .home-page #experience {padding: 36px 0 46px;}
-.home-page #experience .experience-content {padding-top: 38px;}
-.home-page #experience .single-timeline-box {margin-bottom: 38px;}
+.home-page #experience .experience-content {padding-top: 46px;}
+.home-page #experience .single-timeline-box {margin-bottom: 52px;}
 .home-page #experience li:last-child .single-timeline-box {margin-bottom: 0;}
 .home-page #publications {padding: 36px 0 46px;}
 .home-page #publications .publication-ribbon .single-profile {height:145px;padding:16px 12px;}
@@ -2005,6 +2007,11 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .home-page #contact .contact-add-info {margin:28px 0 34px;}
 .home-page #contact {padding:32px 0 38px;}
 .home-page #contact .section-heading h2 {padding-bottom:20px;}
+.home-page #education,
+.home-page #experience,
+.home-page #publications,
+.home-page #portfolio,
+.home-page #contact {scroll-margin-top:90px;}
 .home-page .contact-actions {display:flex;align-items:center;justify-content:center;gap:12px;}
 .home-page .contact-action {display:inline-flex;align-items:center;justify-content:center;min-width:142px;height:44px;padding:0 20px;border:1px solid #f92c2c;border-radius:4px;color:#f92c2c;background:#fff;font-size:13px;font-weight:600;transition:color .3s ease,background-color .3s ease,box-shadow .3s ease,transform .3s ease;}
 .home-page .contact-action i {margin-right:8px;}

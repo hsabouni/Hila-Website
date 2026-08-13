@@ -72,7 +72,9 @@
 	.single-profile {max-width: 350px; margin: 30px auto;border: 0;}
 	.profile-border{border: 0;}
 
-	.single-horizontal-timeline {max-width: 350px;margin: 30px auto;}
+	.single-horizontal-timeline {max-width: 350px;margin: 44px auto;}
+	.home-page #education .single-horizontal-timeline {min-height:0;padding:0 8px;}
+	.home-page #experience .single-timeline-box {margin-bottom:58px;}
 
 }/*max-width:767px*/
 
