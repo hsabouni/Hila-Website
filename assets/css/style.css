@@ -2514,3 +2514,20 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
         left:-5px;
     }
 }
+
+/* Repeating hand-drawn theme marks for experience entries. */
+.theme-icon-library {position:absolute;width:0;height:0;overflow:hidden;}
+.home-page #experience .experience-theme-icons {
+    display:flex;
+    align-items:center;
+    gap:7px;
+    margin:5px 0 4px;
+    color:#303544;
+}
+.home-page #experience .experience-theme-icons svg {
+    display:block;
+    width:23px;
+    height:23px;
+    flex:0 0 23px;
+    overflow:visible;
+}
