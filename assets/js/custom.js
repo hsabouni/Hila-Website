@@ -275,8 +275,10 @@ $(document).ready(function(){
 		});
 
 	// 6. Reveal the page structure as it enters the viewport
-		var revealSections = $('.home-page #about, .home-page #education, .home-page #experience, .home-page #publications, .home-page #portfolio, .home-page #contact, .portfolio-one-page #intro, .portfolio-one-page #method, .portfolio-one-page #task-design, .portfolio-one-page #study-design, .portfolio-one-page #analysis, .portfolio-one-page #about, .portfolio-one-page #lessons_learned, .portfolio-one-page #contact, .portfolio-two-page .case-study-section, .research-journal-page .journal-project-intro, .research-journal-page .journal-portfolio-section, .research-journal-page .journal-notes-intro, .research-journal-page .journal-note-section, .research-journal-page .project-navigation');
+		var revealSections = $('.home-page #about, .home-page #publications, .home-page #portfolio, .home-page #contact, .portfolio-one-page #intro, .portfolio-one-page #method, .portfolio-one-page #task-design, .portfolio-one-page #study-design, .portfolio-one-page #analysis, .portfolio-one-page #about, .portfolio-one-page #lessons_learned, .portfolio-one-page #contact, .portfolio-two-page .case-study-section, .research-journal-page .journal-project-intro, .research-journal-page .journal-portfolio-section, .research-journal-page .journal-notes-intro, .research-journal-page .journal-note-section, .research-journal-page .project-navigation');
+		var pacedHomeSections = $('.home-page #education, .home-page #experience');
 		revealSections.addClass('scroll-reveal');
+		pacedHomeSections.addClass('scroll-reveal');
 		$('body').addClass('motion-ready');
 
 		if ('IntersectionObserver' in window) {
@@ -287,8 +289,17 @@ $(document).ready(function(){
 			},{threshold:.12,rootMargin:'0px 0px -10% 0px'});
 
 			revealSections.each(function(){revealObserver.observe(this);});
+
+			var pacedHomeObserver = new IntersectionObserver(function(entries){
+				entries.forEach(function(entry){
+					$(entry.target).toggleClass('is-visible',entry.isIntersecting);
+				});
+			},{threshold:.08,rootMargin:'0px 0px -50% 0px'});
+
+			pacedHomeSections.each(function(){pacedHomeObserver.observe(this);});
 		} else {
 			revealSections.addClass('is-visible');
+			pacedHomeSections.addClass('is-visible');
 		}
 
 		var experienceEntries = $('#experience .single-timeline-box, .portfolio-one-page #task-design .single-timeline-box, .portfolio-one-page #study-design .single-timeline-box').addClass('experience-reveal');
@@ -298,9 +309,6 @@ $(document).ready(function(){
 			var experienceObserver = new IntersectionObserver(function(entries){
 				entries.forEach(function(entry){
 					$(entry.target).toggleClass('is-visible',entry.isIntersecting);
-					if (entry.target === experienceEntries.get(0)) {
-						$('#experience').toggleClass('experience-started',entry.isIntersecting);
-					}
 				});
 			},{threshold:.18,rootMargin:'-6% 0px -28% 0px'});
 
@@ -309,9 +317,6 @@ $(document).ready(function(){
 			var educationObserver = new IntersectionObserver(function(entries){
 				entries.forEach(function(entry){
 					$(entry.target).toggleClass('is-visible',entry.isIntersecting);
-					if (entry.target === educationEntries.get(0)) {
-						$('#education').toggleClass('education-started',entry.isIntersecting);
-					}
 				});
 			},{threshold:.2,rootMargin:'-5% 0px -28% 0px'});
 
@@ -327,8 +332,6 @@ $(document).ready(function(){
 		} else {
 			experienceEntries.addClass('is-visible');
 			educationEntries.addClass('is-visible');
-			$('#experience').addClass('experience-started');
-			$('#education').addClass('education-started');
 			researchEntries.addClass('is-visible');
 		}
 
