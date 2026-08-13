@@ -2539,7 +2539,7 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     flex-basis:21px;
 }
 .home-page #experience #generative-ai-decisions .timeline-content h4.title span > i,
-.home-page #experience .main-timeline > ul > li:nth-child(3) .timeline-content h4.title span > i {
+.home-page #experience #vr-training-decisions .timeline-content h4.title span > i {
     width:16px;
     height:16px;
     border-radius:50%;
