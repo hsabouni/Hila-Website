@@ -2321,6 +2321,46 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .home-page .contact-action-primary:hover,.home-page .contact-action-primary:focus,
 .page-contact .contact-action-primary:hover,.page-contact .contact-action-primary:focus {border-color:#d92f2f;color:#fff;background:#d92f2f;}
 
+/* Carry the homepage palette across the research and case-study pages. */
+.portfolio-one-page,
+.portfolio-two-page,
+.research-journal-page {background:#fcfbf9;color:#565e70;}
+.portfolio-one-page .about,
+.portfolio-two-page .about,
+.research-journal-page .about,
+.portfolio-one-page .page-contact,
+.portfolio-two-page .page-contact,
+.research-journal-page .page-contact {background:#fff;}
+.portfolio-one-page .education,
+.portfolio-one-page .dicot,
+.portfolio-two-page .education,
+.portfolio-two-page .dicot,
+.research-journal-page .education,
+.research-journal-page .dicot,
+.portfolio-one-page .project-navigation,
+.portfolio-two-page .project-navigation,
+.research-journal-page .project-navigation {background:#e9dfd8;}
+.portfolio-one-page .section-heading h2,
+.portfolio-two-page .section-heading h2,
+.research-journal-page .section-heading h2,
+.portfolio-one-page .single-about-txt h3,
+.portfolio-two-page .single-about-txt h3,
+.research-journal-page .research-phase-content h3 {color:#303544;}
+.portfolio-one-page .single-about-txt p,
+.portfolio-two-page .single-about-txt p,
+.research-journal-page .journal-body-copy,
+.research-journal-page .research-phase-content p,
+.research-journal-page .journal-info-card p {color:#565e70;}
+.portfolio-one-page .section-heading,
+.portfolio-two-page .section-heading,
+.research-journal-page .section-heading,
+.portfolio-one-page .page-contact,
+.portfolio-two-page .page-contact,
+.research-journal-page .page-contact,
+.portfolio-one-page .project-navigation,
+.portfolio-two-page .project-navigation,
+.research-journal-page .project-navigation {border-color:#ded3cc;}
+
 .about-contribution {padding-top: 50px;}
 
 .button {
