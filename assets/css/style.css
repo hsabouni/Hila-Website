@@ -2402,7 +2402,7 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 }
 .home-page #education .education-journey-path {
     position:absolute;
-    top:91px;
+    top:110px;
     left:12.5%;
     width:75%;
     height:2px;
@@ -2419,7 +2419,7 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     border-right:3px solid #f92c2c;
     z-index:3;
     transform:rotate(45deg);
-    animation:educationJourneyArrow 9s ease-in-out infinite;
+    animation:educationJourneyArrow 14s ease-in-out infinite;
 }
 @keyframes educationJourneyArrow {
     0% {left:0;opacity:0;}
@@ -2474,7 +2474,7 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
         top:0;
         left:-5px;
         transform:rotate(135deg);
-        animation:educationJourneyArrowMobile 9s ease-in-out infinite;
+        animation:educationJourneyArrowMobile 14s ease-in-out infinite;
     }
     @keyframes educationJourneyArrowMobile {
         0% {top:0;opacity:0;}
