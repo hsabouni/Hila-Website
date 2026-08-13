@@ -364,6 +364,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f92c2c;}
 .hero-layout {display:flex;align-items:center;}
 .header-text {position:relative;z-index:2;text-align:left;}
 .decision-field {--self-weight:.62;--ai-weight:.62;--group-weight:.62;position:relative;z-index:2;min-height:410px;padding:28px 30px 24px;border:1px solid rgba(143,32,32,.13);border-radius:28px;background:rgba(255,255,255,.58);box-shadow:0 24px 60px rgba(74,52,48,.09);backdrop-filter:blur(8px);}
+.decision-field:focus-visible {outline:3px solid #2563eb;outline-offset:5px;}
 .decision-kicker {margin:0;color:#8f2020;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;}
 .decision-map {position:relative;height:230px;margin-top:0;}
 .decision-source {position:absolute;left:0;width:145px;padding-left:18px;color:#4d5365;transition:transform .5s ease,opacity .5s ease;}
@@ -1981,6 +1982,11 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     .hero-about-sequence-node {opacity:1;transform:scale(1);animation:none;}
     .hero-about-sequence-label {opacity:1;transform:translate(-50%,0);animation:none;}
     .hero-about-sequence-node:after {display:none;}
+    .decision-field,
+    .decision-field *,
+    .decision-source,
+    .influence-line,
+    .outcome-factor {animation:none!important;transition:none!important;}
 }
 .home-page #education {padding: 36px 0 44px;}
 .home-page #education .education-horizontal-timeline {padding: 34px 0 0;}

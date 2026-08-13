@@ -207,7 +207,8 @@ $(document).ready(function(){
 		$(window).on('resize',alignHeroTopics);
 
 		var decisionField = document.querySelector('.decision-field');
-		if (decisionField && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+		if (decisionField) {
+			var decisionReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 			var decisionState = decisionField.querySelector('.decision-state');
 			var decisionSources = decisionField.querySelectorAll('.decision-source');
 			var decisionLines = decisionField.querySelectorAll('.influence-line');
@@ -218,6 +219,7 @@ $(document).ready(function(){
 				'Social influence leads; you + AI still contribute'
 			];
 			function activateDecisionSource(strongest){
+				if (decisionReducedMotion) {return;}
 				var weights = strongest === 2 ? [.28,.28,.28] : [.5,.5,.5];
 				weights[strongest] = 1;
 				decisionField.style.setProperty('--self-weight',weights[0].toFixed(2));
@@ -229,11 +231,9 @@ $(document).ready(function(){
 				decisionState.textContent = influenceLabels[strongest];
 				decisionField.classList.add('is-active');
 				decisionField.classList.add('has-interacted');
+				decisionField.setAttribute('aria-label','Interactive group decision visualization. ' + influenceLabels[strongest] + '. Use Enter or Space to cycle the leading factor.');
 			}
-			decisionSources.forEach(function(source,index){
-				source.addEventListener('mouseenter',function(){activateDecisionSource(index);});
-			});
-			decisionField.addEventListener('pointerleave',function(){
+			function resetDecisionField(){
 				decisionField.style.setProperty('--self-weight','.62');
 				decisionField.style.setProperty('--ai-weight','.62');
 				decisionField.style.setProperty('--group-weight','.62');
@@ -242,7 +242,27 @@ $(document).ready(function(){
 				decisionLines.forEach(function(line){line.classList.remove('is-dominant');});
 				outcomeFactors.forEach(function(factor){factor.classList.remove('is-emphasized');});
 				decisionField.classList.remove('is-active');
-			});
+				decisionField.setAttribute('aria-label','Interactive group decision visualization. Your judgment, an AI recommendation, and a teammate\'s judgment all contribute. Use Enter or Space to cycle which factor carries more weight.');
+			}
+			if (!decisionReducedMotion) {
+				var decisionCycleIndex = -1;
+				decisionSources.forEach(function(source,index){
+					source.addEventListener('mouseenter',function(){decisionCycleIndex=index;activateDecisionSource(index);});
+				});
+				decisionField.addEventListener('pointerleave',resetDecisionField);
+				decisionField.addEventListener('pointerup',function(event){
+					if (event.pointerType === 'mouse') {return;}
+					decisionCycleIndex=(decisionCycleIndex+1)%3;
+					activateDecisionSource(decisionCycleIndex);
+				});
+				decisionField.addEventListener('keydown',function(event){
+					if (event.key === 'Enter' || event.key === ' ') {
+						event.preventDefault();
+						decisionCycleIndex=(decisionCycleIndex+1)%3;
+						activateDecisionSource(decisionCycleIndex);
+					}
+				});
+			}
 		}
 
 		$('.hero-topic[href^="#"]').on('click',function(event){
