@@ -2123,6 +2123,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-one-page .case-study-meta-card strong,
 .portfolio-one-page .case-study-finding-grid strong,
 .portfolio-one-page .case-study-lesson-grid strong {display:block;margin-bottom:9px;color:#3c4258;font-size:15px;line-height:1.45;}
+.portfolio-one-page .case-study-lesson-grid strong {margin-bottom:0;}
 .portfolio-one-page .case-study-meta-card p,
 .portfolio-one-page .case-study-finding-grid p,
 .portfolio-one-page .case-study-lesson-grid p,
