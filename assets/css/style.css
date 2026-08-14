@@ -2117,7 +2117,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-one-page .case-study-lesson-grid > div {padding:22px;border:1px solid #e4e7ec;border-radius:10px;background:#fff;}
 .portfolio-one-page .case-study-finding-grid > div,
 .portfolio-one-page .case-study-lesson-grid > div {padding:16px 4px;border:0;border-top:2px solid #f92c2c;border-radius:0;background:transparent;}
-.portfolio-one-page .case-study-lesson-grid > div {display:flex;align-items:center;min-height:92px;padding:20px;border:1px solid #e4e7ec;border-top:3px solid #f92c2c;border-radius:10px;background:#fff;box-shadow:0 6px 16px rgba(60,66,88,.05);}
+.portfolio-one-page .case-study-lesson-grid > div {display:flex;align-items:center;min-height:92px;padding:22px;border:1px solid #e4e7ec;border-radius:10px;background:#fff;box-shadow:none;}
 .portfolio-one-page .case-study-meta-card span,
 .portfolio-one-page .case-study-finding-grid span,
 .portfolio-one-page .case-study-implication > span {display:block;margin-bottom:8px;color:#f92c2c;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
