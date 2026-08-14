@@ -2157,6 +2157,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-one-page .case-study-condition-grid {margin-top:18px;}
 .portfolio-one-page .case-study-method-figure {margin-top:28px;}
 .portfolio-one-page .case-study-method-figure .single-method-img {padding-top:0;}
+.portfolio-one-page .case-study-method-figure .case-study-caption {text-align:center;}
 .portfolio-one-page .case-study-process-grid > div,
 .portfolio-one-page .case-study-condition-grid > div {padding:20px;border:1px solid #e4e7ec;background:#fff;}
 .portfolio-one-page .case-study-process-grid > div {padding:16px 4px;border:0;border-top:2px solid #f92c2c;background:transparent;}
