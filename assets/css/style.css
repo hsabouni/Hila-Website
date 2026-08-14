@@ -2108,6 +2108,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-one-page #about .single-method-img {padding-top:32px;}
 .portfolio-one-page #contact {padding:36px 0 46px;}
 .portfolio-one-page #contact .section-heading h2 {padding-bottom:0;}
+.portfolio-one-page .case-study-analysis-note {margin:18px 0 0;color:#565e70;font-size:13px;font-weight:500;line-height:1.7;}
 .portfolio-one-page .case-study-meta-grid,
 .portfolio-one-page .case-study-finding-grid,
 .portfolio-one-page .case-study-lesson-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px;}
