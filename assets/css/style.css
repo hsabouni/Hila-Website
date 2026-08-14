@@ -2131,12 +2131,17 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-one-page .case-study-key-result {border-color:#f92c2c;background:#fff4f2;}
 .portfolio-one-page .case-study-caption {max-width:720px;margin:12px auto 0;color:#8a909e;font-size:12px;line-height:1.65;text-align:left;}
 .portfolio-one-page .case-study-qual-figure {margin-top:28px;}
-.portfolio-one-page .case-study-theme-map {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
-.portfolio-one-page .case-study-theme-group {display:flex;flex-direction:column;align-items:center;padding:12px 12px 20px;}
-.portfolio-one-page .case-study-theme-notes {position:relative;z-index:2;display:flex;justify-content:center;gap:10px;width:100%;margin-bottom:-8px;}
-.portfolio-one-page .case-study-theme-notes span {display:flex;align-items:center;justify-content:center;min-height:58px;width:108px;padding:10px;background:#f2dfd8;box-shadow:0 5px 12px rgba(60,66,88,.10);color:#3c4258;font-size:11px;font-weight:500;text-align:center;transform:rotate(-2deg);}
-.portfolio-one-page .case-study-theme-notes span:nth-child(2) {background:#f7eee9;transform:rotate(2deg);}
-.portfolio-one-page .case-study-theme-core {display:flex;align-items:center;justify-content:center;width:190px;height:150px;border:2px solid #f92c2c;border-radius:50%;background:#fffaf7;color:#3c4258;font-size:17px;font-weight:600;text-align:center;}
+.portfolio-one-page .case-study-theme-map {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;padding:12px 8px 4px;scroll-margin-top:120px;}
+.portfolio-one-page .case-study-theme-group {position:relative;display:flex;flex-direction:column;align-items:center;padding:12px 12px 22px;}
+.portfolio-one-page .case-study-theme-group::after {position:absolute;z-index:0;top:92px;left:50%;width:2px;height:38px;background:#d7a99d;content:"";transform:translateX(-50%);}
+.portfolio-one-page .case-study-theme-notes {position:relative;z-index:2;display:flex;justify-content:center;gap:12px;width:100%;margin-bottom:-4px;}
+.portfolio-one-page .case-study-theme-notes span {position:relative;display:flex;align-items:center;justify-content:center;min-height:72px;width:122px;padding:14px 12px;border:1px solid #e7b6a8;border-radius:2px;background:linear-gradient(145deg,#f8ded5 0%,#f2cabd 100%);box-shadow:0 8px 15px rgba(60,66,88,.13),inset 0 1px 0 rgba(255,255,255,.65);color:#3c4258;font-size:12px;font-weight:600;line-height:1.35;text-align:center;transform:rotate(-3deg);}
+.portfolio-one-page .case-study-theme-notes span::before {position:absolute;top:-6px;left:50%;width:38px;height:12px;background:rgba(255,250,247,.72);box-shadow:0 1px 2px rgba(60,66,88,.08);content:"";transform:translateX(-50%) rotate(1deg);}
+.portfolio-one-page .case-study-theme-notes span::after {position:absolute;right:-1px;bottom:-1px;width:0;height:0;border-top:13px solid rgba(195,74,55,.18);border-right:13px solid #fff;content:"";}
+.portfolio-one-page .case-study-theme-notes span:nth-child(2) {border-color:#d9cbc1;background:linear-gradient(145deg,#f8f0e9 0%,#eaded5 100%);transform:rotate(2.5deg) translateY(4px);}
+.portfolio-one-page .case-study-theme-notes span:nth-child(2)::after {border-top-color:rgba(60,66,88,.12);}
+.portfolio-one-page .case-study-theme-core {position:relative;z-index:1;display:flex;align-items:center;justify-content:center;width:202px;height:164px;border:2px solid #c34a37;border-radius:48% 52% 46% 54% / 54% 46% 54% 46%;background:radial-gradient(circle at 38% 32%,#fff 0%,#fff8f4 46%,#f4ddd5 100%);box-shadow:0 12px 24px rgba(60,66,88,.10),inset 0 0 0 7px rgba(195,74,55,.06);color:#3c4258;font-size:18px;font-weight:600;text-align:center;}
+.portfolio-one-page .case-study-theme-core::after {position:absolute;inset:8px;border:1px solid rgba(195,74,55,.34);border-radius:52% 48% 55% 45% / 46% 54% 48% 52%;content:"";}
 .portfolio-one-page .case-study-implication {padding:28px;border-left:4px solid #f92c2c;background:#fff4f2;}
 .portfolio-one-page .case-study-implication h3 {margin:0 0 12px;color:#3c4258;font-size:21px;line-height:1.55;text-transform:none;}
 .portfolio-one-page .case-study-next-step {margin-top:24px;padding-top:24px;border-top:1px solid #e4e7ec;}
