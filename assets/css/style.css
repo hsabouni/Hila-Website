@@ -2188,9 +2188,13 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 /* Portfolio Two: use the same compact case-study rhythm */
 .portfolio-two-page .section-heading h2 {padding-bottom:24px;}
 .portfolio-two-page .portfolio-two-intro {padding:112px 0 46px;}
-.portfolio-two-page .portfolio-two-intro .about-content {padding-top:34px;}
+.portfolio-two-page .portfolio-two-intro .section-heading h2 {padding-bottom:0;}
+.portfolio-two-page .portfolio-two-intro .about-content {padding-top:28px;}
+.portfolio-two-page .portfolio-two-intro .single-about-txt h3 {text-align:left;}
 .portfolio-two-page .portfolio-two-intro .youtube-video-padding {padding-top:0;}
 .portfolio-two-page .portfolio-two-intro iframe {display:block;width:100%;max-width:560px;margin:0 auto;}
+.portfolio-two-page .portfolio-two-video-row {margin-top:22px;}
+.portfolio-two-page .portfolio-two-intro .portfolio-two-meta-grid {margin-top:24px;}
 .portfolio-two-page .portfolio-two-method {padding:36px 0 44px;}
 .portfolio-two-page .portfolio-two-method .education-horizontal-timeline {padding:34px 0 0;}
 .portfolio-two-page .portfolio-two-method .timeline-horizontal-border {padding:14px 0 20px;}
@@ -2203,7 +2207,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-two-page .portfolio-two-content .single-method-img {padding-top:32px;}
 .portfolio-two-page .portfolio-two-contact {padding:36px 0 46px;}
 .portfolio-two-page .portfolio-two-contact .button {width:240px;}
-.portfolio-two-page .case-study-award {margin-top:8px;color:#f92c2c;font-size:13px;font-weight:600;letter-spacing:.3px;}
+.portfolio-two-page .case-study-award {display:inline-flex;align-items:center;margin-top:10px;padding:7px 13px;border:1px solid #f92c2c;border-radius:999px;background:#fff4f2;color:#f92c2c;font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;}
 .portfolio-two-page .portfolio-two-meta-grid,
 .portfolio-two-page .portfolio-two-process-grid,
 .portfolio-two-page .portfolio-two-finding-grid,
