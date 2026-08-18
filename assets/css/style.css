@@ -2216,7 +2216,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-two-page .portfolio-two-meta-grid > div {padding:22px;border:1px solid #e4e7ec;border-radius:10px;background:#fff;}
 .portfolio-two-page .portfolio-two-process-grid > div,
 .portfolio-two-page .portfolio-two-finding-grid > div {padding:16px 4px;border-top:2px solid #f92c2c;}
-.portfolio-two-page .portfolio-two-lesson-grid > div {display:flex;align-items:center;min-height:92px;padding:22px;border:1px solid #e4e7ec;border-radius:10px;background:#fff;}
+.portfolio-two-page .portfolio-two-lesson-grid > div {display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:116px;padding:22px;border:1px solid #e4e7ec;border-radius:10px;background:#fff;}
 .portfolio-two-page .portfolio-two-meta-grid span,
 .portfolio-two-page .portfolio-two-process-grid span,
 .portfolio-two-page .portfolio-two-finding-grid span,
@@ -2226,7 +2226,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-two-page .portfolio-two-process-grid strong,
 .portfolio-two-page .portfolio-two-finding-grid strong,
 .portfolio-two-page .portfolio-two-lesson-grid strong {display:block;margin-bottom:9px;color:#3c4258;font-size:15px;line-height:1.45;}
-.portfolio-two-page .portfolio-two-lesson-grid strong {margin-bottom:0;}
+.portfolio-two-page .portfolio-two-lesson-grid strong {margin-bottom:8px;}
 .portfolio-two-page .portfolio-two-meta-grid p,
 .portfolio-two-page .portfolio-two-process-grid p,
 .portfolio-two-page .portfolio-two-finding-grid p,
@@ -2265,6 +2265,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-two-page .portfolio-two-event-table thead th:nth-child(5) {width:27%;}
 .portfolio-two-page .portfolio-two-event-table tbody th {white-space:nowrap;}
 .portfolio-two-page .portfolio-two-event-table tbody td:nth-child(2) {background:#fff;font-weight:600;}
+.portfolio-two-page .portfolio-two-event-table th,
+.portfolio-two-page .portfolio-two-event-table td {padding:11px 14px;line-height:1.4;}
+.portfolio-two-page .portfolio-two-caption strong {color:#3c4258;font-weight:600;}
 .portfolio-two-page .portfolio-two-flow-wrap {margin-top:32px;overflow-x:auto;border:1px solid #c8ccd5;border-radius:12px;background:#fff;box-shadow:0 12px 32px rgba(60,66,88,.09);}
 .portfolio-two-page .portfolio-two-flow {display:grid;grid-template-columns:130px minmax(360px,1fr) 130px;align-items:center;gap:24px;min-width:700px;padding:32px;}
 .portfolio-two-page .portfolio-two-flow-person {display:flex;flex-direction:column;align-items:center;color:#3c4258;}
