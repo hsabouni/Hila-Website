@@ -1573,6 +1573,15 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     opacity:1;
     transform:translateY(0);
 }
+.motion-ready.portfolio-one-page .portfolio-one-entry-reveal {
+    opacity:0;
+    transform:translateY(22px);
+    transition:opacity .75s ease,transform .75s ease;
+}
+.motion-ready.portfolio-one-page .portfolio-one-entry-reveal.is-visible {
+    opacity:1;
+    transform:translateY(0);
+}
 @media (max-width: 767px) {
     .research-journal-hero {padding:135px 0 70px;}
     .research-journal-hero h1 {font-size:38px;}
@@ -1600,6 +1609,11 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         transition:none;
     }
     .motion-ready.portfolio-two-page .portfolio-two-entry-reveal {
+        opacity:1;
+        transform:none;
+        transition:none;
+    }
+    .motion-ready.portfolio-one-page .portfolio-one-entry-reveal {
         opacity:1;
         transform:none;
         transition:none;
