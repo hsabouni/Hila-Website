@@ -1012,27 +1012,17 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     transform:none;
     transition:opacity .75s ease;
 }
-.motion-ready.portfolio-one-page #task-design .experience-reveal,
-.motion-ready.portfolio-one-page #study-design .experience-reveal {
-    opacity:0;
-    transform:translateY(24px);
-    transition:opacity .75s ease,transform .75s ease;
-}
-.motion-ready #experience .experience-reveal.is-visible,
-.motion-ready.portfolio-one-page #task-design .experience-reveal.is-visible,
-.motion-ready.portfolio-one-page #study-design .experience-reveal.is-visible {
+.motion-ready #experience .experience-reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 .motion-ready #education .education-reveal,
-.motion-ready.portfolio-one-page #method .education-reveal,
 .motion-ready.portfolio-two-page .portfolio-two-method .education-reveal {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity .7s ease,transform .7s ease;
 }
 .motion-ready #education .education-reveal.is-visible,
-.motion-ready.portfolio-one-page #method .education-reveal.is-visible,
 .motion-ready.portfolio-two-page .portfolio-two-method .education-reveal.is-visible {opacity:1;transform:translateY(0);}
 .experience-journal-link {
     display: inline-flex;
@@ -1058,9 +1048,6 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     .motion-ready .publications.scroll-reveal .publication-ribbon .col-sm-2,
     .motion-ready #experience .experience-reveal,
     .motion-ready #education .education-reveal,
-    .motion-ready.portfolio-one-page #task-design .experience-reveal,
-    .motion-ready.portfolio-one-page #study-design .experience-reveal,
-    .motion-ready.portfolio-one-page #method .education-reveal,
     .motion-ready.portfolio-two-page .portfolio-two-method .education-reveal {
         opacity: 1;
         transform: none;
