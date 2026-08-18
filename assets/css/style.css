@@ -2249,6 +2249,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-two-page .portfolio-two-comparison tbody td:nth-child(2) {background:#fae8e3;}
 .portfolio-two-page .portfolio-two-comparison tbody tr:last-child th,
 .portfolio-two-page .portfolio-two-comparison tbody tr:last-child td {border-bottom:0;}
+.portfolio-two-page .portfolio-two-power-table tbody td[rowspan] {font-size:18px;font-weight:600;text-align:center;vertical-align:middle;}
 .portfolio-two-page .portfolio-two-implication {padding:28px;border-left:4px solid #f92c2c;background:#fff4f2;}
 .portfolio-two-page .portfolio-two-implication h3 {margin:0 0 12px;color:#3c4258;font-size:21px;line-height:1.55;text-transform:none;}
 .portfolio-two-page .portfolio-two-next-step {margin-top:24px;padding-top:24px;border-top:1px solid #e4e7ec;}
