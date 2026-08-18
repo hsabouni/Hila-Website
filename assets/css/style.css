@@ -1553,6 +1553,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .research-journal-page .research-phase-current .research-phase-marker {background:#f92c2c;color:#fff;}
 .research-journal-page .research-phase-takeaway {border-left-color:#f92c2c;}
 .research-journal-page .research-note {border-color:#e4e7ec;}
+.portfolio-two-page .education,
+.portfolio-two-page .dicot {background:#faf8f6;}
 .motion-ready.research-journal-page .research-entry-reveal {
     opacity:0;
     transform:translateY(22px);
