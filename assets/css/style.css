@@ -2237,6 +2237,18 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-two-page .portfolio-two-lens-heading h3 {margin:0;color:#3c4258;font-size:18px;font-weight:500;line-height:1.55;text-transform:none;}
 .portfolio-two-page .portfolio-two-method .education-horizontal-timeline {display:none;}
 .portfolio-two-page .portfolio-two-caption {max-width:720px;margin:12px auto 0;color:#8a909e;font-size:12px;line-height:1.65;text-align:left;}
+.portfolio-two-page .portfolio-two-comparison-wrap {margin-top:32px;overflow-x:auto;border:1px solid #e4e7ec;border-radius:12px;background:#fff;box-shadow:0 12px 32px rgba(60,66,88,.06);}
+.portfolio-two-page .portfolio-two-comparison {width:100%;min-width:680px;border-collapse:separate;border-spacing:0;color:#565e70;font-size:13px;line-height:1.5;text-align:left;}
+.portfolio-two-page .portfolio-two-comparison caption {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.portfolio-two-page .portfolio-two-comparison th,
+.portfolio-two-page .portfolio-two-comparison td {padding:15px 18px;border-bottom:1px solid #e4e7ec;vertical-align:middle;}
+.portfolio-two-page .portfolio-two-comparison thead th {color:#3c4258;background:#faf8f6;font-size:15px;font-weight:600;border-bottom:2px solid #f92c2c;}
+.portfolio-two-page .portfolio-two-comparison thead th:first-child {width:28%;}
+.portfolio-two-page .portfolio-two-comparison thead th span {display:block;margin-top:2px;color:#6d7485;font-size:10px;font-weight:500;letter-spacing:.6px;text-transform:uppercase;}
+.portfolio-two-page .portfolio-two-comparison tbody th {color:#3c4258;font-weight:600;background:#faf8f6;}
+.portfolio-two-page .portfolio-two-comparison tbody td:nth-child(2) {background:#fff8f6;}
+.portfolio-two-page .portfolio-two-comparison tbody tr:last-child th,
+.portfolio-two-page .portfolio-two-comparison tbody tr:last-child td {border-bottom:0;}
 .portfolio-two-page .portfolio-two-implication {padding:28px;border-left:4px solid #f92c2c;background:#fff4f2;}
 .portfolio-two-page .portfolio-two-implication h3 {margin:0 0 12px;color:#3c4258;font-size:21px;line-height:1.55;text-transform:none;}
 .portfolio-two-page .portfolio-two-next-step {margin-top:24px;padding-top:24px;border-top:1px solid #e4e7ec;}
