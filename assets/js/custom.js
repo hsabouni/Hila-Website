@@ -304,6 +304,7 @@ $(document).ready(function(){
 		var experienceEntries = $('#experience .single-timeline-box, .portfolio-one-page #task-design .single-timeline-box, .portfolio-one-page #study-design .single-timeline-box').addClass('experience-reveal');
 		var educationEntries = $('#education .single-horizontal-timeline, .portfolio-one-page #method .single-horizontal-timeline, .portfolio-two-page .portfolio-two-method .single-horizontal-timeline').addClass('education-reveal');
 		var researchEntries = $('.research-journal-page .research-phase, .research-journal-page .research-transition').addClass('research-entry-reveal');
+		var portfolioTwoEntries = $('.portfolio-two-page .portfolio-two-meta-grid, .portfolio-two-page .portfolio-two-process-grid, .portfolio-two-page .portfolio-two-method-detail .portfolio-two-comparison-wrap, .portfolio-two-page .portfolio-two-content .portfolio-two-subsection-heading, .portfolio-two-page .portfolio-two-content .single-about-txt, .portfolio-two-page .portfolio-two-flow-wrap, .portfolio-two-page .portfolio-two-finding-grid, .portfolio-two-page .portfolio-two-content .portfolio-two-comparison-wrap, .portfolio-two-page .portfolio-two-constraint-map, .portfolio-two-page .portfolio-two-implication, .portfolio-two-page .portfolio-two-lesson-grid, .portfolio-two-page .portfolio-two-next-step').addClass('portfolio-two-entry-reveal');
 		if ('IntersectionObserver' in window) {
 			var experienceObserver = new IntersectionObserver(function(entries){
 				entries.forEach(function(entry){
@@ -328,10 +329,19 @@ $(document).ready(function(){
 			},{threshold:.16,rootMargin:'-4% 0px -8% 0px'});
 
 			researchEntries.each(function(){researchObserver.observe(this);});
+
+			var portfolioTwoObserver = new IntersectionObserver(function(entries){
+				entries.forEach(function(entry){
+					$(entry.target).toggleClass('is-visible',entry.isIntersecting);
+				});
+			},{threshold:.16,rootMargin:'-4% 0px -8% 0px'});
+
+			portfolioTwoEntries.each(function(){portfolioTwoObserver.observe(this);});
 		} else {
 			experienceEntries.addClass('is-visible');
 			educationEntries.addClass('is-visible');
 			researchEntries.addClass('is-visible');
+			portfolioTwoEntries.addClass('is-visible');
 		}
 
 		// Draw a changing relationship as one continuous curve through every factor.
