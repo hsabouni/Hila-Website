@@ -2207,8 +2207,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-two-page .portfolio-two-content .single-method-img {padding-top:32px;}
 .portfolio-two-page .portfolio-two-contact {padding:36px 0 46px;}
 .portfolio-two-page .portfolio-two-contact .button {width:240px;}
-.portfolio-two-page .case-study-award {display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:8px 12px;border:1px solid #e4ddd8;border-radius:4px;background:#fffaf7;color:#3c4258;font-size:11px;font-weight:600;letter-spacing:.35px;text-transform:uppercase;}
-.portfolio-two-page .case-study-award::before {width:7px;height:7px;border-radius:50%;background:#f92c2c;content:"";}
+.portfolio-two-page .case-study-award {margin-top:10px;color:#565e70;font-size:12px;font-weight:500;letter-spacing:.25px;}
+.portfolio-two-page .case-study-award span {margin-right:6px;color:#f92c2c;font-weight:700;letter-spacing:.7px;}
 .portfolio-two-page .portfolio-two-meta-grid,
 .portfolio-two-page .portfolio-two-process-grid,
 .portfolio-two-page .portfolio-two-finding-grid,
