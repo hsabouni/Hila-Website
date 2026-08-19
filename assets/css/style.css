@@ -335,7 +335,7 @@ button:focus-visible,
 .line-self {top:24px;width:175px;opacity:var(--self-weight);transform:rotate(27.43deg);}
 .line-ai {top:104px;width:154px;opacity:var(--ai-weight);}
 .line-group {top:184px;width:175px;opacity:var(--group-weight);transform:rotate(-27.43deg);}
-.decision-junction {position:absolute;z-index:2;top:97px;left:286px;width:16px;height:16px;border:2px solid #d04a4a;border-radius:50%;background:rgba(255,255,255,.72);box-shadow:0 0 0 10px rgba(208,74,74,.08);}
+.decision-junction {position:absolute;z-index:2;top:97px;left:286px;width:16px;height:16px;border:2px solid #d04a4a;border-radius:50%;background:#fff;box-shadow:0 0 0 10px rgba(208,74,74,.08);}
 .outcome-line {position:absolute;top:104px;left:294px;width:33px;height:2px;background:#d04a4a;}
 .decision-field.is-intro .influence-line,.decision-field.is-intro .outcome-line {clip-path:inset(0 100% 0 0);}
 .decision-field.is-intro.is-intro-drawing .influence-line,.decision-field.is-intro.is-intro-drawing .outcome-line {clip-path:inset(0 0 0 0);}
