@@ -263,7 +263,7 @@ $(document).ready(function(){
 		}
 
 	// 6. Reveal the page structure as it enters the viewport
-		var revealSections = $('.home-page #about, .home-page #publications, .home-page #portfolio, .home-page #contact, .portfolio-one-page #intro, .portfolio-one-page #method, .portfolio-one-page #task-design, .portfolio-one-page #study-design, .portfolio-one-page #analysis, .portfolio-one-page #about, .portfolio-one-page #lessons_learned, .portfolio-one-page #contact, .portfolio-two-page .case-study-section, .research-journal-page .journal-project-intro, .research-journal-page .journal-portfolio-section, .research-journal-page .journal-notes-intro, .research-journal-page .journal-note-section, .research-journal-page .project-navigation');
+		var revealSections = $('.home-page #publications, .home-page #portfolio, .home-page #contact, .portfolio-one-page #intro, .portfolio-one-page #method, .portfolio-one-page #task-design, .portfolio-one-page #study-design, .portfolio-one-page #analysis, .portfolio-one-page #about, .portfolio-one-page #lessons_learned, .portfolio-one-page #contact, .portfolio-two-page .case-study-section, .research-journal-page .journal-project-intro, .research-journal-page .journal-portfolio-section, .research-journal-page .journal-notes-intro, .research-journal-page .journal-note-section, .research-journal-page .project-navigation');
 		var pacedHomeSections = $('.home-page #education, .home-page #experience');
 		revealSections.addClass('scroll-reveal');
 		pacedHomeSections.addClass('scroll-reveal');
