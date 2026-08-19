@@ -284,7 +284,10 @@ $(document).ready(function(){
 		if ('IntersectionObserver' in window) {
 			var revealObserver = new IntersectionObserver(function(entries){
 				entries.forEach(function(entry){
-					$(entry.target).toggleClass('is-visible',entry.isIntersecting);
+					if (entry.isIntersecting) {
+						$(entry.target).addClass('is-visible');
+						revealObserver.unobserve(entry.target);
+					}
 				});
 			},{threshold:.12,rootMargin:'0px 0px -10% 0px'});
 
@@ -292,7 +295,10 @@ $(document).ready(function(){
 
 			var pacedHomeObserver = new IntersectionObserver(function(entries){
 				entries.forEach(function(entry){
-					$(entry.target).toggleClass('is-visible',entry.isIntersecting);
+					if (entry.isIntersecting) {
+						$(entry.target).addClass('is-visible');
+						pacedHomeObserver.unobserve(entry.target);
+					}
 				});
 			},{threshold:.08,rootMargin:'0px 0px -50% 0px'});
 
@@ -310,7 +316,10 @@ $(document).ready(function(){
 		if ('IntersectionObserver' in window) {
 			var experienceObserver = new IntersectionObserver(function(entries){
 				entries.forEach(function(entry){
-					$(entry.target).toggleClass('is-visible',entry.isIntersecting);
+					if (entry.isIntersecting) {
+						$(entry.target).addClass('is-visible');
+						experienceObserver.unobserve(entry.target);
+					}
 				});
 			},{threshold:.18,rootMargin:'-6% 0px -28% 0px'});
 
@@ -318,7 +327,10 @@ $(document).ready(function(){
 
 			var educationObserver = new IntersectionObserver(function(entries){
 				entries.forEach(function(entry){
-					$(entry.target).toggleClass('is-visible',entry.isIntersecting);
+					if (entry.isIntersecting) {
+						$(entry.target).addClass('is-visible');
+						educationObserver.unobserve(entry.target);
+					}
 				});
 			},{threshold:.2,rootMargin:'-5% 0px -28% 0px'});
 
@@ -326,7 +338,10 @@ $(document).ready(function(){
 
 			var researchObserver = new IntersectionObserver(function(entries){
 				entries.forEach(function(entry){
-					$(entry.target).toggleClass('is-visible',entry.isIntersecting);
+					if (entry.isIntersecting) {
+						$(entry.target).addClass('is-visible');
+						researchObserver.unobserve(entry.target);
+					}
 				});
 			},{threshold:.16,rootMargin:'-4% 0px -8% 0px'});
 
@@ -334,7 +349,10 @@ $(document).ready(function(){
 
 			var portfolioTwoObserver = new IntersectionObserver(function(entries){
 				entries.forEach(function(entry){
-					$(entry.target).toggleClass('is-visible',entry.isIntersecting);
+					if (entry.isIntersecting) {
+						$(entry.target).addClass('is-visible');
+						portfolioTwoObserver.unobserve(entry.target);
+					}
 				});
 			},{threshold:.16,rootMargin:'-4% 0px -8% 0px'});
 
@@ -342,7 +360,10 @@ $(document).ready(function(){
 
 			var portfolioOneObserver = new IntersectionObserver(function(entries){
 				entries.forEach(function(entry){
-					$(entry.target).toggleClass('is-visible',entry.isIntersecting);
+					if (entry.isIntersecting) {
+						$(entry.target).addClass('is-visible');
+						portfolioOneObserver.unobserve(entry.target);
+					}
 				});
 			},{threshold:.16,rootMargin:'-4% 0px -8% 0px'});
 
