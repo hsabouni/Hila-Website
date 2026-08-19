@@ -264,8 +264,8 @@ button:focus-visible,
     border-radius: 3px;
     text-transform: capitalize;
     color: #fff;
-    background: #f92c2c;
-    border:1px solid #f92c2c;
+    background: #c34a37;
+    border:1px solid #c34a37;
     box-shadow: 0 5px 20px rgba(0,0,0,.2);
     -webkit-transition: 0.3s linear; 
     -moz-transition: 0.3s linear; 
@@ -273,7 +273,7 @@ button:focus-visible,
     -o-transition: 0.3s linear; 
     transition: 0.3s linear;
 }
-.header-text a.resume-download:hover{box-shadow:0 5px 20px rgba(0,0,0,.28);background:#b42424;border-color:#b42424;}
+.header-text a.resume-download:hover{box-shadow:0 5px 20px rgba(0,0,0,.28);background:#a83d2f;border-color:#a83d2f;}
 .hero-scroll {
     position: absolute;
     bottom: 24px;
