@@ -222,15 +222,25 @@ button:focus-visible,
     line-height: 1.5;
 }
 .header-text h2 span {color: #f92c2c;}
+.header-text .hero-eyebrow {
+    max-width:520px;
+    margin:0 0 20px;
+    color:#3c4258;
+    font-size:11px;
+    font-weight:600;
+    line-height:1.5;
+    letter-spacing:1.15px;
+    text-transform:uppercase;
+}
 .header-text .hero-tagline {
     max-width: 520px;
-    margin: 8px 0 18px;
-    color: #596073;
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 1.45;
+    margin: 0 0 24px;
+    color: #303544;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.18;
     text-transform: none;
-    letter-spacing: .2px;
+    letter-spacing: -.7px;
     white-space: normal;
 }
 .header-text .hero-support {
@@ -286,17 +296,20 @@ button:focus-visible,
     to {opacity:1;transform:translateY(0);}
 }
 .header-text.hero-animate .hero-tagline,
+.header-text.hero-animate .hero-eyebrow,
 .header-text.hero-animate .hero-support,
 .header-text.hero-animate .resume-download {
     opacity: 0;
     animation: heroReveal 1.05s ease forwards;
 }
-.header-text.hero-animate .hero-tagline {animation-delay:.08s;}
-.header-text.hero-animate .hero-support {animation-delay:.34s;}
-.header-text.hero-animate .resume-download {animation-delay:.60s;}
+.header-text.hero-animate .hero-eyebrow {animation-delay:.08s;}
+.header-text.hero-animate .hero-tagline {animation-delay:.26s;}
+.header-text.hero-animate .hero-support {animation-delay:.44s;}
+.header-text.hero-animate .resume-download {animation-delay:.68s;}
 @media (prefers-reduced-motion: reduce) {
     .decision-field {animation:none;}
     .header-text.hero-animate .hero-tagline,
+    .header-text.hero-animate .hero-eyebrow,
     .header-text.hero-animate .hero-support,
     .header-text.hero-animate .resume-download {
         opacity: 1;
@@ -1995,8 +2008,10 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .home-page .timeline-content h4.title,
 .home-page .experience-time h2,
 .home-page .portfolio .work-card h3 {color:#303544;}
+.home-page .header-text .hero-eyebrow,
 .home-page .header-text .hero-tagline,
 .home-page .header-text .hero-support {color:#51596d;}
+.home-page .header-text .hero-tagline {color:#303544;}
 .home-page .decision-field {border-color:rgba(92,67,63,.14);background:rgba(255,255,255,.76);box-shadow:0 24px 60px rgba(66,49,47,.10);}
 .home-page .decision-kicker {color:#64697a;}
 .home-page .decision-context,
