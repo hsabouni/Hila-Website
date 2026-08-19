@@ -188,6 +188,28 @@ $(document).ready(function(){
 			});
 		}
 
+		var phdCardAnimation = document.querySelector('.phd-card-animation');
+		if (phdCardAnimation && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+			var phdCardMedia = phdCardAnimation.parentElement;
+			var phdCardRect = phdCardMedia.getBoundingClientRect();
+			var phdCardIsVisible = phdCardRect.bottom > 0 && phdCardRect.top < window.innerHeight;
+			function updatePhdCardAnimation(){
+				phdCardAnimation.classList.toggle('is-animating',phdCardIsVisible && !document.hidden);
+			}
+			if ('IntersectionObserver' in window) {
+				var phdCardObserver = new IntersectionObserver(function(entries){
+					phdCardIsVisible = entries[0].isIntersecting;
+					updatePhdCardAnimation();
+				},{threshold:.35});
+				phdCardObserver.observe(phdCardMedia);
+			} else {
+				phdCardIsVisible = true;
+				updatePhdCardAnimation();
+			}
+			document.addEventListener('visibilitychange',updatePhdCardAnimation);
+			updatePhdCardAnimation();
+		}
+
 		window.requestAnimationFrame(function(){
 			$('.header-text').addClass('hero-animate');
 		});

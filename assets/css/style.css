@@ -1200,6 +1200,38 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio .work-card-research-image {padding:0;background:#fbf7f4;}
 .portfolio .work-card-research-image img {object-fit:cover;object-position:center 52%;transform:scale(1.02);}
 .portfolio .work-card:hover .work-card-research-image img {transform:scale(1.05);}
+.portfolio .phd-card-animation {position:absolute;inset:0;width:100%;height:100%;pointer-events:none;transform:scale(1.02);transform-origin:center;transition:transform .55s cubic-bezier(.22,.61,.36,1);}
+.portfolio .work-card:hover .phd-card-animation {transform:scale(1.05);}
+.portfolio .phd-card-flow {fill:none;stroke:#f92c2c;stroke-width:8;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;opacity:0;filter:drop-shadow(0 0 7px rgba(249,44,44,.22));}
+.portfolio .phd-card-decision-halo {fill:none;stroke:#f92c2c;stroke-width:7;opacity:0;transform-box:fill-box;transform-origin:center;}
+.portfolio .phd-card-decision-node {fill:#f92c2c;opacity:0;transform-box:fill-box;transform-origin:center;}
+.portfolio .phd-card-animation.is-animating .phd-card-flow {animation:phdCardFlow 9s ease-in-out infinite;}
+.portfolio .phd-card-animation.is-animating .phd-card-flow-ai {animation-delay:1.25s;}
+.portfolio .phd-card-animation.is-animating .phd-card-flow-peer {animation-delay:2.5s;}
+.portfolio .phd-card-animation.is-animating .phd-card-decision-halo {animation:phdCardHalo 9s ease-out 3.8s infinite;}
+.portfolio .phd-card-animation.is-animating .phd-card-decision-node {animation:phdCardNode 9s ease-in-out 3.8s infinite;}
+@keyframes phdCardFlow {
+    0% {stroke-dashoffset:1;opacity:0;}
+    5% {opacity:.9;}
+    30% {stroke-dashoffset:0;opacity:.9;}
+    62% {stroke-dashoffset:0;opacity:.38;}
+    76%,100% {stroke-dashoffset:0;opacity:0;}
+}
+@keyframes phdCardHalo {
+    0% {opacity:0;transform:scale(.58);}
+    8% {opacity:.55;}
+    26% {opacity:0;transform:scale(1.18);}
+    100% {opacity:0;transform:scale(1.18);}
+}
+@keyframes phdCardNode {
+    0% {opacity:0;transform:scale(.65);}
+    8%,45% {opacity:1;transform:scale(1);}
+    55% {opacity:.35;transform:scale(.8);}
+    70%,100% {opacity:0;transform:scale(.65);}
+}
+@media (prefers-reduced-motion:reduce) {
+    .portfolio .phd-card-animation {display:none;}
+}
 .portfolio .work-card-body {display:flex;min-height:285px;padding:24px;flex:1;flex-direction:column;}
 .portfolio .work-card-meta {margin-bottom:10px;color:#f92c2c;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
 .portfolio .work-card h3 {margin:0 0 12px;color:#3c4258;font-size:19px;font-weight:600;line-height:1.38;text-transform:none;}
