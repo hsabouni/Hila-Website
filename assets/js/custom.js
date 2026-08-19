@@ -195,7 +195,7 @@ $(document).ready(function(){
 			];
 			function activateDecisionSource(strongest,isDemo){
 				if (decisionReducedMotion) {return;}
-				var weights = strongest === 2 ? [.28,.28,.28] : [.5,.5,.5];
+				var weights = [.32,.32,.32];
 				weights[strongest] = 1;
 				decisionField.style.setProperty('--self-weight',weights[0].toFixed(2));
 				decisionField.style.setProperty('--ai-weight',weights[1].toFixed(2));

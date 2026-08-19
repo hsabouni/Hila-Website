@@ -61,7 +61,7 @@
 	.header-text .hero-tagline {font-size:34px;white-space:normal;}
 	.header-text .hero-support {font-size:14px;line-height:1.7;}
 	.decision-field {min-height:395px;padding:24px 20px 18px;border-radius:22px;}
-	.decision-map {height:225px;transform:scale(.9);transform-origin:left top;}
+	.decision-map {width:auto;height:225px;transform:scale(.9);transform-origin:left top;}
 	.decision-caption {margin-bottom:4px;}
 	.single-about-img {max-width: 450px;}
 	.experience-time span>i,.timeline-content span>i,.main-timeline:before,.timeline-axis {display: none;}
@@ -92,7 +92,7 @@
 
 @media screen and (max-width: 540px){
 	.decision-field {display:block;min-height:365px;padding:22px 16px 16px;}
-	.decision-map {height:215px;transform:scale(.82);transform-origin:left top;}
+	.decision-map {width:auto;height:215px;transform:scale(.82);transform-origin:left top;}
 	.subscribe-title h2 {font-size: 24px;}
 
 }/*max-width:540px*/
