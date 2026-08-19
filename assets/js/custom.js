@@ -184,7 +184,6 @@ $(document).ready(function(){
 		if (decisionField) {
 			var decisionReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 			var decisionState = decisionField.querySelector('.decision-state');
-			var decisionCaption = decisionField.querySelector('.decision-caption');
 			var decisionSources = decisionField.querySelectorAll('.decision-source');
 			var decisionLines = decisionField.querySelectorAll('.influence-line');
 			var outcomeFactors = decisionField.querySelectorAll('.outcome-factor');
@@ -229,7 +228,6 @@ $(document).ready(function(){
 					decisionIntroTimers.forEach(window.clearTimeout);
 					decisionField.classList.remove('is-intro','is-intro-drawing');
 					resetDecisionField();
-					decisionCaption.textContent = 'Hover to explore the different outcomes.';
 				}
 				window.requestAnimationFrame(function(){
 					window.requestAnimationFrame(function(){decisionField.classList.add('is-intro-drawing');});
@@ -261,7 +259,6 @@ $(document).ready(function(){
 				});
 			} else {
 				decisionField.classList.remove('is-intro');
-				decisionCaption.textContent = 'Explore the three factors in the final decision.';
 			}
 		}
 
