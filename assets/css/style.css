@@ -335,8 +335,8 @@ button:focus-visible,
 .line-self {top:24px;width:175px;opacity:var(--self-weight);transform:rotate(27.43deg);}
 .line-ai {top:104px;width:154px;opacity:var(--ai-weight);}
 .line-group {top:184px;width:175px;opacity:var(--group-weight);transform:rotate(-27.43deg);}
-.decision-junction {position:absolute;z-index:2;top:97px;left:286px;width:16px;height:16px;border:2px solid #d04a4a;border-radius:50%;background:#fff;box-shadow:0 0 0 10px rgba(208,74,74,.08);}
-.outcome-line {position:absolute;top:104px;left:294px;width:33px;height:2px;background:#d04a4a;}
+.decision-junction {position:absolute;z-index:2;top:97px;left:286px;width:16px;height:16px;border:2px solid #c34a37;border-radius:50%;background:#fff;box-shadow:0 0 0 10px rgba(195,74,55,.08);}
+.outcome-line {position:absolute;top:104px;left:294px;width:33px;height:2px;background:#c34a37;}
 .decision-field.is-intro .influence-line,.decision-field.is-intro .outcome-line {clip-path:inset(0 100% 0 0);}
 .decision-field.is-intro.is-intro-drawing .influence-line,.decision-field.is-intro.is-intro-drawing .outcome-line {clip-path:inset(0 0 0 0);}
 .decision-field.is-intro .line-ai {transition-delay:.16s;}
@@ -349,15 +349,15 @@ button:focus-visible,
 .outcome-equation {display:flex;align-items:center;gap:3px;margin:7px 0 9px;color:#aeb4c5;font-size:8px;font-weight:600;letter-spacing:.35px;text-transform:uppercase;}
 .outcome-equation b {color:#7f879d;font-weight:500;}
 .outcome-factor {padding:3px 4px;border-radius:5px;transition:color .25s ease,background-color .25s ease;}
-.outcome-factor.is-emphasized {color:#fff;background:#c94840;}
+.outcome-factor.is-emphasized {color:#fff;background:#c34a37;}
 .decision-context {max-width:450px;margin:0 0 7px;color:#4d5365;font-size:13px;font-weight:500;line-height:1.55;}
 .decision-caption {margin:0;color:#858b9b;font-size:9px;font-weight:500;letter-spacing:.2px;}
 .decision-question {position:absolute;right:30px;bottom:22px;left:30px;margin:0;color:#596073;font-size:13.5px;font-weight:500;letter-spacing:.1px;opacity:0;transform:translateY(5px);transition:opacity .45s ease,transform .45s ease;}
 .decision-field.has-interacted .decision-question {opacity:1;transform:translateY(0);}
 .decision-source.is-dominant {opacity:1;transform:translateX(6px);}
-.decision-source.is-dominant strong {color:#8f2020;}
-.decision-source.is-dominant .source-dot {background:#d04a4a;box-shadow:0 0 0 8px rgba(208,74,74,.15);transform:scale(1.35);}
-.influence-line.is-dominant {height:3px;opacity:1;background:#d04a4a;}
+.decision-source.is-dominant strong {color:#c34a37;}
+.decision-source.is-dominant .source-dot {background:#c34a37;box-shadow:0 0 0 8px rgba(195,74,55,.15);transform:scale(1.35);}
+.influence-line.is-dominant {height:3px;opacity:1;background:#c34a37;}
 .line-group.is-dominant {height:3px;}
 .decision-field.is-active .decision-outcome {transform:translateX(3px);}
 @keyframes decisionFieldReveal {from {opacity:0;transform:translateX(24px);} to {opacity:1;transform:translateX(0);}}
@@ -2024,7 +2024,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .home-page .decision-source small,
 .home-page .decision-caption {color:#7c8394;}
 .home-page .decision-outcome {background:#51586a;box-shadow:0 8px 18px rgba(48,53,68,.16);}
-.home-page .decision-source.is-dominant strong {color:#a8322f;}
+.home-page .decision-source.is-dominant strong {color:#c34a37;}
 .home-page #about,
 .home-page #experience,
 .home-page #portfolio {background:#fff;}
