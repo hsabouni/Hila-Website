@@ -188,6 +188,25 @@ $(document).ready(function(){
 			});
 		}
 
+		var phdCardFigure = document.querySelector('.phd-card-figure');
+		if (phdCardFigure && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+			var phdFigureVisible = false;
+			function updatePhdFigureMotion(){
+				phdCardFigure.classList.toggle('is-animating',phdFigureVisible && !document.hidden);
+			}
+			if ('IntersectionObserver' in window) {
+				var phdFigureObserver = new IntersectionObserver(function(entries){
+					phdFigureVisible = entries[0].isIntersecting;
+					updatePhdFigureMotion();
+				},{threshold:.35});
+				phdFigureObserver.observe(phdCardFigure);
+			} else {
+				phdFigureVisible = true;
+				updatePhdFigureMotion();
+			}
+			document.addEventListener('visibilitychange',updatePhdFigureMotion);
+		}
+
 		window.requestAnimationFrame(function(){
 			$('.header-text').addClass('hero-animate');
 		});
