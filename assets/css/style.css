@@ -331,12 +331,17 @@ button:focus-visible,
 .source-self {top:20px;opacity:var(--self-weight);}
 .source-ai {top:100px;opacity:var(--ai-weight);}
 .source-group {top:180px;opacity:var(--group-weight);}
-.influence-line {position:absolute;left:140px;height:2px;background:linear-gradient(90deg,rgba(178,193,206,.45),#a6adb8);transform-origin:left center;transition:opacity .45s ease,height .45s ease;}
+.influence-line {position:absolute;left:140px;height:2px;background:linear-gradient(90deg,rgba(178,193,206,.45),#a6adb8);transform-origin:left center;transition:opacity .45s ease,height .45s ease,clip-path .9s ease;}
 .line-self {top:25px;width:166px;opacity:var(--self-weight);transform:rotate(28.7deg);}
 .line-ai {top:105px;width:146px;opacity:var(--ai-weight);}
 .line-group {top:185px;width:166px;opacity:var(--group-weight);transform:rotate(-28.7deg);}
 .decision-junction {position:absolute;top:97px;left:286px;width:16px;height:16px;border:2px solid #d04a4a;border-radius:50%;background:#fff;box-shadow:0 0 0 10px rgba(208,74,74,.08);}
 .outcome-line {position:absolute;top:104px;left:302px;width:46px;height:2px;background:#d04a4a;}
+.decision-field.is-intro .influence-line,.decision-field.is-intro .outcome-line {clip-path:inset(0 100% 0 0);}
+.decision-field.is-intro.is-intro-drawing .influence-line,.decision-field.is-intro.is-intro-drawing .outcome-line {clip-path:inset(0 0 0 0);}
+.decision-field.is-intro .line-ai {transition-delay:.16s;}
+.decision-field.is-intro .line-group {transition-delay:.32s;}
+.decision-field.is-intro .outcome-line {transition:clip-path .7s ease .52s;}
 .decision-outcome {position:absolute;top:65px;right:0;width:148px;padding:17px 12px;border-radius:16px;background:#3c4258;color:#fff;box-shadow:0 12px 28px rgba(60,66,88,.2);transition:transform .45s ease;}
 .decision-outcome small,.decision-outcome strong {display:block;}
 .decision-outcome small {margin-bottom:5px;color:#c8ccda;font-size:9px;letter-spacing:.8px;text-transform:uppercase;}
@@ -357,7 +362,7 @@ button:focus-visible,
 .decision-field.is-active .decision-outcome {transform:translateX(3px);}
 @keyframes decisionFieldReveal {from {opacity:0;transform:translateX(24px);} to {opacity:1;transform:translateX(0);}}
 .decision-field {animation:decisionFieldReveal 1.1s ease .3s both;}
-@media (prefers-reduced-motion: reduce) {.decision-field {animation:none;}.decision-question {opacity:1;transform:none;}}
+@media (prefers-reduced-motion: reduce) {.decision-field {animation:none;}.decision-question {opacity:1;transform:none;}.decision-field.is-intro .influence-line,.decision-field.is-intro .outcome-line {clip-path:inset(0);}}
 
 /*.header-text-area*/
 

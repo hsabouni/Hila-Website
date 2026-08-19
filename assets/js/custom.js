@@ -184,6 +184,7 @@ $(document).ready(function(){
 		if (decisionField) {
 			var decisionReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 			var decisionState = decisionField.querySelector('.decision-state');
+			var decisionCaption = decisionField.querySelector('.decision-caption');
 			var decisionSources = decisionField.querySelectorAll('.decision-source');
 			var decisionLines = decisionField.querySelectorAll('.influence-line');
 			var outcomeFactors = decisionField.querySelectorAll('.outcome-factor');
@@ -192,7 +193,7 @@ $(document).ready(function(){
 				'AI guides; you + teammate still contribute',
 				'Social influence leads; you + AI still contribute'
 			];
-			function activateDecisionSource(strongest){
+			function activateDecisionSource(strongest,isDemo){
 				if (decisionReducedMotion) {return;}
 				var weights = strongest === 2 ? [.28,.28,.28] : [.5,.5,.5];
 				weights[strongest] = 1;
@@ -204,7 +205,7 @@ $(document).ready(function(){
 				outcomeFactors.forEach(function(factor,index){factor.classList.toggle('is-emphasized',index === strongest);});
 				decisionState.textContent = influenceLabels[strongest];
 				decisionField.classList.add('is-active');
-				decisionField.classList.add('has-interacted');
+				if (!isDemo) {decisionField.classList.add('has-interacted');}
 				decisionField.setAttribute('aria-label','Interactive group decision visualization. ' + influenceLabels[strongest] + '. Use Enter or Space to cycle the leading factor.');
 			}
 			function resetDecisionField(){
@@ -220,22 +221,47 @@ $(document).ready(function(){
 			}
 			if (!decisionReducedMotion) {
 				var decisionCycleIndex = -1;
+				var decisionIntroActive = true;
+				var decisionIntroTimers = [];
+				function finishDecisionIntro(){
+					if (!decisionIntroActive) {return;}
+					decisionIntroActive = false;
+					decisionIntroTimers.forEach(window.clearTimeout);
+					decisionField.classList.remove('is-intro','is-intro-drawing');
+					resetDecisionField();
+					decisionCaption.textContent = 'Hover to explore the different outcomes.';
+				}
+				window.requestAnimationFrame(function(){
+					window.requestAnimationFrame(function(){decisionField.classList.add('is-intro-drawing');});
+				});
+				decisionIntroTimers.push(window.setTimeout(function(){activateDecisionSource(0,true);},1400));
+				decisionIntroTimers.push(window.setTimeout(function(){activateDecisionSource(1,true);},2900));
+				decisionIntroTimers.push(window.setTimeout(function(){activateDecisionSource(2,true);},4400));
+				decisionIntroTimers.push(window.setTimeout(resetDecisionField,5900));
+				decisionIntroTimers.push(window.setTimeout(finishDecisionIntro,6800));
+				decisionField.addEventListener('pointerenter',finishDecisionIntro,{once:true});
+				decisionField.addEventListener('focusin',finishDecisionIntro,{once:true});
 				decisionSources.forEach(function(source,index){
-					source.addEventListener('mouseenter',function(){decisionCycleIndex=index;activateDecisionSource(index);});
+					source.addEventListener('mouseenter',function(){finishDecisionIntro();decisionCycleIndex=index;activateDecisionSource(index);});
 				});
 				decisionField.addEventListener('pointerleave',resetDecisionField);
 				decisionField.addEventListener('pointerup',function(event){
 					if (event.pointerType === 'mouse') {return;}
+					finishDecisionIntro();
 					decisionCycleIndex=(decisionCycleIndex+1)%3;
 					activateDecisionSource(decisionCycleIndex);
 				});
 				decisionField.addEventListener('keydown',function(event){
 					if (event.key === 'Enter' || event.key === ' ') {
 						event.preventDefault();
+						finishDecisionIntro();
 						decisionCycleIndex=(decisionCycleIndex+1)%3;
 						activateDecisionSource(decisionCycleIndex);
 					}
 				});
+			} else {
+				decisionField.classList.remove('is-intro');
+				decisionCaption.textContent = 'Explore the three factors in the final decision.';
 			}
 		}
 
