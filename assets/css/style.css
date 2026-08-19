@@ -1202,20 +1202,22 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio .work-card:hover .work-card-research-image img {transform:scale(1.05);}
 .portfolio .phd-card-animation {position:absolute;inset:0;width:100%;height:100%;pointer-events:none;transform:scale(1.02);transform-origin:center;transition:transform .55s cubic-bezier(.22,.61,.36,1);}
 .portfolio .work-card:hover .phd-card-animation {transform:scale(1.05);}
-.portfolio .phd-card-person {position:absolute;inset:0;background-image:url('../images/portfolio/ai-group-decision-warm.png');background-position:center 52%;background-size:cover;will-change:transform;}
-.portfolio .phd-card-person-left {clip-path:polygon(7% 7%,38% 7%,38% 57%,7% 57%);transform-origin:23% 48%;}
-.portfolio .phd-card-person-right {clip-path:polygon(62% 7%,93% 7%,93% 57%,62% 57%);transform-origin:77% 48%;}
-.portfolio .phd-card-animation.is-animating .phd-card-person-left {animation:phdPersonLeft 8s ease-in-out infinite;}
-.portfolio .phd-card-animation.is-animating .phd-card-person-right {animation:phdPersonRight 8s ease-in-out infinite;}
-@keyframes phdPersonLeft {
-    0%,10%,36%,100% {transform:rotate(0) translateY(0);}
-    17% {transform:rotate(.75deg) translateY(-1px);}
-    24% {transform:rotate(-.35deg) translateY(0);}
+.portfolio .phd-card-head {position:absolute;inset:0;background-image:url('../images/portfolio/ai-group-decision-warm.png');background-position:center 52%;background-size:cover;will-change:transform;}
+.portfolio .phd-card-head-left {clip-path:polygon(13% 11%,26% 11%,25% 34%,14% 34%);transform-origin:19.5% 33%;}
+.portfolio .phd-card-head-right {clip-path:polygon(74% 11%,87% 11%,86% 34%,75% 34%);transform-origin:80.5% 33%;}
+.portfolio .phd-card-animation.is-animating .phd-card-head-left {animation:phdHeadLeft 8s ease-in-out infinite;}
+.portfolio .phd-card-animation.is-animating .phd-card-head-right {animation:phdHeadRight 8s ease-in-out infinite;}
+@keyframes phdHeadLeft {
+    0%,8%,38%,100% {transform:translate(0,0) rotate(0);}
+    14% {transform:translate(1px,-2px) rotate(1.2deg);}
+    21% {transform:translate(2px,0) rotate(-.8deg);}
+    28% {transform:translate(1px,-1px) rotate(.7deg);}
 }
-@keyframes phdPersonRight {
-    0%,42%,72%,100% {transform:rotate(0) translateY(0);}
-    50% {transform:rotate(-.75deg) translateY(-1px);}
-    59% {transform:rotate(.35deg) translateY(0);}
+@keyframes phdHeadRight {
+    0%,42%,76%,100% {transform:translate(0,0) rotate(0);}
+    49% {transform:translate(-1px,-2px) rotate(-1.2deg);}
+    57% {transform:translate(-2px,0) rotate(.8deg);}
+    65% {transform:translate(-1px,-1px) rotate(-.7deg);}
 }
 @media (prefers-reduced-motion:reduce) {
     .portfolio .phd-card-animation {display:none;}
