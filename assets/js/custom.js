@@ -175,6 +175,18 @@ $(document).ready(function(){
 
 
     // 5. Homepage entrance and research-theme navigation
+		if (document.body.classList.contains('home-page')) {
+			var homeHero = document.querySelector('.welcome-hero');
+			var homeSectionOrder = ['portfolio','publications','experience','education','contact'];
+			var previousHomeSection = homeHero;
+			homeSectionOrder.forEach(function(sectionId){
+				var section = document.getElementById(sectionId);
+				if (section && previousHomeSection) {
+					previousHomeSection.insertAdjacentElement('afterend',section);
+					previousHomeSection = section;
+				}
+			});
+		}
 
 		window.requestAnimationFrame(function(){
 			$('.header-text').addClass('hero-animate');
