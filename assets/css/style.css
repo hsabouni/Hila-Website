@@ -2029,8 +2029,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .home-page #experience,
 .home-page #portfolio {background:#fff;}
 .home-page #education,
-.home-page #publications,
-.home-page #contact {background:#f1ece7;}
+.home-page #publications {background:#f1ece7;}
 .home-page #experience,
 .home-page #publications,
 .home-page #portfolio,
@@ -2331,8 +2330,8 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .home-page .portfolio .work-card-role,
 .home-page .publication-ribbon .publication-name {color:#565e70;}
 .home-page #education,
-.home-page #publications,
-.home-page #contact {background:#e9dfd8;}
+.home-page #publications {background:#e9dfd8;}
+.home-page #contact {background:#fff;}
 
 .current-focus-badge,
 .experience-journal-link span,
@@ -2466,26 +2465,6 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 }
 .home-page.motion-ready #education .education-journey-path {opacity:0;transition:opacity .45s ease;}
 .home-page.motion-ready #education.is-visible .education-journey-path {opacity:.75;}
-.home-page #education .education-journey-arrow {
-    position:absolute;
-    top:-5px;
-    left:0;
-    width:12px;
-    height:12px;
-    border-top:3px solid #f92c2c;
-    border-right:3px solid #f92c2c;
-    z-index:3;
-    transform:rotate(45deg);
-    opacity:0;
-    animation:none;
-}
-.home-page.motion-ready #education.is-visible .education-journey-arrow,
-.home-page:not(.motion-ready) #education .education-journey-arrow {animation:educationJourneyArrow 14s ease-in-out infinite;}
-@keyframes educationJourneyArrow {
-    0% {left:0;opacity:1;}
-    88% {left:calc(100% - 12px);opacity:1;}
-    100% {left:calc(100% - 12px);opacity:1;}
-}
 .home-page #education .education-journey-stop {position:relative;z-index:1;min-width:0;}
 .home-page #education .education-journey-marker {
     position:relative;
@@ -2529,19 +2508,6 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
         width:2px;
         height:auto;
     }
-    .home-page #education .education-journey-arrow {
-        top:0;
-        left:-5px;
-        transform:rotate(135deg);
-        animation:none;
-    }
-    .home-page.motion-ready #education.is-visible .education-journey-arrow,
-    .home-page:not(.motion-ready) #education .education-journey-arrow {animation:educationJourneyArrowMobile 14s ease-in-out infinite;}
-    @keyframes educationJourneyArrowMobile {
-        0% {top:0;opacity:1;}
-        88% {top:calc(100% - 12px);opacity:1;}
-        100% {top:calc(100% - 12px);opacity:1;}
-    }
     .home-page #education .education-journey-stop {padding:0 0 32px;}
     .home-page #education .education-journey-stop:last-child {padding-bottom:0;}
     .home-page #education .education-journey-marker {
@@ -2559,20 +2525,6 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     .home-page #education .education-journey .experience-time,
     .home-page #education .education-journey .timeline-content {padding:0;}
     .home-page #education .education-journey .timeline-content {margin-top:10px;}
-}
-
-@media (prefers-reduced-motion:reduce) {
-    .home-page #education .education-journey-arrow {
-        left:calc(100% - 12px);
-        opacity:1;
-        animation:none;
-    }
-}
-@media (max-width:767px) and (prefers-reduced-motion:reduce) {
-    .home-page #education .education-journey-arrow {
-        top:calc(100% - 12px);
-        left:-5px;
-    }
 }
 
 /* Repeating hand-drawn theme marks for experience entries. */
