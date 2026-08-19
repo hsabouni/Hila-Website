@@ -224,36 +224,24 @@ button:focus-visible,
 .header-text h2 span {color: #f92c2c;}
 .header-text .hero-tagline {
     max-width: 520px;
-    margin: 8px 0 38px;
+    margin: 8px 0 18px;
     color: #596073;
-    font-size: 25px;
-    font-weight: 300;
-    line-height: 1.55;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.45;
     text-transform: none;
     letter-spacing: .2px;
     white-space: normal;
 }
-.header-text .hero-focus {
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:0;
+.header-text .hero-support {
     max-width:520px;
-    margin:0 0 64px;
-    color: #8a5360;
-    font-size: 11.5px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    white-space: nowrap;
+    margin:0 0 48px;
+    color:#596073;
+    font-size:14px;
+    font-weight:400;
+    line-height:1.8;
+    text-transform:none;
 }
-.header-text .hero-focus .hero-keyword {
-    display:inline-block;
-    color: #8a5360;
-    font-size: 11.5px;
-    white-space:nowrap;
-}
-.header-text .hero-focus .hero-separator {padding:0;color:#d04a4a;font-size:8px;}
 .header-text a.resume-download {
     display:block;
     margin-right:auto;
@@ -298,18 +286,18 @@ button:focus-visible,
     to {opacity:1;transform:translateY(0);}
 }
 .header-text.hero-animate .hero-tagline,
-.header-text.hero-animate .hero-focus,
+.header-text.hero-animate .hero-support,
 .header-text.hero-animate .resume-download {
     opacity: 0;
     animation: heroReveal 1.05s ease forwards;
 }
 .header-text.hero-animate .hero-tagline {animation-delay:.08s;}
-.header-text.hero-animate .hero-focus {animation-delay:.34s;}
+.header-text.hero-animate .hero-support {animation-delay:.34s;}
 .header-text.hero-animate .resume-download {animation-delay:.60s;}
 @media (prefers-reduced-motion: reduce) {
     .decision-field {animation:none;}
     .header-text.hero-animate .hero-tagline,
-    .header-text.hero-animate .hero-focus,
+    .header-text.hero-animate .hero-support,
     .header-text.hero-animate .resume-download {
         opacity: 1;
         animation: none;
@@ -2007,10 +1995,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .home-page .timeline-content h4.title,
 .home-page .experience-time h2,
 .home-page .portfolio .work-card h3 {color:#303544;}
-.home-page .header-text .hero-tagline {color:#51596d;}
-.home-page .header-text .hero-focus,
-.home-page .header-text .hero-focus .hero-keyword {color:#6f5962;}
-.home-page .header-text .hero-focus .hero-separator {color:#f92c2c;}
+.home-page .header-text .hero-tagline,
+.home-page .header-text .hero-support {color:#51596d;}
 .home-page .decision-field {border-color:rgba(92,67,63,.14);background:rgba(255,255,255,.76);box-shadow:0 24px 60px rgba(66,49,47,.10);}
 .home-page .decision-kicker {color:#64697a;}
 .home-page .decision-context,
