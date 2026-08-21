@@ -1855,7 +1855,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 .research-journal-page .journal-meta-grid {margin-top:34px;}
 .research-journal-page .hero-about-sequence-line {height:1.5px;opacity:.78;}
-.research-journal-page .hero-about-sequence-node {width:12px;height:12px;margin-left:-6px;border-width:1.5px;}
+.research-journal-page .hero-about-sequence-node {width:13px;height:13px;margin-left:-6.5px;border-width:2px;}
 .research-journal-page .hero-about-sequence-label {font-size:10px;color:#777e91;}
 .research-journal-page .hero-about-sequence-node {--curve-emphasis:0;box-shadow:0 0 0 calc(var(--curve-emphasis) * 8px) rgba(249,44,44,.12);}
 .research-journal-page .hero-about-sequence-node {
@@ -1864,12 +1864,12 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     animation:none;
 }
 .research-journal-page .hero-about-sequence-node-three {
-    width:14px;
-    height:14px;
-    margin-left:-7px;
-    margin-top:-1px;
-    border-width:2px;
-    background:rgba(249,44,44,.1);
+    width:16px;
+    height:16px;
+    margin-left:-8px;
+    margin-top:-1.5px;
+    border-width:2.5px;
+    background:rgba(249,44,44,.18);
 }
 .research-journal-page .hero-about-sequence-label {
     opacity:1;
@@ -1892,39 +1892,39 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 .research-journal-page .hero-about-sequence-node-one:after {
     animation-name:journalNodePulseSoft;
-    animation-duration:1.65s;
+    animation-duration:1.2s;
     animation-delay:0s;
 }
 .research-journal-page .hero-about-sequence-node-two:after {
     animation-name:journalNodePulseMedium;
-    animation-duration:2.45s;
-    animation-delay:.3s;
+    animation-duration:1.7s;
+    animation-delay:.18s;
 }
 .research-journal-page .hero-about-sequence-node-three:after {
     animation-name:journalNodePulseStrong;
-    animation-duration:3.5s;
-    animation-delay:.85s;
+    animation-duration:2.2s;
+    animation-delay:.45s;
 }
 @keyframes journalNodeLabelFade {
     0%,100% {opacity:.62;}
     28%,72% {opacity:1;}
 }
 @keyframes journalNodePulseSoft {
-    0% {opacity:.48;transform:scale(.8);}
-    32% {opacity:0;transform:scale(1.65);}
+    0% {opacity:.64;transform:scale(.8);}
+    32% {opacity:0;transform:scale(1.8);}
     33%,100% {opacity:0;transform:scale(.8);}
 }
 @keyframes journalNodePulseMedium {
-    0% {opacity:.56;transform:scale(.78);}
-    18% {opacity:0;transform:scale(1.75);}
+    0% {opacity:.7;transform:scale(.78);}
+    18% {opacity:0;transform:scale(1.9);}
     19% {opacity:0;transform:scale(.78);}
-    27% {opacity:.5;transform:scale(.82);}
-    46% {opacity:0;transform:scale(1.95);}
+    27% {opacity:.66;transform:scale(.82);}
+    46% {opacity:0;transform:scale(2.15);}
     47%,100% {opacity:0;transform:scale(.78);}
 }
 @keyframes journalNodePulseStrong {
-    0% {opacity:.78;transform:scale(.72);}
-    58% {opacity:0;transform:scale(3);}
+    0% {opacity:.92;transform:scale(.72);}
+    58% {opacity:0;transform:scale(3.25);}
     59%,100% {opacity:0;transform:scale(.72);}
 }
 .research-journal-page .journal-implication-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px;}
