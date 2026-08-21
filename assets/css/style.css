@@ -2459,7 +2459,7 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .portfolio-two-page .education,
 .portfolio-two-page .dicot,
 .research-journal-page .education,
-.research-journal-page .dicot,
+.research-journal-page .dicot {background:#e9dfd8;}
 .portfolio-one-page .project-navigation,
 .portfolio-two-page .project-navigation,
 .research-journal-page .project-navigation {background:#fff;}
