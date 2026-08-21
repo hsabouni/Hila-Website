@@ -2228,11 +2228,12 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-two-page .portfolio-two-intro iframe {display:block;width:100%;max-width:560px;margin:0 auto;}
 .portfolio-two-page .portfolio-two-video-row {margin-top:22px;}
 .portfolio-two-page .portfolio-two-intro .portfolio-two-meta-grid {margin-top:24px;}
-.portfolio-two-page .portfolio-two-method {padding:36px 0 44px;}
+.portfolio-two-page .portfolio-two-method {padding:36px 0 14px;}
 .portfolio-two-page .portfolio-two-method .education-horizontal-timeline {padding:34px 0 0;}
 .portfolio-two-page .portfolio-two-method .timeline-horizontal-border {padding:14px 0 20px;}
-.portfolio-two-page .portfolio-two-method-detail {padding:36px 0 46px;}
+.portfolio-two-page .portfolio-two-method-detail {padding:14px 0 38px;}
 .portfolio-two-page .portfolio-two-method-detail .method-content {padding-top:0;}
+.portfolio-two-page .portfolio-two-method-detail .case-study-evidence-grid {margin-top:0;}
 .portfolio-two-page .portfolio-two-content {padding:36px 0 46px;}
 .portfolio-two-page .portfolio-two-content .about-content {padding-top:var(--case-heading-content-gap);}
 .portfolio-two-page .portfolio-two-content .about-contribution {padding-top:34px;}
