@@ -2323,12 +2323,15 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-two-page .portfolio-two-flow-lane.flow-to-mike::after {left:1px;transform:rotate(-135deg);}
 .portfolio-two-page .portfolio-two-flow-lane span {position:absolute;top:-12px;left:50%;padding:2px 10px;color:#565e70;background:#fff;font-size:11px;font-weight:600;letter-spacing:.25px;transform:translateX(-50%);white-space:nowrap;}
 .portfolio-two-page .portfolio-two-flow-lane span strong {color:#f92c2c;font-size:13px;}
-.portfolio-two-page .portfolio-two-constraint-map {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:var(--case-text-visual-gap);}
-.portfolio-two-page .portfolio-two-constraint-map section {padding:22px;border:1px solid #c8ccd5;border-top:3px solid #f92c2c;border-radius:10px;background:#fff;box-shadow:0 10px 24px rgba(60,66,88,.06);}
+.portfolio-two-page .portfolio-two-constraint-map {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:0;}
+.portfolio-two-page .portfolio-two-constraint-map section {padding:16px 4px;border:0;border-top:2px solid #f92c2c;background:transparent;box-shadow:none;}
 .portfolio-two-page .portfolio-two-constraint-map section > span {display:block;margin-bottom:5px;color:#565e70;font-size:10px;font-weight:600;letter-spacing:1px;}
 .portfolio-two-page .portfolio-two-constraint-map h4 {margin:0 0 14px;color:#3c4258;font-size:16px;font-weight:600;line-height:1.4;}
-.portfolio-two-page .portfolio-two-constraint-map ul {display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none;}
-.portfolio-two-page .portfolio-two-constraint-map li {padding:7px 10px;border-radius:4px;color:#3c4258;background:#f0e7e2;font-size:11px;font-weight:500;line-height:1.4;}
+.portfolio-two-page .portfolio-two-constraint-map ul {display:grid;gap:6px;margin:0;padding:0;list-style:none;}
+.portfolio-two-page .portfolio-two-constraint-map li {padding:0;color:#777e91;background:transparent;font-size:12px;font-weight:500;line-height:1.5;}
+.portfolio-two-page #capabilities .portfolio-two-subsection-heading {padding-bottom:0;border-bottom:0;}
+.portfolio-two-page #capabilities .about-content {padding-top:24px;}
+.portfolio-two-page #capabilities .portfolio-two-constraint-map + .portfolio-two-caption + .row {margin-top:30px;}
 .portfolio-two-page .portfolio-two-implication {padding:18px 24px;border-left:4px solid #f92c2c;background:transparent;}
 .portfolio-two-page .portfolio-two-implication h3 {margin:0 0 12px;color:#3c4258;font-size:21px;line-height:1.55;text-transform:none;}
 .portfolio-two-page .portfolio-two-implication + .portfolio-two-lesson-grid {margin-top:18px;}
