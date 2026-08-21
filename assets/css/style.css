@@ -1863,6 +1863,14 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     transform:scale(1);
     animation:none;
 }
+.research-journal-page .hero-about-sequence-node-three {
+    width:14px;
+    height:14px;
+    margin-left:-7px;
+    margin-top:-1px;
+    border-width:2px;
+    background:rgba(249,44,44,.1);
+}
 .research-journal-page .hero-about-sequence-label {
     opacity:1;
     transform:translate(-50%,0);
@@ -1915,8 +1923,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     47%,100% {opacity:0;transform:scale(.78);}
 }
 @keyframes journalNodePulseStrong {
-    0% {opacity:.68;transform:scale(.72);}
-    58% {opacity:0;transform:scale(2.75);}
+    0% {opacity:.78;transform:scale(.72);}
+    58% {opacity:0;transform:scale(3);}
     59%,100% {opacity:0;transform:scale(.72);}
 }
 .research-journal-page .journal-implication-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px;}
