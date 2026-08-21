@@ -2348,14 +2348,22 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .page-contact .contact-action:hover,.page-contact .contact-action:focus {color:#fff;background:#d92f2f;box-shadow:0 8px 20px rgba(60,66,88,.14);text-decoration:none;transform:translateY(-2px);}
 .project-navigation {padding:38px 0 44px;border-top:1px solid #e5e9ee;background:#fff;}
 .project-navigation h2 {margin:0 0 22px;color:#3c4258;font-size:18px;font-weight:500;text-transform:none;}
-.project-navigation-actions {display:flex;align-items:center;justify-content:center;gap:12px;}
+.project-navigation-actions {display:grid;grid-template-columns:repeat(2,minmax(0,360px));justify-content:center;gap:18px;text-align:left;}
 .project-navigation-link {display:inline-flex;align-items:center;justify-content:center;min-width:210px;height:46px;padding:0 20px;border:1px solid #f92c2c;border-radius:4px;color:#f92c2c;background:#fff;font-size:12px;font-weight:600;transition:color .3s ease,background-color .3s ease,box-shadow .3s ease,transform .3s ease;}
 .project-navigation-link:hover,.project-navigation-link:focus {color:#fff;background:#f92c2c;box-shadow:0 8px 20px rgba(60,66,88,.14);text-decoration:none;transform:translateY(-2px);}
+.project-navigation-card {display:grid;grid-template-columns:128px 1fr;min-height:92px;overflow:hidden;border:1px solid #ded3cc;border-radius:8px;color:#303544;background:#fff;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease;}
+.project-navigation-card img {width:128px;height:100%;min-height:92px;object-fit:cover;}
+.project-navigation-card > span {display:flex;flex-direction:column;justify-content:center;padding:14px 16px;}
+.project-navigation-card small {margin-bottom:5px;color:#6f5962;font-size:10px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;}
+.project-navigation-card strong {color:#303544;font-size:14px;font-weight:600;line-height:1.45;}
+.project-navigation-card:hover,.project-navigation-card:focus-visible {border-color:#f92c2c;color:#303544;box-shadow:0 9px 22px rgba(60,66,88,.12);text-decoration:none;transform:translateY(-2px);}
 @media (max-width:520px) {
     .page-contact .contact-actions {flex-direction:column;}
     .page-contact .contact-action {width:100%;max-width:240px;}
-    .project-navigation-actions {flex-direction:column;}
+    .project-navigation-actions {grid-template-columns:1fr;}
     .project-navigation-link {width:100%;max-width:260px;}
+    .project-navigation-card {grid-template-columns:104px 1fr;width:100%;}
+    .project-navigation-card img {width:104px;}
 }
 
 /* Color accessibility pass: preserve the warm red, cream, and navy palette. */
