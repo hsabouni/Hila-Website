@@ -51,7 +51,7 @@ $(document).ready(function(){
 		
 		$('body').scrollspy({
 			target:'.navbar-collapse',
-			offset:0
+			offset:80
 		});
 
 	// Keep the experience axis centered between its first and last markers.
