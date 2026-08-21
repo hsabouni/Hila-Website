@@ -2160,6 +2160,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card:focus-within::before {opacity:1;visibility:visible;}
 :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card:hover .case-study-evidence-popover,
 :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card:focus-within .case-study-evidence-popover {opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1);visibility:visible;}
+:is(.portfolio-one-page,.portfolio-two-page) section:has(.case-study-evidence-card:hover),
+:is(.portfolio-one-page,.portfolio-two-page) section:has(.case-study-evidence-card:focus-within) {position:relative;z-index:1001;}
 @media (prefers-reduced-motion:reduce) {
     :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card::before,
     :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-trigger,
