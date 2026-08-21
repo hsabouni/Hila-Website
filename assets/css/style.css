@@ -2459,8 +2459,13 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .blog-page .blog-entry {position:relative;max-width:1000px;padding:8px 0 8px 34px;border-left:5px solid #f92c2c;}
 .blog-page .blog-entry-meta {display:flex;flex-wrap:wrap;gap:10px;color:#565e70;font-size:14px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;}
 .blog-page .blog-entry h2 {max-width:880px;margin:18px 0 16px;color:#303544;font-size:clamp(34px,4vw,56px);font-weight:600;letter-spacing:-.03em;line-height:1.12;}
-.blog-page .blog-entry p {max-width:850px;margin:0;color:#565e70;font-size:18px;line-height:1.75;}
-.blog-page .blog-entry-status {display:inline-block;margin-top:24px;color:#f92c2c;font-size:13px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;}
+.blog-page .blog-entry p {max-width:850px;color:#565e70;font-size:18px;line-height:1.75;}
+.blog-page .blog-entry-deck {margin:0;}
+.blog-page .blog-article-body {max-width:850px;margin-top:52px;padding-top:44px;border-top:1px solid #cfc3bb;}
+.blog-page .blog-article-body h3 {margin:46px 0 13px;color:#303544;font-size:26px;font-weight:600;line-height:1.35;}
+.blog-page .blog-article-body p {margin:0 0 18px;}
+.blog-page .blog-placeholder {padding:18px 20px;border-left:3px solid #f92c2c;background:rgba(255,255,255,.58);}
+.blog-page .blog-placeholder strong {color:#303544;font-weight:600;}
 .blog-page .page-contact {background:#e9dfd8;border-color:#ded3cc;}
 @media (max-width:767px) {
     .blog-page .blog-intro {padding:88px 0 48px;}
@@ -2470,6 +2475,8 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     .blog-page .blog-entry {padding-left:22px;}
     .blog-page .blog-entry h2 {font-size:34px;}
     .blog-page .blog-entry p {font-size:16px;}
+    .blog-page .blog-article-body {margin-top:38px;padding-top:34px;}
+    .blog-page .blog-article-body h3 {margin-top:38px;font-size:23px;}
 }
 .project-navigation-card {display:grid;grid-template-columns:128px 1fr;min-height:92px;overflow:hidden;border:1px solid #ded3cc;border-radius:8px;color:#303544;background:#fff;transition:border-color .3s ease,background-color .3s ease,box-shadow .3s ease,transform .3s ease;}
 .project-navigation-card img {width:128px;height:100%;min-height:92px;object-fit:cover;}
