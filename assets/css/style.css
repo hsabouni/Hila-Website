@@ -1414,7 +1414,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     padding:36px 0 46px;
 }
 .research-journal-page .portfolio-journal-layout .journal-portfolio-content,
-.research-journal-page .journal-study-section .about-content {padding-top:34px;}
+.research-journal-page .journal-study-section .about-content {padding-top:var(--case-heading-content-gap);}
 .research-journal-page .portfolio-journal-layout .journal-body-copy {margin-top:16px;}
 .research-journal-page .research-phase {gap:22px;padding-bottom:38px;}
 .research-journal-page .research-phase-label {margin-bottom:6px;}
@@ -2069,6 +2069,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 /* Portfolio One: match the homepage's compact, scannable rhythm */
+.portfolio-one-page,
+.portfolio-two-page,
+.research-journal-page {--case-heading-content-gap:18px;}
 .portfolio-one-page .section-heading h2 {padding-bottom:24px;}
 .portfolio-one-page #intro {padding:112px 0 46px;}
 .portfolio-one-page #intro .about-content {padding-top:34px;}
@@ -2092,7 +2095,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-one-page #analysis .about-content,
 .portfolio-one-page #about .about-content,
 .portfolio-one-page #lessons_learned .about-content {padding-top:34px;}
-.portfolio-one-page #analysis .about-content {padding-top:18px;}
+.portfolio-one-page #analysis .about-content,
+.portfolio-one-page #lessons_learned .about-content {padding-top:var(--case-heading-content-gap);}
 .portfolio-one-page #analysis .single-method-img,
 .portfolio-one-page #about .single-method-img {padding-top:32px;}
 .portfolio-one-page #contact {padding:36px 0 46px;}
@@ -2175,7 +2179,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-one-page #study-design {display:none;}
 .portfolio-one-page .case-study-process-grid,
 .portfolio-one-page .case-study-condition-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;}
-.portfolio-one-page .case-study-process-grid {margin-top:34px;}
+.portfolio-one-page .case-study-process-grid {margin-top:var(--case-heading-content-gap);}
 .portfolio-one-page .case-study-condition-grid {margin-top:18px;}
 .portfolio-one-page .case-study-method-figure {margin-top:28px;}
 .portfolio-one-page .case-study-method-figure .single-method-img {padding-top:0;}
@@ -2223,7 +2227,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-two-page .portfolio-two-method-detail {padding:36px 0 46px;}
 .portfolio-two-page .portfolio-two-method-detail .method-content {padding-top:0;}
 .portfolio-two-page .portfolio-two-content {padding:36px 0 46px;}
-.portfolio-two-page .portfolio-two-content .about-content {padding-top:34px;}
+.portfolio-two-page .portfolio-two-content .about-content {padding-top:var(--case-heading-content-gap);}
 .portfolio-two-page .portfolio-two-content .about-contribution {padding-top:34px;}
 .portfolio-two-page .portfolio-two-method-detail .single-method-img,
 .portfolio-two-page .portfolio-two-content .single-method-img {padding-top:32px;}
@@ -2256,6 +2260,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-two-page .portfolio-two-implication p,
 .portfolio-two-page .portfolio-two-next-step p {margin:0;color:#777e91;font-size:13px;line-height:1.75;}
 .portfolio-two-page .portfolio-two-key-result {border-color:#f92c2c!important;background:#fff4f2!important;}
+.portfolio-two-page .portfolio-two-method .portfolio-two-process-grid {margin-top:var(--case-heading-content-gap);}
 .portfolio-two-page .portfolio-two-lens-heading {margin-top:34px;}
 .portfolio-two-page .portfolio-two-lens-heading h3 {margin:0;color:#3c4258;font-size:18px;font-weight:500;line-height:1.55;text-transform:none;}
 .portfolio-two-page .portfolio-two-subsection-heading {margin-bottom:0;padding-bottom:14px;border-bottom:2px solid #f92c2c;}
