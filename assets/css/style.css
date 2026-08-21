@@ -2454,7 +2454,7 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .blog-page .navbar-brand {color:#f92c2c!important;}
 .blog-page .blog-intro {padding:80px 0 20px;background:#fff;}
 .blog-page .blog-intro-copy {max-width:980px;margin:0 auto;padding:34px 15px 8px;}
-.blog-page .blog-intro-copy h1 {max-width:820px;margin:0;color:#303544;font-size:30px;font-weight:400;letter-spacing:-.015em;line-height:1.45;}
+.blog-page .blog-intro-copy h1 {max-width:820px;margin:0;color:#303544;font-size:30px;font-weight:400;letter-spacing:-.015em;line-height:1.45;text-shadow:2px 2px 0 rgba(249,44,44,.2);}
 .blog-page .blog-note-browser {margin-top:24px;padding-top:0;border-top:0;}
 .blog-page .blog-note-browser h2 {margin:0 0 6px;color:#303544;font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
 .blog-page .blog-note-tags {display:flex;flex-wrap:wrap;gap:4px 14px;}
