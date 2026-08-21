@@ -2480,7 +2480,7 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .blog-page .blog-article-body p {margin:0 0 18px;}
 .blog-page .blog-placeholder {padding:18px 20px;border-left:3px solid #f92c2c;background:rgba(255,255,255,.58);}
 .blog-page .blog-placeholder strong {color:#303544;font-weight:600;}
-.blog-page .page-contact {background:#e9dfd8;border-color:#ded3cc;}
+.blog-page .page-contact {background:#fff;border-color:#ded3cc;}
 @media (max-width:767px) {
     .blog-page .blog-intro {padding:76px 0 18px;}
     .blog-page .blog-intro-copy {padding-top:34px;}
