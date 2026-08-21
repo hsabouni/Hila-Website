@@ -2332,6 +2332,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-two-page .portfolio-two-constraint-map li {padding:5px 7px;border-radius:4px;color:#3c4258;background:#f0e7e2;font-size:11px;font-weight:600;line-height:1.35;}
 .portfolio-two-page #capabilities .portfolio-two-subsection-heading {padding-bottom:0;border-bottom:0;}
 .portfolio-two-page #capabilities .about-content {padding-top:24px;}
+.portfolio-two-page .portfolio-two-finding-summary {max-width:920px;margin:30px 0 0;color:#3c4258;font-size:18px;font-weight:500;line-height:1.65;}
 .portfolio-two-page .portfolio-two-implication {padding:18px 24px;border-left:4px solid #f92c2c;background:transparent;}
 .portfolio-two-page .portfolio-two-implication h3 {margin:0 0 12px;color:#3c4258;font-size:21px;line-height:1.55;text-transform:none;}
 .portfolio-two-page .portfolio-two-implication + .portfolio-two-lesson-grid {margin-top:18px;}
