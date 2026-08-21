@@ -1417,7 +1417,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 /* PhD journal: compact case-study rhythm */
 .research-journal-page .portfolio-journal-layout .journal-project-intro {
-    padding:100px 0 46px;
+    padding:48px 0 46px;
 }
 .research-journal-page .journal-project-intro .about-content {padding-top:34px;}
 .research-journal-page .portfolio-journal-layout .journal-section-kicker {margin-top:12px;}
@@ -1445,7 +1445,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 /* Match Portfolio One's first two-section structure exactly */
 .research-journal-page .section-heading h2 {padding-bottom:24px;}
 .research-journal-page .portfolio-journal-layout .journal-opening-intro {
-    padding:112px 0 46px;
+    padding:48px 0 46px;
 }
 .research-journal-page .journal-opening-intro .about-content {padding-top:34px;}
 .research-journal-page .portfolio-journal-layout .journal-opening-problem {
@@ -2086,7 +2086,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .research-journal-page {--case-heading-content-gap:18px;}
 :is(.portfolio-one-page,.portfolio-two-page) {--case-text-visual-gap:30px;}
 .portfolio-one-page .section-heading h2 {padding-bottom:24px;}
-.portfolio-one-page #intro {padding:112px 0 46px;}
+.portfolio-one-page #intro {padding:48px 0 46px;}
 .portfolio-one-page #intro .about-content {padding-top:34px;}
 .portfolio-one-page #intro .single-method-img {padding-top:32px;}
 .portfolio-one-page #method {padding:36px 0 44px;}
@@ -2235,7 +2235,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 /* Portfolio Two: use the same compact case-study rhythm */
 .portfolio-two-page .section-heading h2 {padding-bottom:24px;}
-.portfolio-two-page .portfolio-two-intro {padding:112px 0 46px;}
+.portfolio-two-page .portfolio-two-intro {padding:48px 0 46px;}
 .portfolio-two-page .portfolio-two-intro .section-heading h2 {padding-bottom:0;}
 .portfolio-two-page .portfolio-two-intro .about-content {padding-top:28px;}
 .portfolio-two-page .portfolio-two-intro .single-about-txt h3 {text-align:left;}
