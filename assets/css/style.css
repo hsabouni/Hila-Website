@@ -1933,12 +1933,36 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .research-journal-page .journal-implication-grid p {margin:0;color:#777e91;font-size:13px;line-height:1.7;}
 .research-journal-page .journal-implication-note {margin-top:18px!important;font-size:13px!important;font-style:italic;}
 .research-journal-page .judgment-signals {
-    width:min(860px,calc(100% - 30px));
-    margin:20px auto 36px;
+    position:relative;
+    width:min(620px,calc(100% - 30px));
+    margin:8px auto 4px;
     display:grid;
     grid-template-columns:repeat(3,minmax(0,1fr));
     gap:44px;
     text-align:center;
+}
+.research-journal-page .judgment-signals:before,
+.research-journal-page .judgment-signals:after {
+    position:absolute;
+    top:8px;
+    color:#f92c2c;
+    font-size:16px;
+    font-weight:500;
+    line-height:1;
+    content:"+";
+}
+.research-journal-page .judgment-signals:before {left:33.333%;transform:translateX(-50%);}
+.research-journal-page .judgment-signals:after {left:66.667%;transform:translateX(-50%);}
+.research-journal-page .judgment-title-lockup {
+    padding:2px 15px 18px;
+    color:#3c4258;
+    text-transform:uppercase;
+}
+.research-journal-page .judgment-title-word {
+    display:block;
+    font-size:24px;
+    font-weight:700;
+    line-height:1.25;
 }
 .research-journal-page .judgment-signal {
     min-width:0;
@@ -1946,9 +1970,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 .research-journal-page .judgment-signal-label {
     display:block;
-    font-size:12px;
-    font-weight:600;
-    letter-spacing:.035em;
+    font-size:17px;
+    font-weight:700;
+    letter-spacing:.045em;
 }
 .research-journal-page .judgment-signal-field {
     position:relative;
@@ -2042,8 +2066,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 @media (max-width:767px) {
     .research-journal-page .journal-meta-grid {margin-top:30px;}
     .research-journal-page .journal-implication-grid {grid-template-columns:1fr;gap:10px;}
-    .research-journal-page .judgment-signals {gap:8px;margin:14px auto 28px;}
-    .research-journal-page .judgment-signal-label {font-size:10px;}
+    .research-journal-page .judgment-signals {gap:8px;margin:8px auto 3px;}
+    .research-journal-page .judgment-title-word {font-size:19px;}
+    .research-journal-page .judgment-signal-label {font-size:14px;}
 }
 @media (prefers-reduced-motion:reduce) {
     .research-journal-page .judgment-signal-field:after,
