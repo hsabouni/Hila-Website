@@ -933,13 +933,23 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 /* Guided scroll storytelling */
 .motion-ready .scroll-reveal {
-    opacity: 0;
-    transform: translateY(34px);
-    transition: opacity .85s ease,transform .85s ease;
+    opacity: 1;
+    transform: none;
 }
 .motion-ready .scroll-reveal.is-visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
+}
+.motion-ready .scroll-reveal > .section-heading,
+.motion-ready .scroll-reveal > .container {
+    opacity:0;
+    transform:translateY(34px);
+    transition:opacity .85s ease,transform .85s ease;
+}
+.motion-ready .scroll-reveal.is-visible > .section-heading,
+.motion-ready .scroll-reveal.is-visible > .container {
+    opacity:1;
+    transform:translateY(0);
 }
 .motion-ready .experience.scroll-reveal .timeline-axis {
     opacity:0;
@@ -998,6 +1008,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .experience-journal-link:hover,.experience-journal-link:focus {color:#b42424;text-decoration:none;}
 @media (prefers-reduced-motion: reduce) {
     .motion-ready .scroll-reveal,
+    .motion-ready .scroll-reveal > .section-heading,
+    .motion-ready .scroll-reveal > .container,
     .motion-ready .experience.scroll-reveal .timeline-axis,
     .motion-ready .publications.scroll-reveal .publication-ribbon .col-sm-2,
     .motion-ready #experience .experience-reveal,
