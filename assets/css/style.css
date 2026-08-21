@@ -2356,7 +2356,11 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .project-navigation-card > span {display:flex;flex-direction:column;justify-content:center;padding:14px 16px;}
 .project-navigation-card small {margin-bottom:5px;color:#6f5962;font-size:10px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;}
 .project-navigation-card strong {color:#303544;font-size:14px;font-weight:600;line-height:1.45;}
-.project-navigation-card:hover,.project-navigation-card:focus-visible {border-color:#f92c2c;color:#303544;box-shadow:0 9px 22px rgba(60,66,88,.12);text-decoration:none;transform:translateY(-2px);}
+.project-navigation-card:hover,.project-navigation-card:focus-visible {border-color:#f92c2c;color:#303544;box-shadow:0 6px 16px rgba(60,66,88,.10);text-decoration:none;transform:none;}
+.project-navigation-card:hover img,.project-navigation-card:focus-visible img,
+.project-navigation-card:hover > span,.project-navigation-card:focus-visible > span,
+.project-navigation-card:hover strong,.project-navigation-card:focus-visible strong,
+.project-navigation-card:hover small,.project-navigation-card:focus-visible small {opacity:1!important;visibility:visible!important;filter:none!important;transform:none!important;}
 @media (max-width:520px) {
     .page-contact .contact-actions {flex-direction:column;}
     .page-contact .contact-action {width:100%;max-width:240px;}
