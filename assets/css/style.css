@@ -2452,19 +2452,21 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 /* Blog landing page */
 .blog-page {background:#fcfbf9;color:#565e70;}
 .blog-page .navbar-brand {color:#f92c2c!important;}
-.blog-page .blog-intro {padding:80px 0 30px;background:#fff;}
-.blog-page .blog-intro-copy {max-width:1170px;margin:0 auto;padding:34px 15px 10px;}
-.blog-page .blog-intro-copy h1 {max-width:920px;margin:0;color:#303544;font-size:32px;font-weight:500;letter-spacing:-.02em;line-height:1.35;}
-.blog-page .blog-note-browser {margin-top:28px;padding-top:18px;border-top:1px solid #ded3cc;}
+.blog-page .blog-intro {padding:80px 0 20px;background:#fff;}
+.blog-page .blog-intro-copy {max-width:980px;margin:0 auto;padding:34px 15px 8px;}
+.blog-page .blog-intro-copy h1 {max-width:820px;margin:0;color:#303544;font-size:30px;font-weight:400;letter-spacing:-.015em;line-height:1.45;}
+.blog-page .blog-note-browser {margin-top:24px;padding-top:14px;border-top:1px solid #e5ddd7;}
 .blog-page .blog-note-browser h2 {margin:0 0 6px;color:#303544;font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
 .blog-page .blog-note-tags {display:flex;flex-wrap:wrap;gap:4px 14px;}
 .blog-page .blog-note-tags span {display:inline-block;color:#565e70;font-size:14px;font-weight:500;}
-.blog-page .blog-feed {padding:72px 0 84px;background:#e9dfd8;}
-.blog-page .blog-entry-card {display:block;padding:38px 42px;border:1px solid #cfc3bb;border-radius:12px;color:#303544;background:#fff;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease;}
-.blog-page .blog-entry-card:hover,.blog-page .blog-entry-card:focus {color:#303544;border-color:#f92c2c;box-shadow:0 14px 32px rgba(48,53,68,.10);transform:translateY(-3px);}
+.blog-page .blog-feed {padding:24px 0 76px;background:#fff;}
+.blog-page .blog-feed .container {max-width:980px;}
+.blog-page .blog-entry-card {display:block;padding:34px 0 32px;border-top:1px solid #d8d0ca;border-bottom:1px solid #d8d0ca;color:#303544;background:transparent;transition:border-color .25s ease;}
+.blog-page .blog-entry-card:hover,.blog-page .blog-entry-card:focus {color:#303544;border-color:#f92c2c;}
 .blog-page .blog-entry-meta {display:flex;flex-wrap:wrap;gap:10px;color:#565e70;font-size:14px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;}
-.blog-page .blog-entry-card h2 {width:100%;margin:0 0 12px;color:#303544;font-size:clamp(28px,3vw,42px);font-weight:600;letter-spacing:-.03em;line-height:1.16;}
-.blog-page .blog-entry-card p {width:100%;color:#565e70;font-size:17px;line-height:1.7;}
+.blog-page .blog-entry-card h2 {width:100%;margin:0 0 10px;color:#303544;font-size:clamp(27px,3vw,38px);font-weight:500;letter-spacing:-.025em;line-height:1.2;transition:color .25s ease;}
+.blog-page .blog-entry-card:hover h2,.blog-page .blog-entry-card:focus h2 {color:#f92c2c;}
+.blog-page .blog-entry-card p {width:100%;color:#565e70;font-size:16px;line-height:1.7;}
 .blog-page .blog-entry-deck {margin:0 0 22px;}
 .blog-page .blog-entry-card .blog-entry-meta {color:#6d7485;font-size:12px;font-weight:400;letter-spacing:.04em;}
 .blog-page .blog-entry-tags {display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:10px;color:#6d7485;font-size:12px;font-weight:400;}
@@ -2480,12 +2482,12 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .blog-page .blog-placeholder strong {color:#303544;font-weight:600;}
 .blog-page .page-contact {background:#e9dfd8;border-color:#ded3cc;}
 @media (max-width:767px) {
-    .blog-page .blog-intro {padding:76px 0 28px;}
+    .blog-page .blog-intro {padding:76px 0 18px;}
     .blog-page .blog-intro-copy {padding-top:34px;}
     .blog-page .blog-intro-copy h1 {font-size:28px;}
     .blog-page .blog-note-browser {margin-top:34px;padding-top:23px;}
-    .blog-page .blog-feed {padding:54px 0 62px;}
-    .blog-page .blog-entry-card {padding:28px 24px;}
+    .blog-page .blog-feed {padding:20px 0 56px;}
+    .blog-page .blog-entry-card {padding:28px 0;}
     .blog-page .blog-entry-card h2 {font-size:30px;}
     .blog-page .blog-entry-card p {font-size:16px;}
     .blog-page .blog-article-layout {padding:124px 0 60px;}
