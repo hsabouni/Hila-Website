@@ -2466,7 +2466,8 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .blog-page .blog-entry-card h2 {width:100%;margin:0 0 12px;color:#303544;font-size:clamp(28px,3vw,42px);font-weight:600;letter-spacing:-.03em;line-height:1.16;}
 .blog-page .blog-entry-card p {width:100%;color:#565e70;font-size:17px;line-height:1.7;}
 .blog-page .blog-entry-deck {margin:0 0 22px;}
-.blog-page .blog-entry-tags {display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:13px;color:#565e70;font-size:14px;font-weight:500;}
+.blog-page .blog-entry-card .blog-entry-meta {color:#6d7485;font-size:12px;font-weight:400;letter-spacing:.04em;}
+.blog-page .blog-entry-tags {display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:10px;color:#6d7485;font-size:12px;font-weight:400;}
 .blog-page .blog-article-layout {padding:150px 0 82px;background:#fff;}
 .blog-page .blog-article {max-width:980px;}
 .blog-page .blog-back-link {display:inline-block;margin-bottom:46px;color:#565e70;text-decoration:underline;text-decoration-color:#f92c2c;text-underline-offset:4px;}
