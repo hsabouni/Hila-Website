@@ -2327,8 +2327,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-two-page .portfolio-two-constraint-map section {padding:16px 4px;border:0;border-top:2px solid #f92c2c;background:transparent;box-shadow:none;}
 .portfolio-two-page .portfolio-two-constraint-map section > span {display:block;margin-bottom:5px;color:#565e70;font-size:10px;font-weight:600;letter-spacing:1px;}
 .portfolio-two-page .portfolio-two-constraint-map h4 {margin:0 0 14px;color:#3c4258;font-size:16px;font-weight:600;line-height:1.4;}
-.portfolio-two-page .portfolio-two-constraint-map ul {display:grid;gap:6px;margin:0;padding:0;list-style:none;}
-.portfolio-two-page .portfolio-two-constraint-map li {padding:0;color:#777e91;background:transparent;font-size:12px;font-weight:500;line-height:1.5;}
+.portfolio-two-page .portfolio-two-constraint-map ul {display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none;}
+.portfolio-two-page .portfolio-two-constraint-map ul::before {flex-basis:100%;margin-bottom:1px;color:#777e91;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;content:"Themes";}
+.portfolio-two-page .portfolio-two-constraint-map li {padding:5px 7px;border-radius:4px;color:#3c4258;background:#f0e7e2;font-size:11px;font-weight:600;line-height:1.35;}
 .portfolio-two-page #capabilities .portfolio-two-subsection-heading {padding-bottom:0;border-bottom:0;}
 .portfolio-two-page #capabilities .about-content {padding-top:24px;}
 .portfolio-two-page #capabilities .portfolio-two-constraint-map + .portfolio-two-caption + .row {margin-top:30px;}
