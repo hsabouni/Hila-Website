@@ -1884,37 +1884,40 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 .research-journal-page .hero-about-sequence-node-one:after {
     animation-name:journalNodePulseSoft;
-    animation-duration:2.1s;
+    animation-duration:1.65s;
     animation-delay:0s;
 }
 .research-journal-page .hero-about-sequence-node-two:after {
     animation-name:journalNodePulseMedium;
-    animation-duration:2.55s;
-    animation-delay:.45s;
+    animation-duration:2.45s;
+    animation-delay:.3s;
 }
 .research-journal-page .hero-about-sequence-node-three:after {
     animation-name:journalNodePulseStrong;
-    animation-duration:2.85s;
-    animation-delay:1.05s;
+    animation-duration:3.5s;
+    animation-delay:.85s;
 }
 @keyframes journalNodeLabelFade {
     0%,100% {opacity:.62;}
     28%,72% {opacity:1;}
 }
 @keyframes journalNodePulseSoft {
-    0% {opacity:.42;transform:scale(.82);}
-    48% {opacity:0;transform:scale(1.7);}
-    49%,100% {opacity:0;transform:scale(.82);}
+    0% {opacity:.48;transform:scale(.8);}
+    32% {opacity:0;transform:scale(1.65);}
+    33%,100% {opacity:0;transform:scale(.8);}
 }
 @keyframes journalNodePulseMedium {
-    0% {opacity:.5;transform:scale(.78);}
-    48% {opacity:0;transform:scale(2);}
-    49%,100% {opacity:0;transform:scale(.78);}
+    0% {opacity:.56;transform:scale(.78);}
+    18% {opacity:0;transform:scale(1.75);}
+    19% {opacity:0;transform:scale(.78);}
+    27% {opacity:.5;transform:scale(.82);}
+    46% {opacity:0;transform:scale(1.95);}
+    47%,100% {opacity:0;transform:scale(.78);}
 }
 @keyframes journalNodePulseStrong {
-    0% {opacity:.58;transform:scale(.74);}
-    48% {opacity:0;transform:scale(2.3);}
-    49%,100% {opacity:0;transform:scale(.74);}
+    0% {opacity:.68;transform:scale(.72);}
+    58% {opacity:0;transform:scale(2.75);}
+    59%,100% {opacity:0;transform:scale(.72);}
 }
 .research-journal-page .journal-implication-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px;}
 .research-journal-page .journal-implication-grid > div {padding:18px 4px;border-top:2px solid #f92c2c;}
