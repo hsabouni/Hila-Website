@@ -2356,7 +2356,7 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .project-navigation-card > div {display:flex;flex-direction:column;justify-content:center;padding:14px 16px;}
 .project-navigation-card small {margin-bottom:5px;color:#6f5962;font-size:10px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;}
 .project-navigation-card a {display:inline;color:#303544;font-size:14px;font-weight:600;line-height:1.45;text-decoration:none;}
-.project-navigation-card a:hover,.project-navigation-card a:focus-visible {color:#f92c2c;text-decoration:underline;text-underline-offset:3px;}
+.project-navigation-card a:hover,.project-navigation-card a:focus-visible {color:#303544;text-decoration:none;}
 .project-navigation-card:hover,.project-navigation-card:focus-within {border-color:#6f5962;background:#f1ece7;box-shadow:0 8px 20px rgba(60,66,88,.14);transform:translateY(-2px);}
 @media (max-width:520px) {
     .page-contact .contact-actions {flex-direction:column;}
