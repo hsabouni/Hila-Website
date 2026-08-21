@@ -2122,6 +2122,17 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-one-page .case-study-caption {max-width:720px;margin:12px auto 0;color:#8a909e;font-size:12px;line-height:1.65;text-align:left;}
 .portfolio-one-page .case-study-qual-figure {margin-top:28px;}
 .portfolio-one-page .case-study-theme-map {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;padding:12px 8px 4px;scroll-margin-top:120px;}
+.portfolio-one-page .case-study-figure-zoom {position:relative;z-index:1;transform-origin:center;transition:transform .6s cubic-bezier(.2,.7,.2,1),box-shadow .6s ease;}
+.portfolio-one-page .case-study-figure-zoom:focus-visible {z-index:8;outline:3px solid #f92c2c;outline-offset:6px;transform:scale(1.14);box-shadow:0 20px 42px rgba(60,66,88,.16);}
+@media (hover:hover) and (pointer:fine) {
+    .portfolio-one-page .case-study-figure-zoom {cursor:zoom-in;}
+    .portfolio-one-page .case-study-figure-zoom:hover {z-index:8;transform:scale(1.14);box-shadow:0 20px 42px rgba(60,66,88,.16);}
+}
+@media (prefers-reduced-motion:reduce) {
+    .portfolio-one-page .case-study-figure-zoom {transition:none;}
+    .portfolio-one-page .case-study-figure-zoom:hover,
+    .portfolio-one-page .case-study-figure-zoom:focus-visible {transform:none;}
+}
 .portfolio-one-page .case-study-theme-group {position:relative;display:flex;flex-direction:column;align-items:center;padding:12px 12px 22px;}
 .portfolio-one-page .case-study-theme-notes {position:relative;z-index:2;display:flex;justify-content:space-between;gap:0;width:228px;margin-bottom:-20px;transform:translateY(8px);}
 .portfolio-one-page .case-study-theme-notes span {position:relative;display:flex;align-items:center;justify-content:center;height:84px;width:84px;padding:10px;border:0;border-radius:0;background:linear-gradient(145deg,#f8ded5 0%,#f2cabd 100%);box-shadow:0 7px 13px rgba(60,66,88,.12),inset 0 1px 0 rgba(255,255,255,.65);color:#3c4258;font-size:11px;font-weight:600;line-height:1.35;text-align:center;transform:rotate(-3deg);}
