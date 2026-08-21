@@ -2260,12 +2260,10 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-two-page .case-study-award span {margin-right:6px;color:#f92c2c;font-weight:700;letter-spacing:.7px;}
 .portfolio-two-page .portfolio-two-meta-grid,
 .portfolio-two-page .portfolio-two-process-grid,
-.portfolio-two-page .portfolio-two-finding-grid,
-.portfolio-two-page .portfolio-two-lesson-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px;}
+.portfolio-two-page .portfolio-two-finding-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px;}
 .portfolio-two-page .portfolio-two-meta-grid > div {padding:22px;border:1px solid #e4e7ec;border-radius:10px;background:#fff;}
 .portfolio-two-page .portfolio-two-process-grid > div,
 .portfolio-two-page .portfolio-two-finding-grid > div {padding:16px 4px;border-top:2px solid #f92c2c;}
-.portfolio-two-page .portfolio-two-lesson-grid > div {display:flex;align-items:center;min-height:92px;padding:22px;border:1px solid #e4e7ec;border-radius:10px;background:#fff;}
 .portfolio-two-page .portfolio-two-meta-grid span,
 .portfolio-two-page .portfolio-two-process-grid span,
 .portfolio-two-page .portfolio-two-finding-grid span,
@@ -2273,13 +2271,10 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-two-page .portfolio-two-lens-heading span {display:block;margin-bottom:8px;color:#f92c2c;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
 .portfolio-two-page .portfolio-two-meta-grid strong,
 .portfolio-two-page .portfolio-two-process-grid strong,
-.portfolio-two-page .portfolio-two-finding-grid strong,
-.portfolio-two-page .portfolio-two-lesson-grid strong {display:block;margin-bottom:9px;color:#3c4258;font-size:15px;line-height:1.45;}
-.portfolio-two-page .portfolio-two-lesson-grid strong {margin-bottom:0;}
+.portfolio-two-page .portfolio-two-finding-grid strong {display:block;margin-bottom:9px;color:#3c4258;font-size:15px;line-height:1.45;}
 .portfolio-two-page .portfolio-two-meta-grid p,
 .portfolio-two-page .portfolio-two-process-grid p,
 .portfolio-two-page .portfolio-two-finding-grid p,
-.portfolio-two-page .portfolio-two-lesson-grid p,
 .portfolio-two-page .portfolio-two-implication p,
 .portfolio-two-page .portfolio-two-next-step p {margin:0;color:#777e91;font-size:13px;line-height:1.75;}
 .portfolio-two-page .portfolio-two-key-result {border-color:#f92c2c!important;background:#fff4f2!important;}
@@ -2348,7 +2343,6 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-two-page .portfolio-two-finding-summary {max-width:920px;margin:30px 0 0;color:#3c4258;font-size:18px;font-weight:500;line-height:1.65;}
 .portfolio-two-page .portfolio-two-implication {padding:18px 24px;border-left:4px solid #f92c2c;background:transparent;}
 .portfolio-two-page .portfolio-two-implication h3 {margin:0 0 12px;color:#3c4258;font-size:21px;line-height:1.55;text-transform:none;}
-.portfolio-two-page .portfolio-two-implication + .portfolio-two-lesson-grid {margin-top:18px;}
 .portfolio-two-page .portfolio-two-next-step {margin-top:24px;padding-top:24px;border-top:1px solid #e4e7ec;}
 .portfolio-two-page .portfolio-two-next-step h3 {margin:0 0 10px;color:#3c4258;font-size:18px;text-transform:none;}
 .portfolio-two-page #conclusion .about-content > .row,
@@ -2359,7 +2353,6 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     .portfolio-two-page .portfolio-two-meta-grid,
     .portfolio-two-page .portfolio-two-process-grid,
     .portfolio-two-page .portfolio-two-finding-grid,
-    .portfolio-two-page .portfolio-two-lesson-grid,
     .portfolio-two-page .portfolio-two-constraint-map {grid-template-columns:1fr;}
 }
 
@@ -2414,7 +2407,6 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .portfolio-two-page .portfolio-two-meta-grid p,
 .portfolio-two-page .portfolio-two-process-grid p,
 .portfolio-two-page .portfolio-two-finding-grid p,
-.portfolio-two-page .portfolio-two-lesson-grid p,
 .portfolio-two-page .portfolio-two-implication p,
 .portfolio-two-page .portfolio-two-next-step p,
 .portfolio-two-page .portfolio-two-caption {color:#5b6273;}
