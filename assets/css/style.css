@@ -2561,6 +2561,7 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .research-journal-page .project-navigation {background:#fff;}
 .portfolio-two-page #method-detail,
 .portfolio-two-page #conclusion {background:#e9dfd8;}
+.research-journal-page #method {background:#e9dfd8;}
 .portfolio-two-page #dicot,
 .portfolio-two-page #capabilities,
 .portfolio-two-page #power-relations {background:#fff;}
