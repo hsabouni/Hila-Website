@@ -2092,6 +2092,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-one-page #analysis,
 .portfolio-one-page #about,
 .portfolio-one-page #lessons_learned {padding:36px 0 46px;}
+.portfolio-one-page #lessons_learned {background:#e9dfd8;}
 .portfolio-one-page #analysis .about-content,
 .portfolio-one-page #about .about-content,
 .portfolio-one-page #lessons_learned .about-content {padding-top:34px;}
