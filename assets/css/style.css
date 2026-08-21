@@ -2151,6 +2151,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-trigger:hover::after {transform:rotate(90deg);}
 :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-trigger:focus-visible {outline:3px solid #f92c2c;outline-offset:3px;}
 :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-popover {position:fixed;z-index:999;top:50%;left:50%;width:min(820px,86vw);max-height:86vh;padding:30px;border:1px solid #e0e3e9;border-radius:14px;background:#fff;box-shadow:0 28px 70px rgba(37,42,59,.3);opacity:0;overflow:auto;pointer-events:none;transform:translate(-50%,-47%) scale(.94);transition:opacity .35s ease,transform .35s cubic-bezier(.2,.7,.2,1);visibility:hidden;}
+.portfolio-two-page .case-study-evidence-popover-wide {width:min(1180px,96vw);}
 :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-popover > img {display:block;width:100%;height:auto;margin:0 auto;}
 :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card:hover,
 :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card:focus-within {z-index:1000;}
