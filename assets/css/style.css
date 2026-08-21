@@ -2584,9 +2584,9 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .research-journal-page .journal-status,
 .research-journal-page .journal-info-card h3,
 .research-journal-page .research-note-meta,
-.research-journal-page .research-phase-label,
 .research-journal-page .research-transition span,
 .research-journal-page .journal-meta-grid .case-study-meta-card > span {color:#4f5668;}
+.research-journal-page .research-phase-label {color:#777e91;font-weight:500;}
 .portfolio-one-page .section-heading,
 .portfolio-two-page .section-heading,
 .research-journal-page .section-heading,
