@@ -2452,16 +2452,16 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 /* Blog landing page */
 .blog-page {background:#fcfbf9;color:#565e70;}
 .blog-page .navbar-brand {color:#f92c2c!important;}
-.blog-page .blog-intro {min-height:calc(100vh - 245px);padding:95px 0 70px;background:#fff;}
-.blog-page .blog-intro-copy {max-width:900px;margin:0 auto;padding:64px 15px 30px;}
-.blog-page .blog-intro-copy h1 {max-width:820px;margin:0;color:#303544;font-size:46px;font-weight:600;line-height:1.28;}
-.blog-page .blog-intro-copy p {max-width:720px;margin:24px 0 0;color:#565e70;font-size:18px;line-height:1.8;}
-.blog-page .blog-intro-copy span {display:inline-block;margin-top:30px;padding-top:12px;border-top:2px solid #f92c2c;color:#565e70;font-size:12px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;}
+.blog-page .blog-intro {min-height:calc(100vh - 205px);padding:95px 0 64px;background:#fff;}
+.blog-page .blog-intro-copy {max-width:1170px;margin:0 auto;padding:80px 15px 44px;}
+.blog-page .blog-intro-copy h1 {max-width:1120px;margin:0;color:#303544;font-size:clamp(58px,7.4vw,112px);font-weight:600;letter-spacing:-.045em;line-height:1.03;text-transform:lowercase;}
+.blog-page .blog-intro-copy p {max-width:980px;margin:32px 0 0;color:#565e70;font-size:22px;line-height:1.65;}
+.blog-page .blog-intro-copy span {display:inline-block;margin-top:38px;padding-top:13px;border-top:2px solid #f92c2c;color:#565e70;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;}
 .blog-page .page-contact {background:#e9dfd8;border-color:#ded3cc;}
 @media (max-width:767px) {
     .blog-page .blog-intro {padding:88px 0 48px;}
-    .blog-page .blog-intro-copy {padding-top:42px;}
-    .blog-page .blog-intro-copy h1 {font-size:32px;}
+    .blog-page .blog-intro-copy {padding-top:54px;}
+    .blog-page .blog-intro-copy h1 {font-size:48px;}
     .blog-page .blog-intro-copy p {font-size:16px;}
 }
 .project-navigation-card {display:grid;grid-template-columns:128px 1fr;min-height:92px;overflow:hidden;border:1px solid #ded3cc;border-radius:8px;color:#303544;background:#fff;transition:border-color .3s ease,background-color .3s ease,box-shadow .3s ease,transform .3s ease;}
