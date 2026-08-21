@@ -2452,9 +2452,13 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 /* Blog landing page */
 .blog-page {background:#fcfbf9;color:#565e70;}
 .blog-page .navbar-brand {color:#f92c2c!important;}
-.blog-page .blog-intro {padding:95px 0 64px;background:#fff;}
-.blog-page .blog-intro-copy {max-width:1170px;margin:0 auto;padding:80px 15px 44px;}
-.blog-page .blog-intro-copy h1 {max-width:1080px;margin:0;color:#303544;font-size:clamp(48px,6vw,88px);font-weight:600;letter-spacing:-.04em;line-height:1.08;}
+.blog-page .blog-intro {padding:95px 0 54px;background:#fff;}
+.blog-page .blog-intro-copy {max-width:1170px;margin:0 auto;padding:64px 15px 24px;}
+.blog-page .blog-intro-copy h1 {max-width:920px;margin:0;color:#303544;font-size:36px;font-weight:500;letter-spacing:-.02em;line-height:1.35;}
+.blog-page .blog-note-browser {margin-top:48px;padding-top:28px;border-top:1px solid #ded3cc;}
+.blog-page .blog-note-browser h2 {margin:0 0 16px;color:#303544;font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+.blog-page .blog-note-tags {display:flex;flex-wrap:wrap;gap:10px;}
+.blog-page .blog-note-tags span {display:inline-block;padding:8px 13px;border:1px solid #cfc3bb;border-radius:999px;color:#565e70;background:#fff;font-size:14px;font-weight:500;}
 .blog-page .blog-feed {padding:72px 0 84px;background:#e9dfd8;}
 .blog-page .blog-entry-card {display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:34px;padding:38px 42px;border:1px solid #cfc3bb;border-radius:12px;color:#303544;background:#fff;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease;}
 .blog-page .blog-entry-card:hover,.blog-page .blog-entry-card:focus {color:#303544;border-color:#f92c2c;box-shadow:0 14px 32px rgba(48,53,68,.10);transform:translateY(-3px);}
@@ -2478,7 +2482,8 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 @media (max-width:767px) {
     .blog-page .blog-intro {padding:88px 0 48px;}
     .blog-page .blog-intro-copy {padding-top:54px;}
-    .blog-page .blog-intro-copy h1 {font-size:40px;}
+    .blog-page .blog-intro-copy h1 {font-size:28px;}
+    .blog-page .blog-note-browser {margin-top:34px;padding-top:23px;}
     .blog-page .blog-feed {padding:54px 0 62px;}
     .blog-page .blog-entry-card {grid-template-columns:1fr;padding:28px 24px;gap:18px;}
     .blog-page .blog-entry-card h2 {font-size:30px;}
