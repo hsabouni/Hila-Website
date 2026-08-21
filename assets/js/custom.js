@@ -44,9 +44,13 @@ $(document).ready(function(){
 		$('li.smooth-menu a').bind("click", function(event) {
 			event.preventDefault();
 			var anchor = $(this);
+			var target = $(anchor.attr('href'));
+			if (!target.length) {
+				return;
+			}
 			$('html, body').stop().animate({
-				scrollTop: $(anchor.attr('href')).offset().top - 60
-			}, 1200,'easeInOutExpo');
+				scrollTop: target.offset().top - 60
+			}, 700,'swing');
 		});
 		
 		$('body').scrollspy({
