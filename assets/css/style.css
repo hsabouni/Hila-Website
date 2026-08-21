@@ -2346,7 +2346,7 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .page-contact .contact-action i {margin-right:8px;}
 .page-contact .contact-action-primary {color:#fff;background:#f92c2c;}
 .page-contact .contact-action:hover,.page-contact .contact-action:focus {color:#fff;background:#d92f2f;box-shadow:0 8px 20px rgba(60,66,88,.14);text-decoration:none;transform:translateY(-2px);}
-.project-navigation {padding:38px 0 44px;border-top:1px solid #e5e9ee;background:#faf8f6;}
+.project-navigation {padding:38px 0 44px;border-top:1px solid #e5e9ee;background:#fff;}
 .project-navigation h2 {margin:0 0 22px;color:#3c4258;font-size:18px;font-weight:500;text-transform:none;}
 .project-navigation-actions {display:flex;align-items:center;justify-content:center;gap:12px;}
 .project-navigation-link {display:inline-flex;align-items:center;justify-content:center;min-width:210px;height:46px;padding:0 20px;border:1px solid #f92c2c;border-radius:4px;color:#f92c2c;background:#fff;font-size:12px;font-weight:600;transition:color .3s ease,background-color .3s ease,box-shadow .3s ease,transform .3s ease;}
@@ -2453,7 +2453,7 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .research-journal-page .dicot,
 .portfolio-one-page .project-navigation,
 .portfolio-two-page .project-navigation,
-.research-journal-page .project-navigation {background:#e9dfd8;}
+.research-journal-page .project-navigation {background:#fff;}
 .portfolio-one-page .section-heading h2,
 .portfolio-two-page .section-heading h2,
 .research-journal-page .section-heading h2,
