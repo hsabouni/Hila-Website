@@ -2469,6 +2469,11 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .portfolio-one-page .project-navigation,
 .portfolio-two-page .project-navigation,
 .research-journal-page .project-navigation {background:#fff;}
+.portfolio-two-page #method-detail,
+.portfolio-two-page #conclusion {background:#e9dfd8;}
+.portfolio-two-page #dicot,
+.portfolio-two-page #capabilities,
+.portfolio-two-page #power-relations {background:#fff;}
 .portfolio-one-page .section-heading h2,
 .portfolio-two-page .section-heading h2,
 .research-journal-page .section-heading h2,
