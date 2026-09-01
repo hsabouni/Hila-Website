@@ -2454,7 +2454,8 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .blog-page .navbar-brand {color:#f92c2c!important;}
 .blog-page .blog-intro {padding:80px 0 20px;background:#fff;}
 .blog-page .blog-intro-copy {max-width:980px;margin:0 auto;padding:34px 15px 8px;}
-.blog-page .blog-intro-copy h1 {max-width:820px;margin:0;color:#303544;font-size:30px;font-weight:400;letter-spacing:-.015em;line-height:1.45;text-shadow:2px 2px 0 rgba(249,44,44,.2);}
+.blog-page .blog-intro-copy h1 {position:relative;max-width:820px;margin:0;padding-bottom:14px;color:#303544;font-family:Georgia,"Times New Roman",serif;font-size:clamp(38px,5vw,54px);font-weight:400;letter-spacing:-.025em;line-height:1.12;text-shadow:none;}
+.blog-page .blog-intro-copy h1::after {content:"";position:absolute;bottom:0;left:0;width:54px;height:3px;background:#f92c2c;}
 .blog-page .blog-note-browser {margin-top:24px;padding-top:0;border-top:0;}
 .blog-page .blog-note-browser h2 {margin:0 0 6px;color:#303544;font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
 .blog-page .blog-note-tags {display:flex;flex-wrap:wrap;gap:4px 14px;}
@@ -2493,7 +2494,7 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 @media (max-width:767px) {
     .blog-page .blog-intro {padding:76px 0 18px;}
     .blog-page .blog-intro-copy {padding-top:34px;}
-    .blog-page .blog-intro-copy h1 {font-size:28px;}
+    .blog-page .blog-intro-copy h1 {font-size:34px;}
     .blog-page .blog-note-browser {margin-top:34px;padding-top:23px;}
     .blog-page .blog-feed {padding:36px 0 56px;}
     .blog-page .blog-entry-card {padding:22px 0 20px;}
