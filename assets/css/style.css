@@ -1434,6 +1434,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .research-journal-page .research-phase-content h3 {margin-bottom:12px;}
 .research-journal-page .research-phase-takeaway {margin-top:14px;padding:15px 19px;}
 .research-journal-page .research-phase-rigor {margin-top:14px;padding:14px 18px;border:1px solid #e4e7ec;border-radius:4px;background:#faf8f6;color:#4f5668!important;}
+.research-journal-page .research-method-flow {display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:22px 0 0;padding:0;list-style:none;}
+.research-journal-page .research-method-flow li {display:flex;align-items:center;color:#4f5668;font-size:13px;font-weight:500;line-height:1.5;}
+.research-journal-page .research-method-flow li:not(:last-child)::after {margin-left:10px;color:#f92c2c;font-size:16px;font-weight:600;content:"\2192";}
 .research-journal-page .research-transition {margin:0 0 42px 92px;padding:16px 20px;}
 .research-journal-page .research-transition p {margin-top:5px;}
 .research-journal-page .portfolio-journal-layout .journal-notes-intro {padding:36px 0 30px;}
@@ -1566,6 +1569,10 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     .research-phase-marker {width:42px;height:42px;}
     .research-transition {margin:0 0 50px 64px;padding:20px;}
     .research-phase-content h3 {font-size:22px;}
+    .research-journal-page .research-method-flow {display:grid;grid-template-columns:1fr;margin-top:18px;gap:5px;}
+    .research-journal-page .research-method-flow li {align-items:flex-start;}
+    .research-journal-page .research-method-flow li:not(:last-child)::after {display:none;}
+    .research-journal-page .research-method-flow li::before {flex:0 0 auto;width:14px;margin-right:7px;color:#f92c2c;content:"\2192";}
     .research-journal-page .portfolio-journal-layout .journal-project-intro {padding:88px 0 40px;}
     .research-journal-page .portfolio-journal-layout .journal-portfolio-section {padding:32px 0 40px;}
     .research-journal-page .portfolio-journal-layout .journal-note-section {padding:40px 0;}
