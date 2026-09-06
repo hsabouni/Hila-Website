@@ -9,7 +9,7 @@
 @media screen and (max-width:1199px){
 	nav.navbar.bootsnav ul.nav > li > a { padding: 35px 8px;}
 	
-	.welcome-hero {height: 72vh;min-height: 580px;}
+	.welcome-hero {height:auto;min-height:calc(100vh - 90px);min-height:calc(100svh - 90px);max-height:none;}
 
 	.timeline-content span>i, .experience-time span>i {left: -15.5%;}
 }/*max-width:1199px*/

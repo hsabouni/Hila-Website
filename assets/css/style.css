@@ -41,8 +41,9 @@ body{
 	font-size:16px;
 	color: #676a81;
 	background: #fff;
-    max-width:1920px;
-    margin:0 auto;
+	width:100%;
+	max-width:none;
+	margin:0;
 	overflow-x:hidden;
 }
 
@@ -191,9 +192,10 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f92c2c;}
     position:relative;
     overflow: hidden;
     background:linear-gradient(135deg,#fff 0%,#f8f3f0 58%,#f1e7e3 100%);
-    min-height:580px;
-    height:72vh;
-    max-height:680px;
+    min-height:calc(100vh - 90px);
+    min-height:calc(100svh - 90px);
+    height:auto;
+    max-height:none;
 }
 
 a:focus-visible,
@@ -236,7 +238,7 @@ button:focus-visible,
     max-width: 520px;
     margin: 0 0 24px;
     color: #303544;
-    font-size: 42px;
+    font-size:clamp(34px,3vw,48px);
     font-weight: 600;
     line-height: 1.18;
     text-transform: none;
@@ -1860,7 +1862,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 /* Compact vertical rhythm for the homepage only */
-.home-page .welcome-hero {min-height:600px;height:75vh;max-height:720px;}
+.home-page .welcome-hero {min-height:calc(100vh - 90px);min-height:calc(100svh - 90px);height:auto;max-height:none;}
 .home-page .section-heading h2 {padding-bottom: 24px;}
 .home-page #about {padding: 36px 0 46px;}
 .home-page #about .about-content {padding-top: 34px;}
