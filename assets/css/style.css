@@ -1437,6 +1437,15 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .research-journal-page .research-method-flow {display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:22px 0 0;padding:0;list-style:none;}
 .research-journal-page .research-method-flow li {display:flex;align-items:center;color:#4f5668;font-size:13px;font-weight:500;line-height:1.5;}
 .research-journal-page .research-method-flow li:not(:last-child)::after {margin-left:10px;color:#f92c2c;font-size:16px;font-weight:600;content:"\2192";}
+.research-journal-page .research-rigor {margin-top:30px;padding-top:24px;border-top:1px solid rgba(48,53,68,.14);}
+.research-journal-page .research-rigor h4 {margin:0 0 18px;color:#303544;font-size:19px;font-weight:600;line-height:1.4;}
+.research-journal-page .research-rigor-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 34px;}
+.research-journal-page .research-rigor-grid article {padding:16px 0;border-top:1px solid rgba(48,53,68,.1);}
+.research-journal-page .research-rigor-grid article:first-child,
+.research-journal-page .research-rigor-grid article:nth-child(2) {border-top:0;}
+.research-journal-page .research-rigor-grid h5 {margin:0 0 7px;color:#3c4258;font-size:14px;font-weight:600;line-height:1.5;}
+.research-journal-page .research-rigor-grid h5 span {margin-left:7px;color:#f92c2c;font-size:10px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;}
+.research-journal-page .research-rigor-grid p {margin:0;color:#646a77;font-size:13px;line-height:1.7;}
 .research-journal-page .research-transition {margin:0 0 42px 92px;padding:16px 20px;}
 .research-journal-page .research-transition p {margin-top:5px;}
 .research-journal-page .portfolio-journal-layout .journal-notes-intro {padding:36px 0 30px;}
@@ -1573,6 +1582,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     .research-journal-page .research-method-flow li {align-items:flex-start;}
     .research-journal-page .research-method-flow li:not(:last-child)::after {display:none;}
     .research-journal-page .research-method-flow li::before {flex:0 0 auto;width:14px;margin-right:7px;color:#f92c2c;content:"\2192";}
+    .research-journal-page .research-rigor-grid {grid-template-columns:1fr;}
+    .research-journal-page .research-rigor-grid article:nth-child(2) {border-top:1px solid rgba(48,53,68,.1);}
     .research-journal-page .portfolio-journal-layout .journal-project-intro {padding:88px 0 40px;}
     .research-journal-page .portfolio-journal-layout .journal-portfolio-section {padding:32px 0 40px;}
     .research-journal-page .portfolio-journal-layout .journal-note-section {padding:40px 0;}
