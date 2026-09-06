@@ -352,6 +352,7 @@ button:focus-visible,
 .outcome-factor.is-emphasized {color:#fff;background:#f92c2c;}
 .decision-context {max-width:450px;margin:0 0 7px;color:#4d5365;font-size:13px;font-weight:500;line-height:1.55;}
 .decision-caption {margin:0;color:#858b9b;font-size:9px;font-weight:500;letter-spacing:.2px;}
+.touch-instruction {display:none;}
 .decision-question {position:absolute;right:30px;bottom:22px;left:30px;margin:0;color:#596073;font-size:13.5px;font-weight:500;letter-spacing:.1px;opacity:0;transform:translateY(5px);transition:opacity .45s ease,transform .45s ease;}
 .decision-field.has-interacted .decision-question {opacity:1;transform:translateY(0);}
 .decision-source.is-dominant {opacity:1;transform:translateX(6px);}
@@ -580,6 +581,16 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     text-transform: uppercase;
     padding-bottom: 50px;
     border-bottom: 1px solid #e5ebf2;
+}
+.section-heading h1 {
+    margin:0;
+    padding-bottom:50px;
+    border-bottom:1px solid #e5ebf2;
+    color:#303544;
+    font-size:24px;
+    font-weight:600;
+    line-height:1.35;
+    text-transform:uppercase;
 }
 .single-progress-txt {
     display: flex;
@@ -1457,6 +1468,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 /* Match Portfolio One's first two-section structure exactly */
 .research-journal-page .section-heading h2 {padding-bottom:24px;}
+.research-journal-page .section-heading h1 {padding-bottom:24px;}
 .research-journal-page .portfolio-journal-layout .journal-opening-intro {
     padding:48px 0 46px;
 }
@@ -2174,6 +2186,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .research-journal-page {--case-heading-content-gap:18px;}
 :is(.portfolio-one-page,.portfolio-two-page) {--case-text-visual-gap:30px;}
 .portfolio-one-page .section-heading h2 {padding-bottom:24px;}
+.portfolio-one-page .section-heading h1 {padding-bottom:24px;}
 .portfolio-one-page #intro {padding:48px 0 46px;}
 .portfolio-one-page #intro .about-content {padding-top:34px;}
 .portfolio-one-page #intro .single-method-img {padding-top:32px;}
@@ -2264,6 +2277,13 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card:focus-within::before {opacity:1;visibility:visible;}
 :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card:hover .case-study-evidence-popover,
 :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card:focus-within .case-study-evidence-popover {opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1);visibility:visible;}
+:is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card.is-open {z-index:1000;}
+:is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card.is-open::before {opacity:1;visibility:visible;}
+:is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card.is-open .case-study-evidence-popover {opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1);visibility:visible;}
+:is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card:not(.is-open):focus-within::before {opacity:0;visibility:hidden;}
+:is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card:not(.is-open):focus-within .case-study-evidence-popover {opacity:0;pointer-events:none;transform:translate(-50%,-47%) scale(.94);visibility:hidden;}
+.case-study-evidence-close {position:sticky;z-index:2;top:0;float:right;display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin:-16px -16px 8px 12px;border:1px solid #cfd3dc;border-radius:50%;background:#fff;color:#303544;font-size:28px;font-weight:300;line-height:1;}
+.evidence-dialog-open {overflow:hidden;}
 :is(.portfolio-one-page,.portfolio-two-page) section:has(.case-study-evidence-card:hover),
 :is(.portfolio-one-page,.portfolio-two-page) section:has(.case-study-evidence-card:focus-within) {position:relative;z-index:1001;}
 @media (prefers-reduced-motion:reduce) {
@@ -2327,8 +2347,10 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 /* Portfolio Two: use the same compact case-study rhythm */
 .portfolio-two-page .section-heading h2 {padding-bottom:24px;}
+.portfolio-two-page .section-heading h1 {padding-bottom:24px;}
 .portfolio-two-page .portfolio-two-intro {padding:48px 0 46px;}
 .portfolio-two-page .portfolio-two-intro .section-heading h2 {padding-bottom:0;}
+.portfolio-two-page .portfolio-two-intro .section-heading h1 {padding-bottom:0;}
 .portfolio-two-page .portfolio-two-intro .about-content {padding-top:28px;}
 .portfolio-two-page .portfolio-two-intro .single-about-txt h3 {text-align:left;}
 .portfolio-two-page .portfolio-two-intro .youtube-video-padding {padding-top:0;}
@@ -2645,6 +2667,9 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
 .portfolio-one-page .section-heading h2,
 .portfolio-two-page .section-heading h2,
 .research-journal-page .section-heading h2,
+.portfolio-one-page .section-heading h1,
+.portfolio-two-page .section-heading h1,
+.research-journal-page .section-heading h1,
 .portfolio-one-page .single-about-txt h3,
 .portfolio-two-page .single-about-txt h3,
 .research-journal-page .research-phase-content h3 {color:#303544;}
@@ -2691,6 +2716,61 @@ button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled=
     -ms-transition: 0.3s linear; 
     -o-transition: 0.3s linear; 
     transition: 0.3s linear;
+}
+
+/* Mobile usability and accessibility refinements */
+@media (hover:none), (pointer:coarse) {
+    .pointer-instruction {display:none;}
+    .touch-instruction {display:inline;}
+    :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card:hover::before {opacity:0;visibility:hidden;}
+    :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card:hover .case-study-evidence-popover {opacity:0;pointer-events:none;transform:translate(-50%,-47%) scale(.94);visibility:hidden;}
+    :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card.is-open::before {opacity:1;visibility:visible;}
+    :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-card.is-open .case-study-evidence-popover {opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1);visibility:visible;}
+}
+
+@media (max-width:767px) {
+    nav.navbar.bootsnav .navbar-toggle {width:44px;min-width:44px;height:48px;}
+    .header-text .hero-eyebrow,
+    .decision-caption,
+    .decision-outcome small,
+    .outcome-equation,
+    .portfolio .work-card-meta,
+    .portfolio .work-card-role,
+    .portfolio-one-page .case-study-meta-card span,
+    .portfolio-one-page .case-study-finding-grid span,
+    .portfolio-one-page .case-study-process-grid span,
+    .portfolio-one-page .case-study-condition-grid span,
+    .portfolio-two-page .portfolio-two-meta-grid span,
+    .portfolio-two-page .portfolio-two-process-grid span,
+    .portfolio-two-page .portfolio-two-finding-grid span,
+    .portfolio-two-page .portfolio-two-subsection-heading span,
+    .portfolio-two-page .portfolio-two-constraint-map section > span,
+    .portfolio-two-page .portfolio-two-constraint-map ul::before,
+    .portfolio-two-page .portfolio-two-constraint-map li,
+    .research-journal-page .journal-meta-grid .case-study-meta-card > span,
+    .research-journal-page .research-phase-label,
+    .research-journal-page .research-transition span,
+    .research-journal-page .case-study-publication span,
+    .research-journal-page .case-study-publication small,
+    .research-journal-page .research-rigor-grid h5 span,
+    :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-trigger span,
+    :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-trigger small {font-size:12px;}
+    .decision-outcome strong,.decision-source small {font-size:12px;}
+    .outcome-equation {gap:1px;letter-spacing:0;}
+    .outcome-factor {padding:2px;}
+    :is(.portfolio-one-page,.portfolio-two-page) .case-study-evidence-trigger {min-height:52px;}
+    .project-navigation-card a {display:inline-flex;align-items:center;min-height:44px;}
+    .hero-scroll {min-width:44px;min-height:44px;justify-content:center;}
+    .portfolio .work-card-link,.experience-journal-link {display:inline-flex;align-items:center;min-height:44px;}
+    .blog-page .blog-share-trigger {min-width:88px;min-height:44px;justify-content:center;}
+    .portfolio-two-page .portfolio-two-flow-wrap {overflow:hidden;}
+    .portfolio-two-page .portfolio-two-flow {grid-template-columns:58px minmax(0,1fr) 58px;gap:10px;width:100%;min-width:0;padding:20px 14px;}
+    .portfolio-two-page .portfolio-two-flow-person > span {width:48px;height:48px;font-size:18px;}
+    .portfolio-two-page .portfolio-two-flow-person strong {font-size:14px;}
+    .portfolio-two-page .portfolio-two-flow-person small {font-size:12px;letter-spacing:.3px;}
+    .portfolio-two-page .portfolio-two-flow-lanes {min-width:0;gap:24px;}
+    .portfolio-two-page .portfolio-two-flow-lane span {padding:2px 4px;font-size:12px;letter-spacing:0;}
+    .portfolio-two-page .portfolio-two-flow-lane span strong {font-size:12px;}
 }
 
 /* Education journey: one moving direction through four connected stops. */

@@ -142,6 +142,7 @@ $(document).ready(function(){
 	
 		// i. client (carousel)
 		
+		if ($.fn.owlCarousel && $('#client').length) {
 			$('#client').owlCarousel({
 				items:7,
 				loop:true,
@@ -176,6 +177,81 @@ $(document).ready(function(){
 				$('.stop').on('click',function(){
 					owl.trigger('stop.owl.autoplay')
 				})
+		}
+
+		// Accessible evidence dialogs for pointer, keyboard, and touch users.
+		var evidenceCards = document.querySelectorAll('.case-study-evidence-card');
+		var openEvidenceCard = null;
+		var evidenceTrigger = null;
+
+		function closeEvidenceDialog(returnFocus) {
+			if (!openEvidenceCard) return;
+			var popover = openEvidenceCard.querySelector('.case-study-evidence-popover');
+			openEvidenceCard.classList.remove('is-open');
+			openEvidenceCard.querySelector('.case-study-evidence-trigger').setAttribute('aria-expanded','false');
+			popover.setAttribute('aria-hidden','true');
+			document.body.classList.remove('evidence-dialog-open');
+			openEvidenceCard = null;
+			if (returnFocus && evidenceTrigger) evidenceTrigger.focus();
+		}
+
+		evidenceCards.forEach(function(card,index){
+			var trigger = card.querySelector('.case-study-evidence-trigger');
+			var popover = card.querySelector('.case-study-evidence-popover');
+			if (!trigger || !popover) return;
+			var popoverId = popover.id || 'evidence-dialog-' + (index + 1);
+			popover.id = popoverId;
+			popover.setAttribute('role','dialog');
+			popover.setAttribute('aria-modal','true');
+			popover.setAttribute('aria-hidden','true');
+			popover.setAttribute('aria-label',trigger.getAttribute('aria-label') || 'Expanded analysis');
+			trigger.setAttribute('aria-controls',popoverId);
+			trigger.setAttribute('aria-expanded','false');
+
+			var closeButton = document.createElement('button');
+			closeButton.type = 'button';
+			closeButton.className = 'case-study-evidence-close';
+			closeButton.setAttribute('aria-label','Close expanded analysis');
+			closeButton.innerHTML = '&times;';
+			popover.insertBefore(closeButton,popover.firstChild);
+
+			trigger.addEventListener('click',function(){
+				if (openEvidenceCard === card) {
+					closeEvidenceDialog(true);
+					return;
+				}
+				closeEvidenceDialog(false);
+				openEvidenceCard = card;
+				evidenceTrigger = trigger;
+				card.classList.add('is-open');
+				trigger.setAttribute('aria-expanded','true');
+				popover.setAttribute('aria-hidden','false');
+				document.body.classList.add('evidence-dialog-open');
+				closeButton.focus();
+			});
+			closeButton.addEventListener('click',function(){ closeEvidenceDialog(true); });
+		});
+
+		document.addEventListener('keydown',function(event){
+			if (event.key === 'Escape') closeEvidenceDialog(true);
+			if (event.key === 'Tab' && openEvidenceCard) {
+				var dialog = openEvidenceCard.querySelector('.case-study-evidence-popover');
+				var focusable = dialog.querySelectorAll('a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])');
+				if (!focusable.length) return;
+				var first = focusable[0];
+				var last = focusable[focusable.length - 1];
+				if (event.shiftKey && document.activeElement === first) {
+					event.preventDefault();
+					last.focus();
+				} else if (!event.shiftKey && document.activeElement === last) {
+					event.preventDefault();
+					first.focus();
+				}
+			}
+		});
+		document.addEventListener('click',function(event){
+			if (openEvidenceCard && !openEvidenceCard.contains(event.target)) closeEvidenceDialog(false);
+		});
 
 
     // 5. Homepage entrance and research-theme navigation

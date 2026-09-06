@@ -56,6 +56,7 @@
 
 @media screen and (max-width:767px){
 	.welcome-hero {height:auto;min-height:620px;padding:110px 0 80px;}
+	.home-page .welcome-hero {height:auto;min-height:0;max-height:none;padding:110px 0 80px;}
 	.header-text h2 {font-size:38px;}
 	.header-text .hero-eyebrow {font-size:10px;}
 	.header-text .hero-tagline {font-size:34px;white-space:normal;}
