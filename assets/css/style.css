@@ -1463,7 +1463,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .research-journal-page .research-rigor-numbered .research-rigor-grid article:last-child {grid-column:1 / -1;}
 .research-journal-page .research-rigor-numbered .research-rigor-grid article:last-child p {max-width:820px;}
 .research-journal-page .research-rigor-numbered.research-rigor-paired .research-rigor-grid article:last-child {grid-column:auto;}
-.research-journal-page .research-rigor-numbered:not(.research-rigor-paired) .research-rigor-grid article:last-child {display:grid;grid-template-columns:34px minmax(190px,260px) minmax(0,1fr);column-gap:12px;align-items:start;}
+.research-journal-page .research-rigor-numbered:not(.research-rigor-paired) .research-rigor-grid article.research-rigor-wide {display:grid;grid-column:1 / -1!important;width:100%;grid-template-columns:34px minmax(190px,260px) minmax(0,1fr);column-gap:12px;align-items:start;}
 .research-journal-page .research-rigor-numbered:not(.research-rigor-paired) .research-rigor-grid article:last-child .research-rigor-number {grid-column:1;grid-row:1;margin:1px 0 0;}
 .research-journal-page .research-rigor-numbered:not(.research-rigor-paired) .research-rigor-grid article:last-child h5 {grid-column:2;grid-row:1;margin:0;}
 .research-journal-page .research-rigor-numbered:not(.research-rigor-paired) .research-rigor-grid article:last-child p {grid-column:3;grid-row:1 / 3;max-width:none;}
@@ -1607,7 +1607,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     .research-journal-page .research-rigor-grid {grid-template-columns:1fr;}
     .research-journal-page .research-rigor-grid article:nth-child(2) {border-top:1px solid rgba(48,53,68,.1);}
     .research-journal-page .research-rigor-numbered .research-rigor-grid article:last-child {grid-column:auto;}
-    .research-journal-page .research-rigor-numbered:not(.research-rigor-paired) .research-rigor-grid article:last-child {display:block;}
+    .research-journal-page .research-rigor-numbered:not(.research-rigor-paired) .research-rigor-grid article.research-rigor-wide {display:block;grid-column:auto!important;}
     .research-journal-page .research-rigor-numbered:not(.research-rigor-paired) .research-rigor-grid article:last-child .research-rigor-number {margin-bottom:6px;}
     .research-journal-page .portfolio-journal-layout .journal-project-intro {padding:88px 0 40px;}
     .research-journal-page .portfolio-journal-layout .journal-portfolio-section {padding:32px 0 40px;}
