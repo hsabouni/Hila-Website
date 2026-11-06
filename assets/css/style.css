@@ -1464,7 +1464,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .research-journal-page .research-rigor-numbered:not(.research-rigor-paired) > .research-rigor-wide .research-rigor-number {display:block;margin:0 0 6px;}
 .research-journal-page .research-rigor-numbered:not(.research-rigor-paired) > .research-rigor-wide h5 {margin:0 0 7px;color:#3c4258;font-size:14px;font-weight:600;line-height:1.5;}
 .research-journal-page .research-rigor-numbered:not(.research-rigor-paired) > .research-rigor-wide p {margin:0;color:#646a77;font-size:13px;line-height:1.7;}
-.research-journal-page .research-phase-marker {font-weight:400;}
+.research-journal-page .research-phase-marker {font-weight:600;}
 .research-journal-page #method .research-rigor-number {color:#596070;font-size:14px;font-weight:400;letter-spacing:.7px;}
 .research-journal-page .research-transition {margin:0 0 42px 92px;padding:16px 20px;}
 .research-journal-page .research-transition p {margin-top:5px;}
