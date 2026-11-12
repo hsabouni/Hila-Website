@@ -1411,6 +1411,33 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     background:#fff;
     border-left:3px solid #f92c2c;
 }
+.finding-points {
+    margin:18px 0 0;
+    padding:0;
+    list-style:none;
+    counter-reset:finding-point;
+}
+.finding-points li {
+    display:grid;
+    grid-template-columns:32px minmax(0,1fr);
+    gap:14px;
+    padding:17px 0;
+    border-top:1px solid rgba(48,53,68,.12);
+    color:#565e70;
+    font-size:15px;
+    line-height:1.75;
+    counter-increment:finding-point;
+}
+.finding-points li::before {
+    padding-top:3px;
+    color:#f92c2c;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.8px;
+    content:counter(finding-point, decimal-leading-zero);
+}
+.finding-points li:first-child {padding-top:5px;border-top:0;}
+.finding-points strong {display:block;margin-bottom:3px;color:#3c4258;font-size:16px;font-weight:600;}
 .research-transition {
     margin:0 0 58px 98px;
     padding:23px 28px;
