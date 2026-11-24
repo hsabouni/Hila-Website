@@ -1460,6 +1460,27 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     padding:48px 0 46px;
 }
 .research-journal-page .journal-project-intro .about-content {padding-top:34px;}
+.research-journal-page .research-overview-status {
+    margin-top:26px;
+    padding:18px 0;
+    border-top:1px solid rgba(48,53,68,.14);
+    border-bottom:1px solid rgba(48,53,68,.14);
+}
+.research-journal-page .research-overview-status h4 {
+    margin:0 0 10px;
+    color:#303544;
+    font-size:16px;
+    font-weight:600;
+}
+.research-journal-page .research-overview-status ul {margin:0;padding-left:20px;}
+.research-journal-page .research-overview-status li {
+    margin-top:6px;
+    color:#565e70;
+    font-size:16px;
+    line-height:1.7;
+}
+.research-journal-page .research-overview-status li:first-child {margin-top:0;}
+.research-journal-page .research-overview-status strong {color:#3c4258;font-weight:600;}
 .research-journal-page .portfolio-journal-layout .journal-section-kicker {margin-top:12px;}
 .research-journal-page .portfolio-journal-layout .journal-role {margin-top:16px;}
 .research-journal-page .portfolio-journal-layout .journal-portfolio-section {
