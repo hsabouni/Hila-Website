@@ -2170,7 +2170,12 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .home-page #experience .single-timeline-box {margin-bottom: 52px;}
 .home-page #experience li:last-child .single-timeline-box {margin-bottom: 0;}
 .home-page #publications {padding: 36px 0 46px;}
+.home-page #publications .publication-ribbon .row {display:flex;flex-wrap:wrap;}
+.home-page #publications .publication-ribbon .col-sm-2 {width:14.285714%;}
 .home-page #publications .publication-ribbon .single-profile {height:145px;padding:16px 12px;}
+@media (max-width:767px) {
+    .home-page #publications .publication-ribbon .col-sm-2 {width:50%;}
+}
 .home-page #portfolio {padding: 36px 0 46px;}
 .home-page #portfolio .portfolio-content {padding-top: 38px;}
 .home-page #portfolio .isotope .item {margin-bottom:20px;}
